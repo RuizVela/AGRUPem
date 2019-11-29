@@ -14,6 +14,7 @@ class CreateEventsTable extends Migration
             $table->string('title');
             $table->mediumText('content_catalan');
             $table->mediumText('content_spanish');
+            $table->date('date');
             $table->timestamps();
         });
     }
