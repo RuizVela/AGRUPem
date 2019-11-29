@@ -15,6 +15,7 @@ class CreateEventsTable extends Migration
             $table->mediumText('content_catalan');
             $table->mediumText('content_spanish');
             $table->date('date');
+            $table->boolean('expired')->default(true);
             $table->timestamps();
         });
     }
