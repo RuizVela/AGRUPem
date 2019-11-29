@@ -13,7 +13,7 @@ class CreateEventsTable extends Migration
             $table->bigIncrements('id');
             $table->string('title');
             $table->mediumText('content_catalan');
-            $table->mediumText('content_castellano');
+            $table->mediumText('content_spanish');
             $table->timestamps();
         });
     }
