@@ -10,7 +10,7 @@ class EventController extends Controller
 
     public function index()
     {
-        $events=Event::all();
+        $events=Event::sortByDate();
         return view('event.calendar',['events'=>$events]);
     }
 
