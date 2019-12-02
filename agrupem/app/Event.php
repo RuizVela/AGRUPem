@@ -20,4 +20,12 @@ class Event extends Model
         $this->expired = true;
         $this->save();
     }
+    static function expirePastEvents()
+    {
+        $events = Event::all();
+        foreach ($events as $event) 
+            if ($event->date < date('Y-m-d')) {
+                $event->expireEvent();
+        }
+    }
 }

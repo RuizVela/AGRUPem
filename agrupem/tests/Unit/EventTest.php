@@ -29,4 +29,13 @@ class EventTest extends TestCase
         $event->expireEvent();
         $this->assertTrue($event->expired);
     }
+    public function test_expire_if_date_is_past()
+    {
+        
+        $events=factory(Event::class,5)->create(['date'=>'0001-01-01']);
+        Event::expirePastEvents();
+        $events=Event::all();
+        foreach ($events as $event){
+        $this->assertTrue((boolean)$event->expired);}
+    }
 }
