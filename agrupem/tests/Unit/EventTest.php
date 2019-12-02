@@ -24,11 +24,11 @@ class EventTest extends TestCase
     public function test_get_only_nonExpired_events()
     {
         factory(Event::class,2)->create(['expired'=>true]);
-        factory(Event::class,1)->create(['expired'=>false]);
+        factory(Event::class,3)->create(['expired'=>false]);
         $allEvents = Event::all();
         $nonExpiredEvents=Event::getNonExpiredEvents();
-        $this->assertCount(3,$allEvents);
-        $this->assertCount(1,$nonExpiredEvents);
+        $this->assertCount(5,$allEvents);
+        $this->assertCount(3,$nonExpiredEvents);
     }
 
     public function test_expire_test()
