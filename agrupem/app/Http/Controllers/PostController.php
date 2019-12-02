@@ -14,8 +14,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        $post = Post::all();
-        // return view('public.blog',['post'=>$post]);
+        $posts = Post::all();
+        return view('blog.blog',['posts'=>$posts]);
     }
 
     /**
@@ -25,7 +25,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('blog.createPost');
     }
 
     /**
@@ -37,9 +37,10 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $post = new Post;
-        $post->name = $request->name;
-        $post->body = $request->body;
-        $post->collection_id = $request->collection_id;
+        $post->title_catalan = $request->title_catalan;
+        $post->title_spanish = $request->title_spanish;
+        $post->content_catalan = $request->content_catalan;
+        $post->content_spanish = $request->content_spanish;
         $post->save();
     }
 
@@ -62,7 +63,7 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        //
+        return view('blog.editPost', ['post' => $post]);
     }
 
     /**
@@ -74,8 +75,9 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        $post = Post::find($request->id);
+        $post = Post::find($post->id);
         $post->update($request->all());
+        return redirect('/post');
     }
 
     /**
@@ -87,6 +89,6 @@ class PostController extends Controller
     public function destroy(Post $post)
     {
         $post->delete();
-        return 'post deleted';
+        return redirect()->back();
     }
 }
