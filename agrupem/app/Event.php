@@ -23,7 +23,7 @@ class Event extends Model
     static function getPastEvents()
     {
         $today = date('Y-m-d');
-        $events = Event::all()->where('expired', false)->where('date','<',$today);
+        $events = Event::all()->where('date','<',$today)->where('expired', false);
         return $events;
     }
     static function expirePastEvents()
