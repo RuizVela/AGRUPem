@@ -3,7 +3,7 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-
+use App\Event;
 class ExpireEvents extends Command
 {
 
@@ -19,6 +19,6 @@ class ExpireEvents extends Command
 
     public function handle()
     {
-        Event::expirePastEvents(); //TODO: falta algo
+        Event::expirePastEvents(); 
     }
 }

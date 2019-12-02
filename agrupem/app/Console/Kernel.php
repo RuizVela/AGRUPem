@@ -12,12 +12,11 @@ class Kernel extends ConsoleKernel
     ];
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('expire:events')->everyMinute(); //TODO: falta algo
+        $schedule->command('expire:events')->daily(); 
     }
     protected function commands()
     {
         $this->load(__DIR__.'/Commands');
-
         require base_path('routes/console.php');
     }
 }
