@@ -21,6 +21,15 @@ class EventTest extends TestCase
         $expected = $event->date;
         $this->assertEquals($response, $expected);
     }
+    public function test_get_only_nonExpired_events()
+    {
+        factory(Event::class,2)->create(['expired'=>true]);
+        factory(Event::class,1)->create(['expired'=>false]);
+        $allEvents = Event::all();
+        $nonExpiredEvents=Event::getNonExpiredEvents();
+        $this->assertCount(3,$allEvents);
+        $this->assertCount(1,$nonExpiredEvents);
+    }
 
     public function test_expire_test()
     {
@@ -31,7 +40,7 @@ class EventTest extends TestCase
     }
     public function test_expire_if_date_is_past()
     {
-        $events=factory(Event::class,5)->create();
+        factory(Event::class,5)->create();
         Event::expirePastEvents();
         $events=Event::all();
         foreach ($events as $event){

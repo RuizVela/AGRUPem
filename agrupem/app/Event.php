@@ -15,6 +15,11 @@ class Event extends Model
         $eventsSortered = $events->sortBy('date');
         return $eventsSortered;
     }
+    static function getNonExpiredEvents()
+    {
+        $events = Event::sortByDate()->where('expired',false);
+        return $events;
+    }
     public function expireEvent()
     {
         $this->expired = true;
