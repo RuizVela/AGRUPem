@@ -31,11 +31,33 @@ class EventTest extends TestCase
     }
     public function test_expire_if_date_is_past()
     {
-        
-        $events=factory(Event::class,5)->create(['date'=>'0001-01-01']);
+        $events=factory(Event::class,5)->create();
         Event::expirePastEvents();
         $events=Event::all();
         foreach ($events as $event){
         $this->assertTrue((boolean)$event->expired);}
+    }
+    public function test_get_all_past_nonExpired_events()
+    {
+        $yesterday = date('Y-m-d',strtotime("-1 days"));
+        factory(Event::class)->create(['expired'=>false,'date'=>$yesterday]);
+        $events = Event::getPastEvents();
+        $this->assertCount(1,$events);
+        // $response=factory(Event::class)->create(['expired'=>false,'date'=>$yesterday]);
+        // $this->assertContains($response,[$events]); TODO: no funciona porque el objeto no es exactamente igual.
+    }
+    public function test_dont_get_expired_events()
+    {
+        $yesterday = date('Y-m-d',strtotime("-1 days"));
+        factory(Event::class)->create(['expired'=>true,'date'=>$yesterday]);
+        $events = Event::getPastEvents();
+        $this->assertCount(0,$events);
+    }
+    public function test_dont_get_nonPast_events()
+    {
+        $today = date('Y-m-d');
+        factory(Event::class)->create(['expired'=>false,'date'=>$today]);
+        $events = Event::getPastEvents();
+        $this->assertCount(0,$events);
     }
 }
