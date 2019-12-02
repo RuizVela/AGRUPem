@@ -7,7 +7,7 @@ use Illuminate\Console\Command;
 class ExpireEvents extends Command
 {
 
-    protected $signature = 'expire:event';
+    protected $signature = 'expire:events';
 
 
     protected $description = 'Set expired field true in events database';
@@ -19,6 +19,6 @@ class ExpireEvents extends Command
 
     public function handle()
     {
-        
+        Event::expirePastEvents(); //TODO: falta algo
     }
 }
