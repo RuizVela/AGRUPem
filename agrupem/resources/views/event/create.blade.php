@@ -1,8 +1,9 @@
 <form method="POST" action="/event">
     @csrf
-    Titulo: <input type="text" name="title"><br>
-    Contenido en catalan:<input type="textarea" name="content_catalan"><br>
+    Titulo catalan: <input required type="text" name="title_catalan"><br>
+    Titulo castellano: <input type="text" name="title_spanish"><br>
+    Contenido en catalan:<input required type="textarea" name="content_catalan"><br>
     Contenido en castellano:<input type="textarea" name="content_spanish"><br>
-    <input type="date" name="date">
-    <input type="submit" value="Crear Evento">
+    <input required type="date" name="date" value="<?php echo date("Y-m-d");?>">
+    <input type="submit" value="Crear Evento" >
 </form>

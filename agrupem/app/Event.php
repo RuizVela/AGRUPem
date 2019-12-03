@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Event extends Model
 {
     protected $fillable=[
-        'title','content_catalan','content_spanish','date', 'expired'
+        'title_catalan','title_spanish','content_catalan','content_spanish','date', 'expired'
     ];
     static function sortByDate()
     {
