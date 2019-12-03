@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('content')
+@section('content') 
 
 <div class="container">
     <div class="row justify-content-center">
@@ -10,12 +10,15 @@
             </header>
             <main>
             @foreach ($posts as $post)
+            
             <section class="card">
                 <h2 id="title">{{$post->title_catalan}}</h2>
                 <h2 id="title">{{$post->title_spanish}}</h2>
                 <p id="content">{{$post->content_catalan}}</p>
                 <p id="content">{{$post->content_spanish}}</p>
-                <!-- TODO posicionamiento de la imagen -->
+
+                <!-- TO DO MOSTRAR POST IMAGEN -->
+                <img src="{{asset($post->post_image)}}" alt="image">
 
                 <form action="/post/{{$post->id}}/edit" method="GET">
                     <input type="submit" id="button_edit" class = "btn btn-outline-primary mt-4" value="Editar">

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('content')
+@section('content') 
 
 <div class="container">
     <div class="row justify-content-center">
@@ -32,7 +32,7 @@
                             <textarea name="content_spanish" id="content_spanish" cols="30" rows="10"></textarea>
                         </div>
                     </section>
-                    <input type="file" class="btn btn-outline-primary mt-4" name="">
+                    <input type="file" class="btn btn-outline-primary mt-4" name="post_image">
                     <!-- TODO input alt de la imagen -->
                     <input type="submit" class="btn btn-outline-success mt-4" value="Guardar">
                     </form>

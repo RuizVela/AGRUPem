@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use Illuminate\Http\Request;
+use App\Traits\UploadTrait;
 
 class PostController extends Controller
 {
@@ -15,7 +16,8 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::all();
-        return view('blog.blog',['posts'=>$posts]);
+        $currentImage = Post::getPostImage();
+        return view('blog.blog',['posts'=>$posts,'post_Image' => $currentImage]);
     }
 
     /**
@@ -25,7 +27,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('blog.createPost');
+        return view('blog.createPost'); 
     }
 
     /**
@@ -36,12 +38,10 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        $post = new Post;
-        $post->title_catalan = $request->title_catalan;
-        $post->title_spanish = $request->title_spanish;
-        $post->content_catalan = $request->content_catalan;
-        $post->content_spanish = $request->content_spanish;
-        $post->save();
+       
+        Post::create($request->all());
+        Post::updateImagePost($request);
+        return redirect('post');
     }
 
     /**
