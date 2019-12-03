@@ -20,7 +20,7 @@
                         </div>
                         <div>
                             <label for="novelty_content_catalan">Contenido de la Novedad a publicar</label>
-                            <input type="textarea" id="novelty_content_catalan" name="content_catalan" cols="60" rows="1" value="{{$novelty->title_catalan}}"></input>
+                            <input type="textarea" id="novelty_content_catalan" name="content_catalan" cols="60" rows="1" value="{{$novelty->content_catalan}}"></input>
                         </div>
                     </section>
                     <input type="submit" class="btn btn-outline-success mt-4" value="Guardar">
