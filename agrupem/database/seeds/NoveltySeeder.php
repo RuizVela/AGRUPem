@@ -11,6 +11,6 @@ class NoveltySeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Novelty::class, 20)->create();
+        factory(App\Novelty::class, 10)->create();
     }
 }

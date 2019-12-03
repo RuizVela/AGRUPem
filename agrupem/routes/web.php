@@ -22,3 +22,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('post', 'PostController');
 
 Route::resource('resources', 'ResourceController');
+
+Route::resource('novelties', 'NoveltyController');
+
+Route::GET('noveltiesES', 'NoveltyController@indexES');

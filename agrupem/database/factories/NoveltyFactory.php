@@ -9,7 +9,7 @@ $factory->define(Novelty::class, function (Faker $faker) {
     return [
         'title_catalan' => $faker->sentence(1),
         'title_spanish' => $faker->sentence(1),
-        'content_catalan' => $faker->text,
-        'content_spanish' => $faker->text,
+        'content_catalan' => $faker->paragraph(15),
+        'content_spanish' => $faker->paragraph(15),
     ];
 });

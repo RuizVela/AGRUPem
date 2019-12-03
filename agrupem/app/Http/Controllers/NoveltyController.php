@@ -14,7 +14,13 @@ class NoveltyController extends Controller
      */
     public function index()
     {
-        //
+        $novelties = Novelty::all();
+        return view('novelties.novelty',['novelties'=>$novelties]);
+    }
+    public function indexES()
+    {
+        $novelties = Novelty::all();
+        return view('novelties.novelty',['novelties'=>$novelties]);
     }
 
     /**
@@ -24,7 +30,7 @@ class NoveltyController extends Controller
      */
     public function create()
     {
-        //
+        return view('resources.createResource');
     }
 
     /**
@@ -35,7 +41,7 @@ class NoveltyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
     }
 
     /**
