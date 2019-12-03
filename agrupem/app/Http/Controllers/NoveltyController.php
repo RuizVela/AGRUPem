@@ -53,8 +53,8 @@ class NoveltyController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(Novelty $novelty)
-    {
-        //
+    {   
+        return view('novelties.show', ['novelty'=>$novelty]);
     }
 
     /**
@@ -65,7 +65,7 @@ class NoveltyController extends Controller
      */
     public function edit(Novelty $novelty)
     {
-        //
+        return view('novelties.edit', ['novelty'=>$novelty]);
     }
 
     /**
@@ -77,7 +77,8 @@ class NoveltyController extends Controller
      */
     public function update(Request $request, Novelty $novelty)
     {
-        //
+        $novelty->update($request->all());
+        return redirect('novelty');
     }
 
     /**
@@ -88,6 +89,7 @@ class NoveltyController extends Controller
      */
     public function destroy(Novelty $novelty)
     {
-        //
+        $novelty->delete();
+        return redirect()->back();
     }
 }
