@@ -23,6 +23,6 @@ Route::resource('post', 'PostController');
 
 Route::resource('resources', 'ResourceController');
 
-Route::resource('novelties', 'NoveltyController');
+Route::resource('novelty', 'NoveltyController');
 
-Route::GET('noveltiesES', 'NoveltyController@indexES');
+Route::GET('noveltyES', 'NoveltyController@indexES');

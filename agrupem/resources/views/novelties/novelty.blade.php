@@ -12,12 +12,12 @@
             @foreach ($novelties as $novelty)
             <section class="card">
                 <a id="resource_link" href="{{$novelty->url}}">{{$novelty->title_catalan}}</a>
-                <a id="resource_link" href="{{$novelty->url}}">{{$novelty->content_catalan}}</a>
+                <a id="resource_link" href="{{$novelty->url}}">{!! Str::words($novelty->content_catalan, 20,"...")!!}</a>
                 <form action="/novelty/{{$novelty->id}}/edit" method="GET">
                     <input type="submit" id="button_edit" class = "btn btn-outline-primary mt-4" value="Editar">
                 </form>
 
-                <form action="//{{$novelty->id}}" method="post">
+                <form action="/novelty/{{$novelty->id}}" method="post">
                 @csrf
                 @method('DELETE')
                 <input id="button_delete" type="submit" value="Eliminar" class="btn btn-outline-danger mt-4">

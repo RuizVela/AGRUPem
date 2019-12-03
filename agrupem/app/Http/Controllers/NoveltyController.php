@@ -30,7 +30,7 @@ class NoveltyController extends Controller
      */
     public function create()
     {
-        return view('resources.createResource');
+        return view('novelties.create');
     }
 
     /**
@@ -41,6 +41,8 @@ class NoveltyController extends Controller
      */
     public function store(Request $request)
     {
+        Novelty::create($request->all());
+        return redirect('novelty');
 
     }
 
