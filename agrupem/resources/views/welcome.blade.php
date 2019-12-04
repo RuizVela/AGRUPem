@@ -81,18 +81,15 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    AGRUPem
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a onclick="window.location='{{ url("post") }}'">Blog</a>
+                    <a onclick="window.location='{{ url("resources") }}'">Recursos</a>
+                    <a onclick="window.location='{{ url("event") }}'">Esdeveniments</a>
+                    <a onclick="window.location='{{ url("novelty") }}'">Novetats</a>
+                    <a onclick="window.location='{{ url("image") }}'"}>Imatges</a>
                 </div>
             </div>
         </div>
