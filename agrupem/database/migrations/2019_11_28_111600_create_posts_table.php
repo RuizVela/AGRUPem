@@ -19,7 +19,7 @@ class CreatePostsTable extends Migration
             $table->string('title_spanish')->nullable();
             $table->mediumText('content_catalan');
             $table->mediumText('content_spanish')->nullable();
-            $table->string('post_image')->nullable();
+            // $table->string('post_image')->nullable();
             $table->timestamps();
         });
     }

@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Storage;
 
 class Post extends Model
 {
-    protected $fillable = ['id', 'title_catalan', 'title_spanish', 'content_catalan', 'content_spanish','post_image'];
+    protected $fillable = ['id', 'title_catalan', 'title_spanish', 'content_catalan', 'content_spanish'];
 
     
 
@@ -22,36 +22,43 @@ class Post extends Model
     static function updateImagePost(Request $request)
     {
         
+       
         $request->validate([
             
+            'post_id'=> 'id',
             'post_image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
         ]);
 
-        
+      
+      
         
         if ($request->hasFile('post_image')) 
         {
-            
+           
             $image = $request->file('post_image');
+            // $id_post=$request->id;
+            
             $name = uniqid().'_'.time();
             $filePath = $name. '.' . $image->getClientOriginalExtension();
             $image->storeAs('public',$filePath);
+            
                     
         }
         
         
 
+        dd($request);
        
     }
 
     static function getPostImage()
     {        
-        $path="post_images/"; 
+        $path="public/"; 
         $result=Storage::files($path);
         // if(empty($result)){
         //     return "storage/default/default.svg";
         // }
-        return "storage/";
+        return $result;
     }
 
 

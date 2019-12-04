@@ -17,6 +17,7 @@ class PostController extends Controller
     {
         $posts = Post::all();
         $currentImage = Post::getPostImage();
+        
         return view('blog.blog',['posts'=>$posts,'post_Image' => $currentImage]);
     }
 
@@ -74,8 +75,9 @@ class PostController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Post $post)
-    {
+    {   
         $post = Post::find($post->id);
+        dd($post);
         $post->update($request->all());
         return redirect('/post');
     }

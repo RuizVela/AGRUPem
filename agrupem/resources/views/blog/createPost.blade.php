@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <header class="card">
+            <header class="card"> 
                 <div class="card-header">AGRUPem Blog</div>
             </header>
             <main>
