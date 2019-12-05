@@ -8,7 +8,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('post', 'PostController')->except('show');
+Route::resource('post', 'PostController');
 
 Route::resource('resource', 'ResourceController')->except('show');
 

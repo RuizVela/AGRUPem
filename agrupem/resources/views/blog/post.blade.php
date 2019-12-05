@@ -9,10 +9,9 @@
                 <div class="card-header">AGRUPem Blog</div>
             </header>
             <main>
-            @foreach ($posts as $post)
             <section class="card">
                 <h2 id="title">{{$post->title_catalan}}</h2>
-                <p id="content">{!! Str::words($post->content_catalan, 10,"...")!!}</p>
+                <p id="content">{{$post->content_catalan}}</p>
                 <!-- TODO posicionamiento de la imagen -->
 
                 <form action="/post/{{$post->id}}/edit" method="GET">
@@ -24,10 +23,7 @@
                 @method('DELETE') 
                 <input id="button_delete" type="submit" value="Eliminar post" class="btn btn-outline-danger mt-4">
                 </form>
-
             </section>
-            @endforeach
-            <a id="button_create" href="/post/create" class="btn btn-outline-success mt-4">Crear post</a>
             </main>
         </div>
     </div>

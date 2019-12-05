@@ -10,7 +10,7 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::all();
-        return view('blog.blog',['posts'=>$posts]);
+        return view('blog.index',['posts'=>$posts]);
     }
     public function create()
     {
@@ -24,6 +24,10 @@ class PostController extends Controller
     public function edit(Post $post)
     {
         return view('blog.edit',['post'=>$post]);
+    }
+    public function show(Post $post)
+    {   
+        return view('blog.post', ['post'=>$post]);
     }
     public function update(Request $request, Post $post)
     {
