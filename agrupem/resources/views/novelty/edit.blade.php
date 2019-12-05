@@ -19,8 +19,16 @@
                             <input id="novelty_title_catalan" type="text" name="title_catalan" value="{{$novelty->title_catalan}}"></input>
                         </div>
                         <div>
-                            <label for="novelty_content_catalan">Contenido de la Novedad a publicar</label>
+                            <label for="novelty_content_catalan">Contingut</label>
                             <input type="textarea" id="novelty_content_catalan" name="content_catalan" cols="60" rows="1" value="{{$novelty->content_catalan}}"></input>
+                        </div>
+                        <div>
+                            <label for="novelty_title_catalan">Título</label>
+                            <input id="novelty_title_catalan" type="text" name="title_spanish" value="{{$novelty->title_spanish}}"></input>
+                        </div>
+                        <div>
+                            <label for="novelty_content_catalan">Contenido</label>
+                            <input type="textarea" id="novelty_content_catalan" name="content_spanish" cols="60" rows="1" value="{{$novelty->content_spanish}}"></input>
                         </div>
                     </section>
                     <input type="submit" class="btn btn-outline-success mt-4" value="Guardar">

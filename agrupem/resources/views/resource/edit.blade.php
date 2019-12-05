@@ -16,7 +16,11 @@
                     <section class="flex-column p-2">
                         <div>
                             <label for="resource_title">Títol</label>
-                            <input id="resource_title" type="text" name="title" value="{{$resource->title}}"></input>
+                            <input id="resource_title" type="text" name="title_catalan" value="{{$resource->title_catalan}}"></input>
+                        </div>
+                        <div>
+                            <label for="resource_title">Título</label>
+                            <input id="resource_title" type="text" name="title_spanish" value="{{$resource->title_spanish}}"></input>
                         </div>
                         <div>
                             <label for="resource_url">Url</label>

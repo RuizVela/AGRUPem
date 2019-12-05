@@ -30,7 +30,6 @@
                             <label for="novelties_content_spanish">Contenido</label>
                             <textarea id="novelties_content_spanish" name="content_spanish" cols="60" rows="1"></textarea>
                         </div>
-
                     </section>
                     <input type="submit" class="btn btn-outline-success mt-4" value="Guardar">
                     </form>

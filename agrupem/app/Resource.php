@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Resource extends Model
 {
-    protected $fillable = ['id', 'title', 'url'];
+    protected $fillable = ['id', 'title_catalan', 'title_spanish', 'url'];
 }

@@ -1,4 +1,4 @@
-Titulo: {{$event->title}}
+Título: {{$event->title}}
 <table border="1px">
 <tr><td>Catalan <br>{{$event->content_catalan}}</td>
     <td>Castellano <br>{{$event->content_spanish}}</td></tr>
