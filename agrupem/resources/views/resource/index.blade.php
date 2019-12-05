@@ -13,11 +13,11 @@
             <section class="card">
                 <a id="resource_link" href="{{$resource->url}}">{{$resource->title}}</a>
 
-                <form action="/resources/{{$resource->id}}/edit" method="GET">
+                <form action="/resource/{{$resource->id}}/edit" method="GET">
                     <input type="submit" id="button_edit" class = "btn btn-outline-primary mt-4" value="Editar">
                 </form>
 
-                <form action="/resources/{{$resource->id}}" method="post">
+                <form action="/resource/{{$resource->id}}" method="post">
                 @csrf
                 @method('DELETE')
                 <input id="button_delete" type="submit" value="Eliminar" class="btn btn-outline-danger mt-4">
@@ -25,7 +25,7 @@
 
             </section>
             @endforeach
-            <a id="button_create" href="/resources/create" class="btn btn-outline-success mt-4">Crear</a>
+            <a id="button_create" href="/resource/create" class="btn btn-outline-success mt-4">Crear</a>
             </main>
         </div>
     </div>

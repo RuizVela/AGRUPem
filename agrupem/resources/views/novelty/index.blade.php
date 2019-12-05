@@ -30,7 +30,7 @@
 
             </section>
             @endforeach
-            <a id="button_create" href="/resources/create" class="btn btn-outline-success mt-4">Crear</a>
+            <a id="button_create" href="/novelty/create" class="btn btn-outline-success mt-4">Crear</a>
             </main>
         </div>
     </div>

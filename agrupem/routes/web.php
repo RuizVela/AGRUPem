@@ -8,11 +8,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('post', 'PostController');
+Route::resource('post', 'PostController')->except('show');
 
-Route::resource('resources', 'ResourceController');
+Route::resource('resource', 'ResourceController')->except('show');
 
 Route::resource('novelty', 'NoveltyController');
 
-Route::GET('noveltyES', 'NoveltyController@indexES');
 Route::resource('event', 'EventController');

@@ -86,7 +86,7 @@
 
                 <div class="links">
                     <a onclick="window.location='{{ url("post") }}'">Blog</a>
-                    <a onclick="window.location='{{ url("resources") }}'">Recursos</a>
+                    <a onclick="window.location='{{ url("resource") }}'">Recursos</a>
                     <a onclick="window.location='{{ url("event") }}'">Esdeveniments</a>
                     <a onclick="window.location='{{ url("novelty") }}'">Novetats</a>
                     <a onclick="window.location='{{ url("image") }}'"}>Imatges</a>
