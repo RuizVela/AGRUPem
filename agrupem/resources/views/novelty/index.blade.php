@@ -17,7 +17,7 @@
                 <form action="/novelty/{{$novelty->id}}" method="GET">
                     <input type="submit" id="button_show" class = "btn btn-outline-primary mt-4" value="Ver Mas">
                 </form>
-                
+                @if (Auth::check())
                 <form action="/novelty/{{$novelty->id}}/edit" method="GET">
                     <input type="submit" id="button_edit" class = "btn btn-outline-primary mt-4" value="Editar">
                 </form>
@@ -27,11 +27,13 @@
                 @method('DELETE')
                 <input id="button_delete" type="submit" value="Eliminar" class="btn btn-outline-danger mt-4">
                 </form>
-
+                @endif 
             </section>
             @endforeach
+            @if (Auth::check())
             <a id="button_create" href="/novelty/create" class="btn btn-outline-success mt-4">Crear</a>
-            </main>
+            @endif 
+        </main>
         </div>
     </div>
 </div>
