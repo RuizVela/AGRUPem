@@ -14,7 +14,7 @@
                 <h2 id="title">{{$post->title_catalan}}</h2>
                 <p id="content">{!! Str::words($post->content_catalan, 10,"...")!!}</p>
                 <!-- TODO posicionamiento de la imagen -->
-
+                @if (Auth::check())
                 <form action="/post/{{$post->id}}/edit" method="GET">
                     <input type="submit" id="button_edit" class = "btn btn-outline-primary mt-4" value="Editar">
                 </form>
@@ -24,11 +24,13 @@
                 @method('DELETE') 
                 <input id="button_delete" type="submit" value="Eliminar post" class="btn btn-outline-danger mt-4">
                 </form>
-
+                @endif 
             </section>
-            @endforeach
+            @endforeach 
+            @if (Auth::check())
             <a id="button_create" href="/post/create" class="btn btn-outline-success mt-4">Crear post</a>
-            </main>
+            @endif    
+        </main>
         </div>
     </div>
 </div>

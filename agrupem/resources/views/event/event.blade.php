@@ -3,7 +3,10 @@ Título: {{$event->title}}
 <tr><td>Catalan <br>{{$event->content_catalan}}</td>
     <td>Castellano <br>{{$event->content_spanish}}</td></tr>
 </table>
-<form action="/event/{{$event->id}}/edit" method="GET">
+
+
+@if (Auth::check())
+    <form action="/event/{{$event->id}}/edit" method="GET">
     <input type="submit" value="Editar">
 </form>
 <form action="/event/{{$event->id}}" method="POST">
@@ -11,3 +14,6 @@ Título: {{$event->title}}
     @method('DELETE')
     <input type="submit" value="Eliminar">
 </form>
+@endif 
+
+{{-- TODO: preguntar david por el if --}}
