@@ -25,7 +25,7 @@ class ResourceController extends Controller
      */
     public function create()
     {
-        return view('resources.createResource');
+        return view('resources.createResources');
     }
 
     /**
