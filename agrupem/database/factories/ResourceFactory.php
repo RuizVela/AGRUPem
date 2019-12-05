@@ -7,7 +7,8 @@ use Faker\Generator as Faker;
 
 $factory->define(Resource::class, function (Faker $faker) {
     return [
-        'title' => $faker->sentence(1),
+        'title_catalan' => $faker->sentence(1),
+        'title_spanish' => $faker->sentence(1),
         'url' => $faker->url()
     ];
 });
