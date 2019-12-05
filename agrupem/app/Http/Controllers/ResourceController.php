@@ -33,6 +33,6 @@ class ResourceController extends Controller
     public function destroy(Resource $resource)
     {
         $resource->delete();
-        return redirect()->back();
+        return redirect('resource');
     }
 }
