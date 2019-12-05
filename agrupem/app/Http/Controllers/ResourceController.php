@@ -25,7 +25,7 @@ class ResourceController extends Controller
      */
     public function create()
     {
-        return view('resources.createResources');
+        return view('resources.create');
     }
 
     /**
@@ -63,7 +63,7 @@ class ResourceController extends Controller
      */
     public function edit(Resource $resource)
     {
-        return view('resources.editResource', ['resource'=> $resource]);
+        return view('resources.edit', ['resource'=> $resource]);
     }
 
     /**

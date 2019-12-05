@@ -25,7 +25,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('blog.createPost');
+        return view('blog.create');
     }
 
     /**
@@ -63,7 +63,7 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        return view('blog.editPost', ['post' => $post]);
+        return view('blog.edit', ['post' => $post]);
     }
 
     /**
