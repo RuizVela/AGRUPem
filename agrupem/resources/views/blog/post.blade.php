@@ -14,6 +14,7 @@
                 <p id="content">{{$post->content_catalan}}</p>
                 <!-- TODO posicionamiento de la imagen -->
 
+                @if (Auth::check())
                 <form action="/post/{{$post->id}}/edit" method="GET">
                     <input type="submit" id="button_edit" class = "btn btn-outline-primary mt-4" value="Editar">
                 </form>
@@ -23,6 +24,8 @@
                 @method('DELETE') 
                 <input id="button_delete" type="submit" value="Eliminar post" class="btn btn-outline-danger mt-4">
                 </form>
+                @endif
+                <a id="button_return" href="/post" class="btn btn-outline-success mt-4">Volver index</a>
             </section>
             </main>
         </div>

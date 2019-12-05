@@ -37,6 +37,6 @@ class NoveltyController extends Controller
     public function destroy(Novelty $novelty)
     {
         $novelty->delete();
-        return redirect()->back();
+        return redirect('novelty');
     }
 }
