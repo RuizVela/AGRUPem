@@ -19,7 +19,7 @@
                     <input type="submit" id="button_show" class = "btn btn-outline-primary mt-4" value="Ver Mas">
                 </form>
 
-                @if (Auth::check())
+                @auth
                 <form action="/post/{{$post->id}}/edit" method="GET">
                     <input type="submit" id="button_edit" class = "btn btn-outline-primary mt-4" value="Editar">
                 </form>
@@ -29,10 +29,10 @@
                 @method('DELETE') 
                 <input id="button_delete" type="submit" value="Eliminar post" class="btn btn-outline-danger mt-4">
                 </form>
-                @endif 
+                @endauth
             </section>
             @endforeach 
-            @if (Auth::check())
+            @auth
             <a id="button_create" href="/post/create" class="btn btn-outline-success mt-4">Crear post</a>
             @endif    
         </main>

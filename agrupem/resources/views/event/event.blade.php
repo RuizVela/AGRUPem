@@ -5,7 +5,7 @@ Título: {{$event->title}}
 </table>
 
 
-@if (Auth::check())
+@auth
     <form action="/event/{{$event->id}}/edit" method="GET">
     <input type="submit" value="Editar">
 </form>
@@ -14,6 +14,6 @@ Título: {{$event->title}}
     @method('DELETE')
     <input type="submit" value="Eliminar">
 </form>
-@endif 
+@endauth 
 
 {{-- TODO: preguntar david por el if --}}
