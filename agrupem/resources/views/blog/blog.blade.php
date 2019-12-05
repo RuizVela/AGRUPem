@@ -12,9 +12,7 @@
             @foreach ($posts as $post)
             <section class="card">
                 <h2 id="title">{{$post->title_catalan}}</h2>
-                <h2 id="title">{{$post->title_spanish}}</h2>
-                <p id="content">{{$post->content_catalan}}</p>
-                <p id="content">{{$post->content_spanish}}</p>
+                <p id="content">{!! Str::words($post->content_catalan, 10,"...")!!}</p>
                 <!-- TODO posicionamiento de la imagen -->
 
                 <form action="/post/{{$post->id}}/edit" method="GET">
