@@ -44,9 +44,11 @@
                                         Idioma <span class="caret"></span>
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="lang/cat"><img src="{{asset('img/cat.png')}}" width="30px" height="20x"> Catalan</a>
-                                        <a class="dropdown-item" href="lang/es"><img src="{{asset('img/es.png')}}" width="30px" height="20x"> Castellano</a>
-                                        
+                                        <form action="/lang/cat" method="GET">
+                                        <input type="submit" value="Catalan"></form>
+                                        <form action="/lang/es" method="GET">
+                                        <input type="submit" value="Castellano"></form>
+                                       
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
