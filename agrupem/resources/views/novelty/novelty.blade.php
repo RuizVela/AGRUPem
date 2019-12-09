@@ -11,8 +11,8 @@
             <main>
         
             <section class="card">
-                <a id="resource_link" href="{{$novelty->id}}">{{$novelty->title_catalan}}</a>
-                <a id="resource_link" href="{{$novelty->id}}">{{$novelty->content_catalan}}</a>
+                <a id="resource_link" href="{{$novelty->id}}">{{$novelty->getLocalTitle()}}</a>
+                <a id="resource_link" href="{{$novelty->id}}">{{$novelty->getLocalContent()}}</a>
             </section>
             @auth
                 <form action="/novelty/{{$novelty->id}}/edit" method="GET">
