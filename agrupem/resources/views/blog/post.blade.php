@@ -10,8 +10,8 @@
             </header>
             <main>
             <section class="card">
-                <h2 id="title">{{$post->title_catalan}}</h2>
-                <p id="content">{{$post->content_catalan}}</p>
+                <h2 id="title">{{$post->getLocalTitle()}}</h2>
+                <p id="content">{{$post->getLocalContent()}}</p>
                 <!-- TODO posicionamiento de la imagen -->
 
                 @auth
