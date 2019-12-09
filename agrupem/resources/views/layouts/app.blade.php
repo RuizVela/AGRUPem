@@ -38,6 +38,17 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                            @php $locale = session()->get('locale'); @endphp
+                            <li class="nav-item dropdown">
+                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                        Idioma <span class="caret"></span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                        <form action="/lang/cat" method="GET">
+                                        <input type="submit" value="Catalan"></form>
+                                        <form action="/lang/es" method="GET">
+                                        <input type="submit" value="Castellano"></form>
+                                       
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">

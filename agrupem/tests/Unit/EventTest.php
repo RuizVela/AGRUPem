@@ -6,6 +6,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 use App\Event;
+use App;
 
 class EventTest extends TestCase
 {
@@ -31,7 +32,7 @@ class EventTest extends TestCase
         $this->assertCount(3,$nonExpiredEvents);
     }
 
-    public function test_expire_test()
+    public function test_expire_event()
     {
         $event=factory(Event::class)->create();
         $this->assertFalse($event->expired);
@@ -52,8 +53,6 @@ class EventTest extends TestCase
         factory(Event::class)->create(['expired'=>false,'date'=>$yesterday]);
         $events = Event::getPastEvents();
         $this->assertCount(1,$events);
-        // $response=factory(Event::class)->create(['expired'=>false,'date'=>$yesterday]);
-        // $this->assertContains($response,[$events]); TODO: no funciona porque el objeto no es exactamente igual.
     }
     public function test_dont_get_expired_events()
     {
@@ -69,4 +68,68 @@ class EventTest extends TestCase
         $events = Event::getPastEvents();
         $this->assertCount(0,$events);
     }
+    public function test_get_catalan_title()
+     {   
+         App::setLocale('cat');
+         $event=factory(Event::class)->create();
+         $expected=$event->title_catalan;
+         $response = $event->getLocalTitle();
+         $this->assertEquals($expected,$response);
+    }
+    public function test_get_spanish_title()
+    {   
+        App::setLocale('es');
+        $event=factory(Event::class)->create();
+        $expected=$event->title_spanish;
+        $response = $event->getLocalTitle();
+        $this->assertEquals($expected,$response);
+   }
+   public function test_get_catalan_title_if_no_spanish_title()
+   {
+    App::setLocale('es');
+    $event=factory(Event::class)->create(['title_spanish'=>NULL]);
+    $expected=$event->title_catalan;
+    $response = $event->getLocalTitle();
+    $this->assertEquals($expected,$response);
+   }
+   public function test_get_catalan_title_if_non_specific_locale()
+   {
+    App::setLocale('en');
+    $event=factory(Event::class)->create();
+    $expected=$event->title_catalan;
+    $response = $event->getLocalTitle();
+    $this->assertEquals($expected,$response);
+   }
+   public function test_get_catalan_content()
+   {   
+       App::setLocale('cat');
+       $event=factory(Event::class)->create();
+       $expected=$event->content_catalan;
+       $response = $event->getLocalContent();
+       $this->assertEquals($expected,$response);
+  }
+  public function test_get_spanish_content()
+  {   
+      App::setLocale('es');
+      $event=factory(Event::class)->create();
+      $expected=$event->content_spanish;
+      $response = $event->getLocalContent();
+      $this->assertEquals($expected,$response);
+ }
+ public function test_get_catalan_content_if_no_spanish_content()
+ {
+  App::setLocale('es');
+  $event=factory(Event::class)->create(['content_spanish'=>NULL]);
+  $expected=$event->content_catalan;
+  $response = $event->getLocalContent();
+  $this->assertEquals($expected,$response);
+ }
+ public function test_get_catalan_content_if_non_specific_locale()
+ {
+  App::setLocale('en');
+  $event=factory(Event::class)->create();
+  $expected=$event->content_catalan;
+  $response = $event->getLocalContent();
+  $this->assertEquals($expected,$response);
+ }
 }

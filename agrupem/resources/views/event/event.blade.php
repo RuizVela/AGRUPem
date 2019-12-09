@@ -1,8 +1,13 @@
-Título: {{$event->title}}
-<table border="1px">
-<tr><td>Catalan <br>{{$event->content_catalan}}</td>
-    <td>Castellano <br>{{$event->content_spanish}}</td></tr>
-</table>
+
+@extends('layouts.app')
+
+@section('content')
+
+
+{{$event->getLocalTitle()}}
+
+<br>{{$event->getLocalContent()}}
+
 
 
 @auth
@@ -15,5 +20,3 @@ Título: {{$event->title}}
     <input type="submit" value="Eliminar">
 </form>
 @endauth 
-
-{{-- TODO: preguntar david por el if --}}

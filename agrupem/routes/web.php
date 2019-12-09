@@ -6,7 +6,9 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('lang/{locale}', 'HomeController@lang')->name('language');
+
+Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
 
 Route::resource('post', 'PostController');
 Route::get('/post/create', 'PostController@create')->name('post.create')->middleware('auth');
