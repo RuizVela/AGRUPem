@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+use App\Image;
 use Illuminate\Http\Request;
 use App\Traits\UploadTrait;
 
@@ -40,9 +41,14 @@ class PostController extends Controller
     public function store(Request $request)
     {
        
-        Post::create($request->all());
-        Post::updateImagePost($request);
+        $post=Post::create($request->all());
+        $post_id=$post->id;
+        $path=Post::updateImagePost($request,$post->id);
+        Image::create(['post_id'=>$post_id , 'url'=>$path]);
+        
         return redirect('post');
+        
+       
     }
 
     /**
@@ -77,8 +83,8 @@ class PostController extends Controller
     public function update(Request $request, Post $post)
     {   
         $post = Post::find($post->id);
-        dd($post);
         $post->update($request->all());
+
         return redirect('/post');
     }
 

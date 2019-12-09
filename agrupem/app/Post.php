@@ -10,7 +10,10 @@ class Post extends Model
 {
     protected $fillable = ['id', 'title_catalan', 'title_spanish', 'content_catalan', 'content_spanish'];
 
-    
+    public function images()
+    {
+        return $this->hasMany(Image::class);
+    }
 
 
     public function getImageAttribute()
@@ -19,9 +22,9 @@ class Post extends Model
     }
 
 
-    static function updateImagePost(Request $request)
+    static function updateImagePost(Request $request, $post_id )
     {
-        
+       
        
         $request->validate([
             
@@ -36,18 +39,22 @@ class Post extends Model
         {
            
             $image = $request->file('post_image');
-            // $id_post=$request->id;
             
-            $name = uniqid().'_'.time();
+            
+            $name = $post_id.'_'.time();
             $filePath = $name. '.' . $image->getClientOriginalExtension();
-            $image->storeAs('public',$filePath);
+            $image->storeAs("public/$post_id",$filePath);
+            $route="public/$post_id/$filePath";
+            
+
+            return $route; 
             
                     
         }
         
         
 
-        dd($request);
+      
        
     }
 

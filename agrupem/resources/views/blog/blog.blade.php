@@ -10,7 +10,7 @@
             </header>
             <main>
             @foreach ($posts as $post)
-            
+           
             <section class="card">
                 <h2 id="title">{{$post->title_catalan}}</h2>
                 <h2 id="title">{{$post->title_spanish}}</h2>
@@ -18,7 +18,10 @@
                 <p id="content">{{$post->content_spanish}}</p>
 
                 <!-- TO DO MOSTRAR POST IMAGEN -->
-                <img src="{{asset($post->post_image)}}" alt="image">
+                @if($post->images)
+                    <img src="public/{{$post->images[0]}}" alt="image">
+                @endif
+                
 
                 <form action="/post/{{$post->id}}/edit" method="GET">
                     <input type="submit" id="button_edit" class = "btn btn-outline-primary mt-4" value="Editar">
