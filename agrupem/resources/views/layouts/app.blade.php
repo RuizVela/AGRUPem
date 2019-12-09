@@ -38,6 +38,15 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                            @php $locale = session()->get('locale'); @endphp
+                            <li class="nav-item dropdown">
+                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                        Idioma <span class="caret"></span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="lang/cat"><img src="{{asset('img/cat.png')}}" width="30px" height="20x"> Catalan</a>
+                                        <a class="dropdown-item" href="lang/es"><img src="{{asset('img/es.png')}}" width="30px" height="20x"> Castellano</a>
+                                        
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
