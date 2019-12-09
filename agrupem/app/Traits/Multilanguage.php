@@ -25,4 +25,25 @@ trait Multilanguage
         }
         return $this->getCatalanTitle();
     }
+    private function getCatalanContent()
+    {
+        $content = $this->content_catalan;
+        return $content;
+    }
+    private function getSpanishContent()
+    {
+        if  ($this->content_spanish == null)
+        {
+            return $this->content_catalan;
+        }
+        $content = $this->content_spanish;
+        return $content;
+    }
+    public function getLocalContent()
+    {
+        if (App::isLocale('es')) {
+            return $this->getSpanishContent();
+        }
+        return $this->getCatalanContent();
+    }
 }

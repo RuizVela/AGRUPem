@@ -6,7 +6,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('lang/{locale}', 'HomeController@lang');
+Route::get('lang/{locale}', 'HomeController@lang')->name('lang');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
