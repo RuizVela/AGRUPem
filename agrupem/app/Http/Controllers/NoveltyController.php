@@ -21,10 +21,6 @@ class NoveltyController extends Controller
         Novelty::create($request->all());
         return redirect('novelty');
     }
-    public function show(Novelty $novelty)
-    {   
-        return view('novelty.novelty', ['novelty'=>$novelty]);
-    }
     public function edit(Novelty $novelty)
     {
         return view('novelty.edit', ['novelty'=>$novelty]);

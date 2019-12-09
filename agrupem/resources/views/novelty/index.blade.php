@@ -12,11 +12,8 @@
             @foreach ($novelties as $novelty)
             <section class="card">
                 <h3 id="resource_link" href="{{$novelty->url}}">{{$novelty->title_catalan}}</h3>
-                <p id="resource_link" href="{{$novelty->url}}">{!! Str::words($novelty->content_catalan, 20,"...")!!}</p>
+                <p id="resource_link" href="{{$novelty->url}}">{{$novelty->content_catalan}}</p>
                 
-                <form action="/novelty/{{$novelty->id}}" method="GET">
-                    <input type="submit" id="button_show" class = "btn btn-outline-primary mt-4" value="Ver Mas">
-                </form>
                 @auth
                 <form action="/novelty/{{$novelty->id}}/edit" method="GET">
                     <input type="submit" id="button_edit" class = "btn btn-outline-primary mt-4" value="Editar">

@@ -18,7 +18,7 @@ Route::get('/resource/create', 'ResourceController@create')->name('resource.crea
 Route::get('/resource/{resource}/edit', 'ResourceController@edit')->name('resource.edit')->middleware('auth');
 Route::DELETE('/resource/{resource}', 'ResourceController@destroy')->name('resource.destroy')->middleware('auth');
 
-Route::resource('novelty', 'NoveltyController');
+Route::resource('novelty', 'NoveltyController')->except('show');
 Route::get('/novelty/create', 'NoveltyController@create')->name('novelty.create')->middleware('auth');
 Route::get('/novelty/{novelty}/edit', 'NoveltyController@edit')->name('novelty.edit')->middleware('auth');
 Route::DELETE('/novelty/{novelty}', 'NoveltyController@destroy')->name('novelty.destroy')->middleware('auth');
