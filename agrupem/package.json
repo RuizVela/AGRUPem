@@ -22,5 +22,9 @@
         "vue": "^2.5.17",
         "vue-template-compiler": "^2.6.10"
     },
-    "dependencies": {}
+    "dependencies": {
+        "bs4-summernote": "^0.8.10",
+        "codemirror": "^5.49.2",
+        "summernote": "^0.8.12"
+    }
 }

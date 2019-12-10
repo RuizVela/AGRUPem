@@ -13,12 +13,11 @@ class PostController extends Controller
     {
         $posts = Post::all();
         
-        return view('blog.blog',['posts'=>$posts,]);
+        return view('blog.index',['posts'=>$posts,]);
     }
     public function create()
     {
         return view('blog.create');
-        return view('blog.createPost'); 
     }
     public function store(Request $request)
     {

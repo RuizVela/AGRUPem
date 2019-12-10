@@ -9,19 +9,10 @@
                 <div class="card-header">AGRUPem Blog</div>
             </header>
             <main>
-            @foreach ($posts as $post)
-           
             <section class="card">
-                
+
                 <h2 id="title">{{$post->getLocalTitle()}}</h2>
-                <p id="content">{{$post->getLocalContent()}}</p>
-                <!-- TO DO MOSTRAR POST IMAGEN -->
-                @if($post->images)
-                    <img src="public/{{$post->images[0]}}" alt="image">
-                @endif
-                
-               
-                <!-- TODO posicionamiento de la imagen -->
+                {!! html_entity_decode($post->getLocalContent()) !!}
 
                 @auth
                 <form action="/post/{{$post->id}}/edit" method="GET">
