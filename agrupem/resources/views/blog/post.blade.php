@@ -10,9 +10,9 @@
             </header>
             <main>
             <section class="card">
+
                 <h2 id="title">{{$post->getLocalTitle()}}</h2>
-                <p id="content">{{$post->getLocalContent()}}</p>
-                <!-- TODO posicionamiento de la imagen -->
+                {!! html_entity_decode($post->getLocalContent()) !!}
 
                 @auth
                 <form action="/post/{{$post->id}}/edit" method="GET">

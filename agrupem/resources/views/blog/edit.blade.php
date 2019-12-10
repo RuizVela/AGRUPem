@@ -20,7 +20,7 @@
                         </div>
                         <div>
                             <label for="content_catalan">Contingut</label>
-                            <textarea id="content_catalan" name="content_catalan" cols="70" rows="30">{{$post->content_catalan}}</textarea>
+                            <textarea id="content_edit_catalan" name="content_catalan" cols="70" rows="30">{{$post->content_catalan}}</textarea>
                         </div>
                     </section>
                     <section class="flex-column p-2">
@@ -30,7 +30,7 @@
                         </div>
                         <div>
                             <label for="content_spanish">Contenido</label>
-                            <textarea name="content_spanish" id="content_spanish" cols="30" rows="10" value="{{$post->content_spanish}}">{{$post->content_spanish}}</textarea>
+                            <textarea name="content_spanish" id="content_edit_spanish" cols="30" rows="10" value="{{$post->content_spanish}}">{{$post->content_spanish}}</textarea>
                         </div>
                     </section>
                     <input type="file" class="btn btn-outline-primary mt-4" name="">
