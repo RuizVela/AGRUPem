@@ -2,7 +2,11 @@ Título: {{$event->title}}
 <table border="1px">
 <tr><td>Catalan <br>{{$event->content_catalan}}</td>
     <td>Castellano <br>{{$event->content_spanish}}</td></tr>
+    
 </table>
+@foreach($event->images as $image)
+<img src="{{url($image->url)}}" style="max-width:100%">
+@endforeach
 
 
 @auth

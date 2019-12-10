@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Novelty;
+use App\Image;
 use Illuminate\Http\Request;
 
 class NoveltyController extends Controller
@@ -18,8 +19,12 @@ class NoveltyController extends Controller
     }
     public function store(Request $request)
     {
-        Novelty::create($request->all());
-        return redirect('novelty');
+        $novelty=Novelty::create($request->all());
+        $novelty_id=$novelty->id;
+        $path=Image::updateImageNovelty($request, $novelty->id);
+        Image::create(['novelty_id'=>$novelty_id , 'url'=>"storage/".$path]);
+
+        return redirect('/novelty/'.$novelty->id);
     }
     public function show(Novelty $novelty)
     {   
@@ -32,6 +37,9 @@ class NoveltyController extends Controller
     public function update(Request $request, Novelty $novelty)
     {
         $novelty->update($request->all());
+        $novelty_id = $novelty->id;
+        $path=Image::updateImageNovelty($request,$novelty->id);
+        Image::create(['novelty_id'=>$novelty_id , 'url'=>"storage/".$path]);
         return redirect('novelty');
     }
     public function destroy(Novelty $novelty)

@@ -1,5 +1,5 @@
 <form method="POST" action="/event" enctype="multipart/form-data">
-    @csrf
+    <?php echo csrf_field(); ?>
     Título catalan: <input required type="text" name="title_catalan"><br>
     Título castellano: <input type="text" name="title_spanish"><br>
     Contenido en catalan:<input required type="textarea" name="content_catalan"><br>
@@ -8,4 +8,4 @@
 
     <input required type="date" name="date" value="<?php echo date("Y-m-d");?>">
     <input type="submit" value="Crear Evento" >
-</form>
+</form><?php /**PATH C:\xampp\htdocs\Agrupem\agrupem\resources\views/event/create.blade.php ENDPATH**/ ?>

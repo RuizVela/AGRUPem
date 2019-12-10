@@ -11,9 +11,13 @@
             <main>
         
             <section class="card">
-                <a id="resource_link" href="{{$novelty->id}}">{{$novelty->title_catalan}}</a>
-                <a id="resource_link" href="{{$novelty->id}}">{{$novelty->content_catalan}}</a>
+                <h3 id="title_catalan">{{$novelty->title_catalan}}</h3>
+                <p id="content_catalan">{{$novelty->content_catalan}}</p>
             </section>
+                @foreach($novelty->images as $image)
+                <img src="{{url($image->url)}}" style="max-width:100%">
+                <!-- TODO poner estilos en app.css -->
+                @endforeach
             @auth
                 <form action="/novelty/{{$novelty->id}}/edit" method="GET">
                     <input type="submit" id="button_edit" class = "btn btn-outline-primary mt-4" value="Editar">

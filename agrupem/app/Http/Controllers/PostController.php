@@ -12,9 +12,8 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::all();
-        $cqurrentImage = Post::getPostImage();
         
-        return view('blog.blog',['posts'=>$posts,'post_Image' => $currentImage]);
+        return view('blog.blog',['posts'=>$posts,]);
     }
     public function create()
     {
@@ -24,11 +23,8 @@ class PostController extends Controller
     public function store(Request $request)
     {
        
-        $post=Post::create($request->all());
-        $post_id=$post->id;
-        $path=Post::updateImagePost($request,$post->id);
-        Image::create(['post_id'=>$post_id , 'url'=>$path]);
-        
+        Post::create($request->all());
+                
         return redirect('post');
         
        

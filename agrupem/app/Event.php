@@ -2,7 +2,7 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Model; 
 
 class Event extends Model
 {
@@ -36,5 +36,10 @@ class Event extends Model
         $events = Event::getPastEvents();
         foreach ($events as $event) 
         $event->expireEvent();
+    }
+
+    public function images()
+    {
+        return $this->hasMany(Image::class);
     }
 }
