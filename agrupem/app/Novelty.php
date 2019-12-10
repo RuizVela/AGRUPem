@@ -10,4 +10,8 @@ class Novelty extends Model
     use Multilanguage;
     protected $fillable = ['id', 'title_catalan', 'title_spanish', 'content_catalan', 'content_spanish'];
 
+    public function images()
+    {
+        return $this->hasMany(Image::class);
+    }
 }

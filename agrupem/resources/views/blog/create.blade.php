@@ -36,7 +36,7 @@
                     <!-- TODO input alt de la imagen -->
                     <input type="submit" class="btn btn-outline-success mt-4" value="Guardar">
                     </form>
-                </section>
+                </section> 
             </main>
         </div>
     </div>

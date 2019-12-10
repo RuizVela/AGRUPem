@@ -5,6 +5,7 @@ namespace App;
 use App\traits\Multilanguage;
 use Illuminate\Database\Eloquent\Model;
 
+
 class Event extends Model
 {
     use Multilanguage;
@@ -38,5 +39,10 @@ class Event extends Model
         $events = Event::getPastEvents();
         foreach ($events as $event) 
         $event->expireEvent();
+    }
+
+    public function images()
+    {
+        return $this->hasMany(Image::class);
     }
 }

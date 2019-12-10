@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Event;
+use App\Event; 
+use App\Image; 
 use Illuminate\Http\Request;
 
 class EventController extends Controller
@@ -21,7 +22,11 @@ class EventController extends Controller
 
     public function store(Request $request)
     {
-        Event::create($request->all());
+       
+        $event=Event::create($request->all());
+        $event_id=$event->id;
+        $path=Image::updateImageEvent($request,$event->id);
+        Image::create(['event_id'=>$event_id , 'url'=>"storage/".$path]);
         return redirect('event');
     }
 
@@ -38,6 +43,11 @@ class EventController extends Controller
     public function update(Request $request, Event $event)
     {
         $event->update($request->all());
+        $path=Image::updateImageEvent($request,$event->id);
+        $event_id=$event->id;
+        $image=Image::create(['event_id'=>$event_id , 'url'=>"storage/".$path]);
+
+        
         return redirect("event/$event->id");
     }
 

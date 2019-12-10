@@ -13,6 +13,8 @@
             <section class="card">
                 <h3 id="resource_link" href="{{$novelty->url}}">{{$novelty->getLocalTitle()}}</h3>
                 <p id="resource_link" href="{{$novelty->url}}">{!! Str::words($novelty->getLocalContent(), 20,"...")!!}</p>
+                <h3 id="title_catalan">{{$novelty->title_catalan}}</h3>
+                <p id="content_catalan">{!! Str::words($novelty->content_catalan, 20,"...")!!}</p>
                 
                 @auth
                 <form action="/novelty/{{$novelty->id}}/edit" method="GET">
