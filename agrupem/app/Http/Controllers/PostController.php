@@ -56,7 +56,7 @@ class PostController extends Controller
         $post = Post::find($post->id);
         $post->update($request->all());
 
-        return redirect('/post');
+        return redirect('/post'); 
     }
     public function destroy(Post $post)
     {

@@ -47,7 +47,7 @@ class Post extends Model
             $route="public/$post_id/$filePath";
             
 
-            return $route; 
+            return $route;  
             
                     
         }
