@@ -29,3 +29,5 @@ Título: {{$event->title}}
     <input type="submit" value="Eliminar">
 </form>
 @endauth 
+
+@endsection
