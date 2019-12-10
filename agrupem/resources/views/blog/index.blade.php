@@ -11,8 +11,8 @@
             <main>
             @foreach ($posts as $post)
             <section class="card">
-                <h2 id="title">{{$post->title_catalan}}</h2>
-                <p id="content">{!! Str::words($post->content_catalan, 10,"...")!!}</p>
+                <h2 id="title">{{$post->getLocalTitle()}}</h2>
+                <p id="content">{!! Str::words($post->getLocalContent(), 10,"...")!!}</p>
                 <!-- TODO posicionamiento de la imagen -->
 
                 <form action="/post/{{$post->id}}" method="GET">

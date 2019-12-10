@@ -11,7 +11,9 @@
             <main>
             @foreach ($resources as $resource)
             <section class="card">
-                <a id="resource_link" href="{{$resource->url}}">{{$resource->title_catalan}}</a>
+                <a id="resource_link" href="{{$resource->url}}">
+                    {{$resource->getLocalTitle()}}
+                     </a>
                 @auth
                 <form action="/resource/{{$resource->id}}/edit" method="GET">
                     <input type="submit" id="button_edit" class = "btn btn-outline-primary mt-4" value="Editar">

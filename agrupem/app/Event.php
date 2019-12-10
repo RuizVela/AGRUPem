@@ -2,10 +2,12 @@
 
 namespace App;
 
+use App\traits\Multilanguage;
 use Illuminate\Database\Eloquent\Model;
 
 class Event extends Model
 {
+    use Multilanguage;
     protected $fillable=[
         'title_catalan','title_spanish','content_catalan','content_spanish','date', 'expired'
     ];
