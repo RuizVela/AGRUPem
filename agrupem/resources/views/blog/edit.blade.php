@@ -33,8 +33,6 @@
                             <textarea name="content_spanish" id="content_edit_spanish" cols="30" rows="10" value="{{$post->content_spanish}}">{{$post->content_spanish}}</textarea>
                         </div>
                     </section>
-                    <input type="file" class="btn btn-outline-primary mt-4" name="">
-                    <!-- TODO input alt de la imagen -->
                     <input type="submit" class="btn btn-outline-success mt-4" value="Guardar">
                     </form>
                 </section>
