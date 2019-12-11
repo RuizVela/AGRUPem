@@ -24,7 +24,7 @@ class NoveltyController extends Controller
         $path=Image::updateImageNovelty($request, $novelty->id);
         Image::create(['novelty_id'=>$novelty_id , 'url'=>"storage/".$path]);
 
-        return redirect('/novelty/'.$novelty->id);
+        return redirect('/novelty');
     }
     public function edit(Novelty $novelty)
     {
@@ -43,4 +43,6 @@ class NoveltyController extends Controller
         $novelty->delete();
         return redirect('novelty');
     }
+
+   
 }

@@ -23,6 +23,7 @@ Route::DELETE('/resource/{resource}', 'ResourceController@destroy')->name('resou
 Route::resource('novelty', 'NoveltyController')->except('show');
 Route::get('/novelty/create', 'NoveltyController@create')->name('novelty.create')->middleware('auth');
 Route::get('/novelty/{novelty}/edit', 'NoveltyController@edit')->name('novelty.edit')->middleware('auth');
+Route::post('/novelty/{novelty}', 'NoveltyController@store')->name('novelty.store')->middleware('auth');
 Route::DELETE('/novelty/{novelty}', 'NoveltyController@destroy')->name('novelty.destroy')->middleware('auth');
 
 Route::resource('event', 'EventController');
