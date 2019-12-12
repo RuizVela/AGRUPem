@@ -62,8 +62,8 @@ class Image extends Model
         ]);
 
         $novelty= Novelty::find($novelty_id);
-        if ($novelty->images){
-            $prevImage = $novelty->images;
+        if ($novelty->image){
+            $prevImage = $novelty->image;
             $prevImage->each->delete();
         }
       

@@ -4,7 +4,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">Novedades</div>
 
                 <div class="card-body">
                     <?php if(session('status')): ?>
@@ -19,10 +19,13 @@
                     <div class="carousel-inner">
                         <?php $__currentLoopData = $novelties; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index=>$novelty): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         
-                        
-                             <?php echo e($novelty->getLocalTitle()); ?>   
+                    
                             <div class="carousel-item <?php if($index==0): ?>active <?php endif; ?>">
-                            
+                             <?php echo e($novelty->getLocalTitle()); ?>   
+                            <?php if($novelty->image): ?>
+                            <img src="<?php echo e(url($novelty->image->url)); ?>" class="d-block w-100" alt="placeholder">
+                            <?php endif; ?>
+                            <?php echo e($novelty->getLocalContent()); ?>  
                             </div>
 
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
@@ -36,7 +39,7 @@
                             <span class="sr-only">Next</span>
                         </a>
                     </div>
-                    You are logged in!
+                   
                 </div>
             </div>
         </div>

@@ -6,7 +6,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">Novedades</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -20,10 +20,13 @@
                     <div class="carousel-inner">
                         @foreach($novelties as $index=>$novelty)
                         
-                        
-                             {{$novelty->getLocalTitle()}}   
+                    
                             <div class="carousel-item @if($index==0)active @endif">
-                            <img src="https://via.placeholder.com/150x100" class="d-block w-100" alt="placeholder">
+                             {{$novelty->getLocalTitle()}}   
+                            @if($novelty->image)
+                            <img src="{{url($novelty->image->url)}}" class="d-block w-100" alt="placeholder">
+                            @endif
+                            {{$novelty->getLocalContent()}}  
                             </div>
 
                         @endforeach
@@ -37,7 +40,7 @@
                             <span class="sr-only">Next</span>
                         </a>
                     </div>
-                    You are logged in!
+                   
                 </div>
             </div>
         </div>
