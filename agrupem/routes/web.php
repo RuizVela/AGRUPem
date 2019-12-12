@@ -25,6 +25,8 @@ Route::get('/novelty/create', 'NoveltyController@create')->name('novelty.create'
 Route::get('/novelty/{novelty}/edit', 'NoveltyController@edit')->name('novelty.edit')->middleware('auth');
 Route::DELETE('/novelty/{novelty}', 'NoveltyController@destroy')->name('novelty.destroy')->middleware('auth');
 
+Route::get('/calendar', 'CalendarController@calendar');
+
 Route::resource('event', 'EventController');
 Route::get('/event/create', 'EventController@create')->name('event.create')->middleware('auth');
 Route::get('/event/{event}/edit', 'EventController@edit')->name('event.edit')->middleware('auth');

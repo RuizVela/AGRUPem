@@ -10,4 +10,7 @@ Evento: {{$event->getLocalTitle()}} Fecha: {{$event->startDate}}
 </form>
 <br>
 @endforeach
+<div style="  height: 500px; width: 500px;">
+        @include('event.calendar')
+    </div>
 @endsection
