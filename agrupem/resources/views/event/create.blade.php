@@ -6,6 +6,7 @@
     Contenido en castellano:<input type="textarea" name="content_spanish"><br>
     <input type="file" class="btn btn-outline-primary mt-4" name="event_image">
 
-    <input required type="date" name="date" value="<?php echo date("Y-m-d");?>">
+    <input required type="date" name="startDate" value="<?php echo date("Y-m-d");?>">
+    <input required type="date" name="endDate" value="<?php echo date("Y-m-d");?>">
     <input type="submit" value="Crear Evento" >
 </form>
