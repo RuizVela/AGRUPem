@@ -5,7 +5,7 @@
     Contenido en catalan:<input required type="textarea" name="content_catalan"><br>
     Contenido en castellano:<input type="textarea" name="content_spanish"><br>
     <input type="file" class="btn btn-outline-primary mt-4" name="event_image">
-
+{{-- TODO: JS Para que el calendario boquee fechas anteriores --}}
     <input required type="date" name="startDate" value="<?php echo date("Y-m-d");?>">
     <input required type="date" name="endDate" value="<?php echo date("Y-m-d");?>">
     <input type="submit" value="Crear Evento" >
