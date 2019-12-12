@@ -45,7 +45,7 @@ class Image extends Model
             $image->storeAs("public/events/$event_id",$filePath);
             $route="public/events/$event_id/$filePath";
 
-            return $route;  
+            return $route;
             
         }
     
@@ -62,9 +62,9 @@ class Image extends Model
         ]);
 
         $novelty= Novelty::find($novelty_id);
-        if ($novelty->images){
-            $prevImage = $novelty->images;
-            $prevImage->each->delete();
+        if ($novelty->image){
+            $prevImage = $novelty->image;
+            $prevImage->delete();
         }
       
         
@@ -79,7 +79,7 @@ class Image extends Model
             $image->storeAs("public/novelties/$novelty_id",$filePath);  
             $route="public/novelties/$novelty_id/$filePath";
             
-            return $route;            
+            return $route;
                     
         }
     
