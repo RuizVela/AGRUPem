@@ -12,6 +12,7 @@
                 <section class="d-flex flex-row">
                     <form action="/novelty" method="post" accept-charset="UTF-8" enctype="multipart/form-data">
                     @csrf
+                    
                     <section class="flex-column p-2">
                         <div>
                             <label for="novelties_title">Títol</label>
@@ -35,6 +36,7 @@
                         </div>
                     </section>
                     <input type="submit" class="btn btn-outline-success mt-4" value="Guardar">
+                    
                     </form>
                 </section>
             </main>

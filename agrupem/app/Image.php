@@ -45,7 +45,7 @@ class Image extends Model
             $image->storeAs("public/events/$event_id",$filePath);
             $route="public/events/$event_id/$filePath";
 
-            return $route;  
+            return $route;
             
         }
     
@@ -73,13 +73,13 @@ class Image extends Model
            
             $image = $request->file('novelty_image');
             
-            
+                    
             $name = $novelty_id.'_'.time();
             $filePath = $name. '.' . $image->getClientOriginalExtension();
             $image->storeAs("public/novelties/$novelty_id",$filePath);  
             $route="public/novelties/$novelty_id/$filePath";
             
-            return $route;            
+            return $route;
                     
         }
     

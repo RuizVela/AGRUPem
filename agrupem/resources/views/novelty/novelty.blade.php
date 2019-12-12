@@ -6,7 +6,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <header class="card">
-                <div class="card-header">Novedades</div>
+                <div class="card-header">Novedades</div> 
             </header>
             <main>
         

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers; 
 
 use App\Novelty;
 use App\Image;
@@ -11,7 +11,10 @@ class NoveltyController extends Controller
     public function index()
     {
         $novelties = Novelty::all();
+       
+        
         return view('novelty.index',['novelties'=>$novelties]);
+       
     }
     public function create()
     {
@@ -24,7 +27,7 @@ class NoveltyController extends Controller
         $path=Image::updateImageNovelty($request, $novelty->id);
         Image::create(['novelty_id'=>$novelty_id , 'url'=>"storage/".$path]);
 
-        return redirect('/novelty/'.$novelty->id);
+        return redirect('/novelty');
     }
     public function edit(Novelty $novelty)
     {
@@ -43,4 +46,6 @@ class NoveltyController extends Controller
         $novelty->delete();
         return redirect('novelty');
     }
+
+   
 }
