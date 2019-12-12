@@ -12,7 +12,7 @@
             @foreach ($novelties as $novelty)
             <section class="card">
                 <h3 id="title_catalan">{{$novelty->title_catalan}}</h3>
-                <p id="content_catalan">{!! Str::words($novelty->content_catalan, 20,"...")!!}</p>
+                <p id="content_catalan">{{$novelty->content_catalan}}</p>
                 
                 @auth
                 <form action="/novelty/{{$novelty->id}}/edit" method="GET">
