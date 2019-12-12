@@ -73,7 +73,7 @@ class Image extends Model
            
             $image = $request->file('novelty_image');
             
-            
+                    
             $name = $novelty_id.'_'.time();
             $filePath = $name. '.' . $image->getClientOriginalExtension();
             $image->storeAs("public/novelties/$novelty_id",$filePath);  

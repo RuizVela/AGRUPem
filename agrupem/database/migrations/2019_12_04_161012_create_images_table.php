@@ -14,11 +14,14 @@ class CreateImagesTable extends Migration
     public function up()
     {
         Schema::create('images', function (Blueprint $table) {
+            
             $table->bigIncrements('id');
             $table->bigInteger('event_id')->nullable();
-            $table->bigInteger('novelty_id')->nullable();
+            $table->bigInteger('novelty_id')->nullable()->unsigned();
             $table->string('url');
-            $table->timestamps();
+            $table->timestamps(); 
+
+            
         });
     }
 

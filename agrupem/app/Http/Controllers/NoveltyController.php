@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers; 
 
 use App\Novelty;
 use App\Image;
@@ -11,7 +11,10 @@ class NoveltyController extends Controller
     public function index()
     {
         $novelties = Novelty::all();
+       
+        
         return view('novelty.index',['novelties'=>$novelties]);
+       
     }
     public function create()
     {
