@@ -10,12 +10,12 @@ class Event extends Model
 {
     use Multilanguage;
     protected $fillable=[
-        'title_catalan','title_spanish','content_catalan','content_spanish','date', 'expired'
+        'title_catalan','title_spanish','content_catalan','content_spanish','startDate', 'endDate', 'expired'
     ];
     static function sortByDate()
     {
         $events = Event::all();
-        $eventsSortered = $events->sortBy('date');
+        $eventsSortered = $events->sortBy('startDate');
         return $eventsSortered;
     }
     static function getNonExpiredEvents()
@@ -31,7 +31,7 @@ class Event extends Model
     static function getPastEvents()
     {
         $today = date('Y-m-d');
-        $events = Event::all()->where('date','<',$today)->where('expired', false);
+        $events = Event::all()->where('endDate','<',$today)->where('expired', false);
         return $events;
     }
     static function expirePastEvents()

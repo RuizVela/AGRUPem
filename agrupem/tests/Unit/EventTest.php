@@ -15,11 +15,11 @@ class EventTest extends TestCase
     public function test_events_ordered_by_date()
     {
         $events=factory(Event::class,15)->create();
-        $event=factory(Event::class)->create(['date'=>'0001-01-01']);
+        $event=factory(Event::class)->create(['startDate'=>'0001-01-01']);
         $events=Event::sortByDate();
         $firstEvent = $events->first();
-        $response = $firstEvent->date;
-        $expected = $event->date;
+        $response = $firstEvent->startDate;
+        $expected = $event->startDate;
         $this->assertEquals($response, $expected);
     }
     public function test_get_only_nonExpired_events()
@@ -50,21 +50,21 @@ class EventTest extends TestCase
     public function test_get_all_past_nonExpired_events()
     {
         $yesterday = date('Y-m-d',strtotime("-1 days"));
-        factory(Event::class)->create(['expired'=>false,'date'=>$yesterday]);
+        factory(Event::class)->create(['expired'=>false,'endDate'=>$yesterday]);
         $events = Event::getPastEvents();
         $this->assertCount(1,$events);
     }
     public function test_dont_get_expired_events()
     {
         $yesterday = date('Y-m-d',strtotime("-1 days"));
-        factory(Event::class)->create(['expired'=>true,'date'=>$yesterday]);
+        factory(Event::class)->create(['expired'=>true,'endDate'=>$yesterday]);
         $events = Event::getPastEvents();
         $this->assertCount(0,$events);
     }
     public function test_dont_get_nonPast_events()
     {
         $today = date('Y-m-d');
-        factory(Event::class)->create(['expired'=>false,'date'=>$today]);
+        factory(Event::class)->create(['expired'=>false,'endDate'=>$today]);
         $events = Event::getPastEvents();
         $this->assertCount(0,$events);
     }
