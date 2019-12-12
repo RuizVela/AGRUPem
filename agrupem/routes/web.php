@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ContactFormController;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -30,3 +32,6 @@ Route::resource('event', 'EventController');
 Route::get('/event/create', 'EventController@create')->name('event.create')->middleware('auth');
 Route::get('/event/{event}/edit', 'EventController@edit')->name('event.edit')->middleware('auth');
 Route::DELETE('/event/{event}', 'EventController@destroy')->name('event.destroy')->middleware('auth');
+
+Route::get('contact', 'ContactFormController@create');
+Route::post('contact', 'ContactFormController@store');
