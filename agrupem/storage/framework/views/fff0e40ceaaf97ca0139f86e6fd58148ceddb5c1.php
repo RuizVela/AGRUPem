@@ -23,6 +23,10 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.js"></script>
+
+    <!-- Open Street Map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
 </head>
 <body>
     <div id="app">
@@ -96,6 +100,16 @@
             <?php echo $__env->yieldContent('content'); ?>
         </main>
     </div>
+    <script>
+	var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+		osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+		osm = L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib});
+	var map = L.map('map').setView([41.73482, 1.8252], 17).addLayer(osm);
+	L.marker([41.73482, 1.8252])
+		.addTo(map)
+		.bindPopup('AGRUPem.')
+		.openPopup();
+</script>
 </body>
 </html>
 <?php /**PATH C:\xampp\htdocs\AGRUPem\agrupem\resources\views/layouts/app.blade.php ENDPATH**/ ?>
