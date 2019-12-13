@@ -11,6 +11,12 @@ then you should do a duplicate of the .env.example and call it .env. Once you ha
 
 php artisan key:generate
 
+If you want the mail function to work you should:
+
+change the .env and fill it up with your mailing system and credentials and then:
+
+php artisan config:cache
+
 Now you are ready to go.
 
 Regards, Noelia, Raúl, Andrés, Camilo y Nuria.

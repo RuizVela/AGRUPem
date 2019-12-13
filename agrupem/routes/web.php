@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ContactFormController;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -23,9 +25,15 @@ Route::DELETE('/resource/{resource}', 'ResourceController@destroy')->name('resou
 Route::resource('novelty', 'NoveltyController')->except('show');
 Route::get('/novelty/create', 'NoveltyController@create')->name('novelty.create')->middleware('auth');
 Route::get('/novelty/{novelty}/edit', 'NoveltyController@edit')->name('novelty.edit')->middleware('auth');
+Route::post('/novelty/{novelty}', 'NoveltyController@store')->name('novelty.store')->middleware('auth');
 Route::DELETE('/novelty/{novelty}', 'NoveltyController@destroy')->name('novelty.destroy')->middleware('auth');
+
+Route::get('/calendar', 'CalendarController@calendar');
 
 Route::resource('event', 'EventController');
 Route::get('/event/create', 'EventController@create')->name('event.create')->middleware('auth');
 Route::get('/event/{event}/edit', 'EventController@edit')->name('event.edit')->middleware('auth');
 Route::DELETE('/event/{event}', 'EventController@destroy')->name('event.destroy')->middleware('auth');
+
+Route::get('contact', 'ContactFormController@create');
+Route::post('contact', 'ContactFormController@store');
