@@ -87,9 +87,9 @@
                 <div class="links">
                     <a onclick="window.location='{{ url("post") }}'">Blog</a>
                     <a onclick="window.location='{{ url("resource") }}'">Recursos</a>
-                    <a onclick="window.location='{{ url("event") }}'">Esdeveniments</a>
-                    <a onclick="window.location='{{ url("novelty") }}'">Novetats</a>
-                    <a onclick="window.location='{{ url("contact") }}'"}>Contactan's</a>
+                    <a onclick="window.location='{{ url("event") }}'">@lang('welcome.events')</a>
+                    <a onclick="window.location='{{ url("novelty") }}'">@lang('welcome.novelties')</a>
+                    <a onclick="window.location='{{ url("contact") }}'"}>@lang('welcome.contact')</a>
                 </div>
             </div>
         </div>

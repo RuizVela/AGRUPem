@@ -87,9 +87,9 @@
                 <div class="links">
                     <a onclick="window.location='<?php echo e(url("post")); ?>'">Blog</a>
                     <a onclick="window.location='<?php echo e(url("resource")); ?>'">Recursos</a>
-                    <a onclick="window.location='<?php echo e(url("event")); ?>'">Esdeveniments</a>
-                    <a onclick="window.location='<?php echo e(url("novelty")); ?>'">Novetats</a>
-                    <a onclick="window.location='<?php echo e(url("image")); ?>'"}>Imatges</a>
+                    <a onclick="window.location='<?php echo e(url("event")); ?>'"><?php echo app('translator')->get('welcome.events'); ?></a>
+                    <a onclick="window.location='<?php echo e(url("novelty")); ?>'"><?php echo app('translator')->get('welcome.novelties'); ?></a>
+                    <a onclick="window.location='<?php echo e(url("contact")); ?>'"}><?php echo app('translator')->get('welcome.contact'); ?></a>
                 </div>
             </div>
         </div>
