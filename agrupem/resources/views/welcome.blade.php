@@ -89,7 +89,7 @@
                     <a onclick="window.location='{{ url("resource") }}'">Recursos</a>
                     <a onclick="window.location='{{ url("event") }}'">Esdeveniments</a>
                     <a onclick="window.location='{{ url("novelty") }}'">Novetats</a>
-                    <a onclick="window.location='{{ url("image") }}'"}>Imatges</a>
+                    <a onclick="window.location='{{ url("contact") }}'"}>Contactan's</a>
                 </div>
             </div>
         </div>
