@@ -10,10 +10,8 @@ class HomeController extends Controller
     public function index()
     {
         $novelties = Novelty::all();
-        //dd($novelties);
         return view('home',['novelties'=>$novelties]);
-    
-    
+
     }
     public function lang($locale)
     {
