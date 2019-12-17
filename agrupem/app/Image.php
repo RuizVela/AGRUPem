@@ -18,7 +18,8 @@ class Image extends Model
         return $this->belongsTo(Novelty::class);
     }
 
-    static function updateImageEvent($request, $event_id )
+
+    static function uploadImageEvent($request, $event_id) 
     {
            
         $request->validate([
@@ -52,7 +53,7 @@ class Image extends Model
        
     }
 
-    static function updateImageNovelty($request, $novelty_id )
+    static function uploadImageNovelty($request, $novelty_id )
     {
            
         $request->validate([

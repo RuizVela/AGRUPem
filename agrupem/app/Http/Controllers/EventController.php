@@ -25,7 +25,7 @@ class EventController extends Controller
        
         $event=Event::create($request->all());
         $event_id=$event->id;
-        $path=Image::updateImageEvent($request,$event->id);
+        $path=Image::uploadImageEvent($request,$event->id);
         Image::create(['event_id'=>$event_id , 'url'=>"storage/".$path]);
         return redirect('event');
     }
@@ -43,9 +43,9 @@ class EventController extends Controller
     public function update(Request $request, Event $event)
     {
         $event->update($request->all());
-        $path=Image::updateImageEvent($request,$event->id);
+        $path=Image::uploadImageEvent($request,$event->id);
         $event_id=$event->id;
-        $image=Image::create(['event_id'=>$event_id , 'url'=>"storage/".$path]);
+        Image::create(['event_id'=>$event_id , 'url'=>"storage/".$path]);
 
         
         return redirect("event/$event->id");

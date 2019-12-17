@@ -24,7 +24,7 @@ class NoveltyController extends Controller
     {
         $novelty=Novelty::create($request->all());
         $novelty_id=$novelty->id;
-        $path=Image::updateImageNovelty($request, $novelty->id);
+        $path=Image::uploadImageNovelty($request, $novelty->id);
         Image::create(['novelty_id'=>$novelty_id , 'url'=>"storage/".$path]);
 
         return redirect('/novelty');
@@ -37,7 +37,7 @@ class NoveltyController extends Controller
     {
         $novelty->update($request->all());
         $novelty_id = $novelty->id;
-        $path=Image::updateImageNovelty($request,$novelty->id);
+        $path=Image::uploadImageNovelty($request,$novelty->id);
         Image::create(['novelty_id'=>$novelty_id , 'url'=>"storage/".$path]);
         return redirect('novelty');
     }
