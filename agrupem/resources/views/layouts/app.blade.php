@@ -49,9 +49,9 @@
                     <ul class="navbar-nav ml-auto">
                             @php $locale = session()->get('locale'); @endphp
                                         <form action="/lang/cat" method="GET">
-                                        <input type="submit" value="Catalan"></form>
+                                        <input class="button btn" type="submit" value="Catalan"></form>
                                         <form action="/lang/es" method="GET">
-                                        <input type="submit" value="Castellano"></form>
+                                        <input class="button btn" type="submit" value="Castellano"></form>
                                        
                         <!-- Authentication Links -->
                         @guest
