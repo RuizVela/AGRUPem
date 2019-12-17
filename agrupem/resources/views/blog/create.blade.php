@@ -14,21 +14,21 @@
                     @csrf
                     <section class="flex-column p-2">
                         <div>
-                            <label for="title_catalan">Títol</label>
-                            <input id="title_catalan" type="text" name="title_catalan"></input>
+                            <label for="title_cat">Títol</label>
+                            <input id="title_cat" type="text" name="title_catalan"></input>
                         </div>
                         <div>
-                            <label for="content_catalan">Contingut</label>
+                            <label for="content_edit_catalan">Contingut</label>
                             <textarea id="content_edit_catalan" name="content_catalan" cols="30" rows="10"></textarea>
                         </div>
                     </section>
                     <section class="flex-column p-2">
                         <div>
-                            <label for="title_spanish">Título</label>
-                            <input id="title_spanish" type="text" name="title_spanish"></input>
+                            <label for="title_spa">Título</label>
+                            <input id="title_spa" type="text" name="title_spanish"></input>
                         </div>
                         <div>
-                            <label for="content_spanish">Contenido</label>
+                            <label for="content_edit_spanish">Contenido</label>
                             <textarea name="content_spanish" id="content_edit_spanish" cols="30" rows="10"></textarea>
                         </div>
                     </section>
