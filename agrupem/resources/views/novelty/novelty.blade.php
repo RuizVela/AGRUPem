@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+{{-- TODO: borrar esta vista --}}
 @section('content')
 
 <div class="container">

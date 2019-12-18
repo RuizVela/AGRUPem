@@ -31,7 +31,7 @@
                             <input type="textarea" id="novelty_content_catalan" name="content_spanish" cols="60" rows="1" value="{{$novelty->content_spanish}}"></input>
                         </div>
                         <div>
-                         <input type="file" class="btn btn-outline-primary mt-4" name="novelty_image">
+                         <input type="file" class="btn btn-outline-primary mt-4" name="image">
                         </div>
                     </section>
                     <input type="submit" class="btn btn-outline-success mt-4" value="Guardar">

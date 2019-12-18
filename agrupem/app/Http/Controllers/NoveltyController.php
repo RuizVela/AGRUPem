@@ -11,7 +11,7 @@ class NoveltyController extends Controller
     public function index()
     {
         $novelties = Novelty::all();
-       
+        
         
         return view('novelty.index',['novelties'=>$novelties]);
        
@@ -23,9 +23,9 @@ class NoveltyController extends Controller
     public function store(Request $request)
     {
         $novelty=Novelty::create($request->all());
-        $novelty_id=$novelty->id;
-        $path=Image::uploadImageNovelty($request, $novelty->id);
-        Image::create(['novelty_id'=>$novelty_id , 'url'=>"storage/".$path]);
+       
+        $novelty->uploadImage($request,$novelty);
+        
 
         return redirect('/novelty');
     }
@@ -36,9 +36,9 @@ class NoveltyController extends Controller
     public function update(Request $request, Novelty $novelty)
     {
         $novelty->update($request->all());
-        $novelty_id = $novelty->id;
-        $path=Image::uploadImageNovelty($request,$novelty->id);
-        Image::create(['novelty_id'=>$novelty_id , 'url'=>"storage/".$path]);
+        
+        $novelty->uploadImage($request,$novelty);
+        
         return redirect('novelty');
     }
     public function destroy(Novelty $novelty)
