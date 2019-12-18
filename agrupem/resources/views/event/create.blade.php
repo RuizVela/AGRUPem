@@ -4,7 +4,7 @@
     Título castellano: <input type="text" name="title_spanish"><br>
     Contenido en catalan:<input required type="textarea" name="content_catalan"><br>
     Contenido en castellano:<input type="textarea" name="content_spanish"><br>
-    <input type="file" class="btn btn-outline-primary mt-4" name="event_image">
+    <input type="file" class="btn btn-outline-primary mt-4" name="image">
 
     <input required type="date" name="startDate" value="<?php echo date("Y-m-d");?>">
     <input required type="date" name="endDate" value="<?php echo date("Y-m-d");?>">

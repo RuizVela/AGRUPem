@@ -1,8 +1,9 @@
 <section class="card">
                 <h3 id="resource_link" href="{{$novelty->url}}">{{$novelty->getLocalTitle()}}</h3>
                 <p id="resource_link" href="{{$novelty->url}}">{{$novelty->getLocalContent()}}</p>
-                @if($novelty->image)
-                <img src="{{url($novelty->image->url)}}" style="max-width:100%">
+              
+                @if($novelty->imageUrl())
+                <img src="{{url($novelty->imageUrl($novelty))}}" style="max-width:100%">
                 <!-- TODO poner estilos en app.css -->
                 @endif
               
