@@ -10,3 +10,7 @@
     <input type="date" name="endDate" value="{{$event->endDate}}">
     <input type="submit" value="Editar"> 
 </form>
+<form method="POST" action="/event/deleteImage/{{$event->id}}">
+    @csrf
+    <input type="submit" value="Borrar imagen">  
+</form>

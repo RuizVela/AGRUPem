@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Event; 
 use App\Image; 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class EventController extends Controller
 {
@@ -50,5 +51,11 @@ class EventController extends Controller
     {
         $event->delete();
         return redirect('event');
+    }
+
+    public function deleteImage(Event $event)
+    {
+        Storage::delete("public/events/$event->id.jpg");
+        return redirect("event/$event->id");
     }
 }
