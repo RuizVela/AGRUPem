@@ -22,32 +22,27 @@ class EventController extends Controller
 
     public function store(Request $request)
     {
-       
         $event=Event::create($request->all());
-        $event_id=$event->id;
-        $path=Image::uploadImageEvent($request,$event->id);
-        Image::create(['event_id'=>$event_id , 'url'=>"storage/".$path]);
+        $event->uploadImage($request,$event);
         return redirect('event');
     }
-
+    
     public function show(Event $event)
     {
-        return view('event.event',['event'=>$event]);
+        $route = $event->imageUrl($event);
+        return view('event.event',['event'=>$event, 'route'=>$route]);
+        
     }
-
+    
     public function edit(Event $event)
     {
         return view('event.edit',['event'=>$event]);
     }
-
+    
     public function update(Request $request, Event $event)
     {
         $event->update($request->all());
-        $path=Image::uploadImageEvent($request,$event->id);
-        $event_id=$event->id;
-        Image::create(['event_id'=>$event_id , 'url'=>"storage/".$path]);
-
-        
+        $event->uploadImage($request,$event);
         return redirect("event/$event->id");
     }
 

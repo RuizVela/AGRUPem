@@ -4,6 +4,7 @@ namespace App;
 
 use App\traits\Multilanguage;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\File;
 
 
 class Event extends Model
@@ -41,8 +42,35 @@ class Event extends Model
         $event->expireEvent();
     }
 
-    public function images()
+    private function validateImg($request)
     {
-        return $this->hasMany(Image::class);
+        $request->validate([
+                               
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048' //TODO: preguntar david, tamaño requerido
+
+        ]); 
+    } 
+
+    public function uploadImage($request, $event) 
+    {
+           
+        $event->validateImg($request);   
+        
+        if ($request->hasFile('image')) 
+        {
+            $image = $request->file('image');
+            $filePath = $event->id. '.jpg'; //TODO preguntar david
+            $image->storeAs("public/events/",$filePath);            
+        }
+        
+    }
+    public function imageUrl()
+    {
+        $route = "storage/public/events/$this->id.jpg";
+        if (File::exists($route))
+        {
+            return $route;
+        }
+        return false;
     }
 }

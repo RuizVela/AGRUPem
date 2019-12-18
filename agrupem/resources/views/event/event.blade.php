@@ -7,11 +7,9 @@
 {{$event->getLocalTitle()}}
 
 <br>{{$event->getLocalContent()}}
-
-@foreach($event->images as $image)
-<img src="{{url($image->url)}}" style="max-width:100%">
-@endforeach
-
+@if($event->imageUrl())
+<img src="{{url($route)}}" style="max-width:100%">
+@endif
 
 @auth
     <form action="/event/{{$event->id}}/edit" method="GET">
