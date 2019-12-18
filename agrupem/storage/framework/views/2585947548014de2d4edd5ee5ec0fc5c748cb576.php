@@ -6,18 +6,9 @@
 
 <br><?php echo e($event->getLocalContent()); ?>
 
-
-Título: <?php echo e($event->title); ?>
-
-<table border="1px">
-<tr><td>Catalan <br><?php echo e($event->content_catalan); ?></td>
-    <td>Castellano <br><?php echo e($event->content_spanish); ?></td></tr>
-    
-</table>
-<?php $__currentLoopData = $event->images; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $image): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-<img src="<?php echo e(url($image->url)); ?>" style="max-width:100%">
-<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-
+<?php if($event->imageUrl()): ?>
+<img src="<?php echo e(url($route)); ?>" style="max-width:100%">
+<?php endif; ?>
 
 <?php if(auth()->guard()->check()): ?>
     <form action="/event/<?php echo e($event->id); ?>/edit" method="GET">
