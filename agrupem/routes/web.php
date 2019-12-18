@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\ContactFormController;
+use App\Http\Controllers\ContactFormController; 
 
 Route::get('/', function () {
     return view('welcome');
@@ -23,6 +23,7 @@ Route::get('/resource/{resource}/edit', 'ResourceController@edit')->name('resour
 Route::DELETE('/resource/{resource}', 'ResourceController@destroy')->name('resource.destroy')->middleware('auth');
 
 Route::resource('novelty', 'NoveltyController')->except('show');
+Route::post('/novelty/deleteImage/{novelty}', 'NoveltyController@deleteImage')->name('novelty.imageDelete')->middleware('auth');
 Route::get('/novelty/create', 'NoveltyController@create')->name('novelty.create')->middleware('auth');
 Route::get('/novelty/{novelty}/edit', 'NoveltyController@edit')->name('novelty.edit')->middleware('auth');
 Route::post('/novelty/{novelty}', 'NoveltyController@store')->name('novelty.store')->middleware('auth');
@@ -32,6 +33,7 @@ Route::get('/calendar', 'CalendarController@calendar');
 
 Route::resource('event', 'EventController');
 Route::get('/event/create', 'EventController@create')->name('event.create')->middleware('auth');
+Route::post('/event/deleteImage/{event}', 'EventController@deleteImage')->name('event.imageDelete')->middleware('auth');
 Route::get('/event/{event}/edit', 'EventController@edit')->name('event.edit')->middleware('auth');
 Route::DELETE('/event/{event}', 'EventController@destroy')->name('event.destroy')->middleware('auth');
 
