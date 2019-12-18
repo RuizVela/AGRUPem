@@ -35,8 +35,13 @@
                         </div>
                     </section>
                     <input type="submit" class="btn btn-outline-success mt-4" value="Guardar">
-                    </form>
+                </form>
+                <form method="POST" action="/novelty/deleteImage/{{$novelty->id}}">
+                    @csrf
+                    <input type="submit" value="Borrar imagen">  
+                </form>
                 </section>
+
             </main>
         </div>
     </div>

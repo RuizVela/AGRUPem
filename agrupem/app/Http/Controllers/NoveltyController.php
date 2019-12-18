@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Novelty;
 use App\Image;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class NoveltyController extends Controller
 {
@@ -46,6 +47,10 @@ class NoveltyController extends Controller
         $novelty->delete();
         return redirect('novelty');
     }
-
+    public function deleteImage(Novelty $novelty)
+    {
+        Storage::delete("public/novelties/$novelty->id.jpg");
+        return redirect("novelty");
+    }
    
 }
