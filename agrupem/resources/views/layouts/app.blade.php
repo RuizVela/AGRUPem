@@ -27,6 +27,10 @@
     <!-- Open Street Map -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css">
     <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/ba7e41d0d3.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <div id="app">
@@ -46,12 +50,18 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav ml-auto align-content-centre">
                             @php $locale = session()->get('locale'); @endphp
+                                    <div id="social_networks_buttons" class="d-flex align-content-center flex-wrap">
+                                        <a href="https://es-la.facebook.com/AGRUPem"><i class="fab fa-facebook-square"></i></a>
+                                        <a href="https://www.instagram.com/agrupem2011/"><i class="fab fa-instagram"></i></a>
+                                        <a href="https://twitter.com/agrupem1"><i class="fab fa-twitter-square"></i></a>
+                                    </div>
+
                                         <form action="/lang/cat" method="GET">
-                                        <input class="button btn" type="submit" value="Catalan"></form>
+                                        @lang('layout.lenguage-catalan')</form>
                                         <form action="/lang/es" method="GET">
-                                        <input class="button btn" type="submit" value="Castellano"></form>
+                                        @lang('layout.lenguage-spanish')</form>
                                        
                         <!-- Authentication Links -->
                         @guest
@@ -86,6 +96,15 @@
                         
                     </ul>
                 </div>
+            </div>
+        </nav>
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+            <div class="navbar-nav ml-auto">
+                <a href="" class="button btn">@lang('layout.who-we-are')</a>
+                <a href="" class="button btn">@lang('layout.what-we-do')</a>
+                <a href="/resource" class="button btn">RECURSOS</a>
+                <a href="/post" class="button btn">BLOG</a>
+                <a href="/contact" class="button btn">@lang('layout.contact')</a>
             </div>
         </nav>
 

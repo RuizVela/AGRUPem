@@ -12,9 +12,11 @@ class HomeController extends Controller
     public function index()
     {
         $novelties = Novelty::all();
-        $events = Event::all();
-        $posts = Post::all();
-        //dd($novelties);
+        $all_events = Event::all();
+        $all_posts = Post::all();
+        $events = $all_events->take(4);
+        $posts = $all_posts->take(-3);
+
         return view('home',['novelties'=>$novelties, 'events'=>$events, 'posts'=>$posts]);
     
     
