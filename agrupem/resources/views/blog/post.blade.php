@@ -5,13 +5,12 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <header class="card">
-                <div class="card-header">AGRUPem Blog</div>
-            </header>
             <main>
-            <section class="card">
-
-                <h2 id="title">{{$post->getLocalTitle()}}</h2>
+            <section id="blog_container">
+            
+            <header class="card">
+                <div class="card-header"><h2 id="title">{{$post->getLocalTitle()}}</h2></div>
+            </header>
                 {!! html_entity_decode($post->getLocalContent()) !!}
 
                 @auth
@@ -25,7 +24,9 @@
                 <input id="button_delete" type="submit" value="Eliminar post" class="btn btn-outline-danger mt-4">
                 </form>
                 @endauth
-                <a id="button_return" href="/post" class="btn btn-outline-success mt-4">Volver index</a>
+            </section>
+            <section>
+                <a id="button_return" href="/post" class="btn btn-outline-success mt-4">Volver al index</a>
             </section>
             </main>
         </div>

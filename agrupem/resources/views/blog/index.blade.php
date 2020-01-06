@@ -5,13 +5,12 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <header class="card">
-                <div class="card-header">AGRUPem Blog</div>
-            </header>
             <main>
             @foreach ($posts as $post)
-            <section class="card">
-                <h2 id="title">{{$post->getLocalTitle()}}</h2>
+            <section id="blog_index_container">
+            <header class="card">
+                <div class="card-header"><h2 id="title">{{$post->getLocalTitle()}}</h2></div>
+            </header>
                 <p id="content">{!! Str::words($post->getLocalContent(), 10,"...")!!}</p>
                 <!-- TODO posicionamiento de la imagen -->
 

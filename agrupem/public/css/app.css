@@ -91,6 +91,20 @@
   color: #636b6f;
 }
 
+#contact_details_container {
+  position: relative;
+  left: 15%;
+}
+
+#map_container {
+  position: relative;
+  top: 50px;
+}
+
+#blog_index_container {
+  padding: 10% 0%;
+}
+
 /*!
  * Bootstrap v4.4.0 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors

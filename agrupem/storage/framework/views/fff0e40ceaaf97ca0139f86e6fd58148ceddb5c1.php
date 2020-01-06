@@ -36,7 +36,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="<?php echo e(url('/')); ?>">
+                <a class="navbar-brand" href="<?php echo e(url('/home')); ?>">
                     <?php echo e(config('AGRUPem', 'AGRUPem')); ?>
 
                 </a>
@@ -102,8 +102,8 @@
         </nav>
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="navbar-nav ml-auto">
-                <a href="" class="button btn"><?php echo app('translator')->get('layout.who-we-are'); ?></a>
-                <a href="" class="button btn"><?php echo app('translator')->get('layout.what-we-do'); ?></a>
+                <a href="/whoweare" class="button btn"><?php echo app('translator')->get('layout.who-we-are'); ?></a>
+                <a href="/whatwedo" class="button btn"><?php echo app('translator')->get('layout.what-we-do'); ?></a>
                 <a href="/resource" class="button btn">RECURSOS</a>
                 <a href="/post" class="button btn">BLOG</a>
                 <a href="/contact" class="button btn"><?php echo app('translator')->get('layout.contact'); ?></a>

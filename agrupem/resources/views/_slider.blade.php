@@ -15,11 +15,11 @@
                 </div>
                 <div class="carousel-item">
                     <p>@lang('slider.become-a-partner-content')</p>
-                <button class="slider-button btn btn-primary">@lang('slider.become-a-partner-button')</button>
+                <a href="/partner" class="slider-button btn btn-primary">@lang('slider.become-a-partner-button')</a>
                 </div>
                 <div class="carousel-item">
                     <p>@lang('slider.collaborate-content')</p>
-                <button class="slider-button btn btn-primary">@lang('slider.collaborate-button')</button>
+                <a href="/collaborate" class="slider-button btn btn-primary">@lang('slider.collaborate-button')</a>
                 </div>
         </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">

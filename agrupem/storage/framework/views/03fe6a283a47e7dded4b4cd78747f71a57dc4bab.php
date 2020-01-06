@@ -3,13 +3,12 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <header class="card">
-                <div class="card-header">AGRUPem Blog</div>
-            </header>
             <main>
             <?php $__currentLoopData = $posts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $post): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <section class="card">
-                <h2 id="title"><?php echo e($post->getLocalTitle()); ?></h2>
+            <section id="blog_index_container">
+            <header class="card">
+                <div class="card-header"><h2 id="title"><?php echo e($post->getLocalTitle()); ?></h2></div>
+            </header>
                 <p id="content"><?php echo Str::words($post->getLocalContent(), 10,"..."); ?></p>
                 <!-- TODO posicionamiento de la imagen -->
 

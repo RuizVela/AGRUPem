@@ -2,7 +2,9 @@
 
 return [
     'name' => 'Nombre',
-    'message' => 'Mensaje'
+    'message' => 'Mensaje',
+    'phone' => 'Teléfonos',
+    'adress' => 'Dirección',
 ];
 
 ?>

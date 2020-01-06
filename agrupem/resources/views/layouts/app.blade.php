@@ -36,7 +36,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ url('/home') }}">
                     {{ config('AGRUPem', 'AGRUPem') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -100,8 +100,8 @@
         </nav>
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="navbar-nav ml-auto">
-                <a href="" class="button btn">@lang('layout.who-we-are')</a>
-                <a href="" class="button btn">@lang('layout.what-we-do')</a>
+                <a href="/whoweare" class="button btn">@lang('layout.who-we-are')</a>
+                <a href="/whatwedo" class="button btn">@lang('layout.what-we-do')</a>
                 <a href="/resource" class="button btn">RECURSOS</a>
                 <a href="/post" class="button btn">BLOG</a>
                 <a href="/contact" class="button btn">@lang('layout.contact')</a>

@@ -4,6 +4,12 @@
 
 <div id="resources_container" class="container">
     <div class="row justify-content-center">
+        <div class="container justify-content-end">
+            <a href="/collaborate" class="slider-button btn btn-primary">@lang('slider.collaborate-button')</a>
+        </div>
+        <div class="container justify-content-end">
+            <a href="/partner" class="slider-button btn btn-primary">@lang('slider.become-a-partner-button')</a>
+        </div>
         <div class="col-md-8">
             <header class="card">
                 <div class="card-header">Recursos</div>
