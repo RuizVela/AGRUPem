@@ -27,4 +27,12 @@ class HomeController extends Controller
         session()->put('locale', $locale);
         return redirect()->back();
     }
+    public function queFem()
+    {
+        return view('queFem');
+    }
+    public function quiSom()
+    {
+        return view('quiSom');     
+    }
 }

@@ -1,0 +1,43 @@
+.window_information{
+    position: absolute;
+    width: 709px;
+    height: 476px;
+    background-color: #4F9A94;
+    box-shadow: 50px 50px #80CBC4;
+}
+.window_information h1{
+    background-color: #FFE97D;
+    position: relative;
+    top: 10%;
+    left: 5%;
+    width: 400px;
+}
+.text_container{    
+    width: 90%;
+    position: relative;
+    top: 15%;
+    left: 5%;
+background-color: #FFE97D;
+}
+.right_content{
+    text-align: center;
+    position: absolute;
+    right: 50px;
+    width: 400px;
+    top: 20%;
+}
+.right_buttons button{
+    background-color: #FFB74D;
+    height: 70px;
+    width: 150px;
+    border-radius: 40px;
+}
+.right_content img{
+    margin-top: 50px;
+    width: 100%;
+    height: 150px;
+    box-shadow: 15px 15px #80CBC4;
+}
+body{
+    background-color: #E7FBFA;
+}

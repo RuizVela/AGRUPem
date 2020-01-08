@@ -6,6 +6,8 @@ Route::get('/', 'HomeController@index')->name('home');
 
 Auth::routes();
 
+Route::get('/queFem', 'homeController@queFem')->name('queFem');
+
 Route::get('lang/{locale}', 'HomeController@lang')->name('language');
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -37,3 +39,4 @@ Route::DELETE('/event/{event}', 'EventController@destroy')->name('event.destroy'
 
 Route::get('contact', 'ContactFormController@create');
 Route::post('contact', 'ContactFormController@store');
+Route::get('quiSom', 'HomeController@quiSom')->name('quiSom');
