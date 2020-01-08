@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div id="resources_container" class="container">
+<div id="resources_container" class="container"> 
     <div class="row justify-content-center">
         <div class="col-md-8">
             <header class="card">
@@ -11,9 +11,11 @@
             <main>
             @foreach ($resources as $resource)
             <section class="card">
-                <a id="resource_link" href="{{$resource->url}}">
-                    {{$resource->getLocalTitle()}}
-                     </a>
+                <div class="resource_card">
+                    <a id="resource_link" href="{{$resource->url}}">
+                        {{$resource->getLocalTitle()}}
+                    </a>
+                </div>
                 @auth
                 <form action="/resource/{{$resource->id}}/edit" method="GET">
                     <input type="submit" id="button_edit" class = "btn btn-outline-primary mt-4" value="Editar">
