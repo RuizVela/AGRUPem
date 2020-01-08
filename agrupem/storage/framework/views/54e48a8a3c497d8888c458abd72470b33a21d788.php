@@ -1,6 +1,4 @@
-@extends('layouts.app')
-
-@section('content') 
+<?php $__env->startSection('content'); ?> 
 
 <div class="container">
     <div class="row justify-content-center">
@@ -11,7 +9,7 @@
             <main>
                 <section class="d-flex flex-row">
                     <form action="/post" method="post" accept-charset="UTF-8" enctype="multipart/form-data">
-                    @csrf
+                    <?php echo csrf_field(); ?>
                     <section class="flex-column p-2">
                         <div>
                             <label for="title_cat">Títol</label>
@@ -40,4 +38,5 @@
     </div>
 </div>
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\AGRUPem\agrupem\resources\views/blog/create.blade.php ENDPATH**/ ?>

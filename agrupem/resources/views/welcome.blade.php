@@ -82,7 +82,8 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    AGRUPem
+                    <a id="home-link" href="/home" style="text-decoration:none;
+    color: #636b6f">AGRUPem</a>
                 </div>
 
                 <div class="links">

@@ -6,7 +6,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <main>
-                <section class="d-flex flex-row">
+                <section class="d-flex flex-row flex-nowrap align-items-center">
                     <form action="/contact" method="post">
                     @csrf
                     <section class="flex-column p-2">
@@ -25,6 +25,9 @@
                     </section>
                     <input type="submit" class="btn btn-outline-success mt-4" value="Enviar">
                     </form>
+                    <section>
+                        <div id="map" style="width:400px; height:400px; margin-left:20px"></div>
+                    </section>
                 </section> 
             </main>
         </div>
