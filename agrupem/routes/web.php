@@ -6,7 +6,7 @@ Route::get('/', 'HomeController@index')->name('home');
 
 Auth::routes();
 
-Route::get('/queFem', 'homeController@queFem')->name('queFem');
+Route::get('/queFem', 'HomeController@queFem')->name('queFem');
 
 Route::get('lang/{locale}', 'HomeController@lang')->name('language');
 
