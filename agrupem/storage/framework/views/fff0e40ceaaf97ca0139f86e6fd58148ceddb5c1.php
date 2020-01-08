@@ -36,7 +36,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="<?php echo e(url('/')); ?>">
+                <a class="navbar-brand" href="<?php echo e(url('/home')); ?>">
                     <?php echo e(config('AGRUPem', 'AGRUPem')); ?>
 
                 </a>
