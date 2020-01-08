@@ -11448,8 +11448,7 @@ a.text-dark:focus {
 }
 
 .window_information {
-  position: absolute;
-  width: 709px;
+  max-width: 709px;
   height: 476px;
   background-color: #4F9A94;
   box-shadow: 50px 50px #80CBC4;
@@ -11495,5 +11494,13 @@ a.text-dark:focus {
 
 body {
   background-color: #E7FBFA;
+}
+
+#home_events_container {
+  padding: 10px;
+}
+
+#home_events_container h3 {
+  font-size: 20px;
 }
 
