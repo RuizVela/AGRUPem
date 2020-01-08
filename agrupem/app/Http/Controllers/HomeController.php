@@ -31,4 +31,8 @@ class HomeController extends Controller
     {
         return view('queFem');
     }
+    public function quiSom()
+    {
+        return view('quiSom');     
+    }
 }

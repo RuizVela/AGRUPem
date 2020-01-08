@@ -41,3 +41,4 @@ Route::DELETE('/event/{event}', 'EventController@destroy')->name('event.destroy'
 
 Route::get('contact', 'ContactFormController@create');
 Route::post('contact', 'ContactFormController@store');
+Route::get('quiSom', 'HomeController@quiSom')->name('quiSom');
