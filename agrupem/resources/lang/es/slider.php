@@ -10,5 +10,6 @@
         'collaborate-button' => 'Colabora',
         'become-a-partner-content' => 'Erat ut ultricies curabitur non imperdiet est dis ultrices eros, torquent nullam venenatis fames tristique consequat cum potenti egestas quam, sociosqu cras id sollicitudin enim tellus nulla odio. Justo phasellus commodo ullamcorper magna nostra sapien dis integer, a volutpat natoque mollis aptent mauris praesent maecenas ligula, purus vulputate massa dictum laoreet porttitor ad. Bibendum at vehicula fermentum pulvinar nullam, massa nisl elementum imperdiet, metus vulputate habitasse curae.',
         'become-a-partner-button' => 'Hazte socio',
+        'what-we-do-content' => 'Texto de que hacemos en español'
     ];
 ?>
