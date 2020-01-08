@@ -94,13 +94,13 @@
                                 </div>
                             </li>
                         
-                    </ul>
+                    </ul> 
                 </div>
             </div>
         </nav>
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="navbar-nav ml-auto">
-                <a href="" class="button btn">@lang('layout.who-we-are')</a>
+                <a href="/quiSom" class="button btn">@lang('layout.who-we-are')</a>
                 <a href="" class="button btn">@lang('layout.what-we-do')</a>
                 <a href="/resource" class="button btn">RECURSOS</a>
                 <a href="/post" class="button btn">BLOG</a>
