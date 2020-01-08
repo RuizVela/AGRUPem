@@ -11504,3 +11504,26 @@ body {
   font-size: 20px;
 }
 
+.button_pushUp {
+  margin-top: -30px;
+}
+
+.map_pushDown {
+  margin-top: 70px;
+}
+
+.inputColor {
+  background-color: #FFE97D;
+  border-color: transparent;
+  border-radius: 5px;
+}
+
+#contactForm {
+  width: 400px;
+  right: 30%;
+}
+
+.marginLeft {
+  margin-left: -10rem;
+}
+
