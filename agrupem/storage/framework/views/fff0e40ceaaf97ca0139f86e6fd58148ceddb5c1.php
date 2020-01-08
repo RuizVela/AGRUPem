@@ -34,7 +34,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav id="firstNavbar" class="navbar navbar-expand-md navbar-light shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="<?php echo e(url('/')); ?>">
                     <?php echo e(config('AGRUPem', 'AGRUPem')); ?>
@@ -96,14 +96,14 @@
                                 </div>
                             </li>
                         
-                    </ul>
+                    </ul> 
                 </div>
             </div>
         </nav>
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="navbar-nav ml-auto">
-                <a href="" class="button btn"><?php echo app('translator')->get('layout.who-we-are'); ?></a>
                 <a href="/queFem" class="button btn"><?php echo app('translator')->get('layout.what-we-do'); ?></a>
+                <a href="/quiSom" class="button btn"><?php echo app('translator')->get('layout.who-we-are'); ?></a>
                 <a href="/resource" class="button btn">RECURSOS</a>
                 <a href="/post" class="button btn">BLOG</a>
                 <a href="/contact" class="button btn"><?php echo app('translator')->get('layout.contact'); ?></a>

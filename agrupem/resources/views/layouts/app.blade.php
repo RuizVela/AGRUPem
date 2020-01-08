@@ -34,7 +34,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav id="firstNavbar" class="navbar navbar-expand-md navbar-light shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('AGRUPem', 'AGRUPem') }}
@@ -102,7 +102,6 @@
             <div class="navbar-nav ml-auto">
                 <a href="/queFem" class="button btn">@lang('layout.what-we-do')</a>
                 <a href="/quiSom" class="button btn">@lang('layout.who-we-are')</a>
-                <a href="" class="button btn">@lang('layout.what-we-do')</a>
                 <a href="/resource" class="button btn">RECURSOS</a>
                 <a href="/post" class="button btn">BLOG</a>
                 <a href="/contact" class="button btn">@lang('layout.contact')</a>
