@@ -11452,6 +11452,7 @@ a.text-dark:focus {
   height: 476px;
   background-color: #4F9A94;
   box-shadow: 50px 50px #80CBC4;
+  border-radius: 8px;
 }
 
 .window_information h1 {
@@ -11554,5 +11555,59 @@ footer {
 
 .admin_button {
   margin-left: 10px;
+}
+
+.button_pushUp {
+  margin-top: -30px;
+}
+
+.map_pushDown {
+  margin-top: 70px;
+}
+
+.inputColor {
+  background-color: #FFE97D;
+  border-color: transparent;
+  border-radius: 5px;
+}
+
+#contactForm {
+  width: 450px;
+  right: 30%;
+}
+
+.window_block {
+  background-color: #FFE97D;
+  border-radius: 8px;
+  position: relative;
+  margin-top: 10%;
+  left: 10%;
+  bottom: 10%;
+  right: 10%;
+}
+
+.window_center {
+  max-width: 709px;
+  height: 476px;
+  background-color: #4F9A94;
+  border: 30px solid #FFE97D;
+  border-radius: 8px;
+}
+
+ul {
+  margin: 10px;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+p {
+  font-size: 16px;
+}
+
+#map {
+  margin-top: 30px;
+  border-radius: 8px;
+  margin-left: -10;
+  background-color: #FFE97D;
 }
 
