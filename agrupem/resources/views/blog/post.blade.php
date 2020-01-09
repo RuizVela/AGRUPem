@@ -5,13 +5,13 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-      
-            <main>
+           
             <section>
             <header class="card">
                 <h2 class="card-header class-header" id="title">{{$post->getLocalTitle()}}</h2>
             </header>
-                {!! html_entity_decode($post->getLocalContent()) !!}
+            <main class="margin">
+                <hr>{!! html_entity_decode($post->getLocalContent()) !!}<br><br>
 
                 @auth
                 <form action="/post/{{$post->id}}/edit" method="GET">
