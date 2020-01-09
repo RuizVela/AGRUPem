@@ -6,6 +6,7 @@
     <div class="row justify-content-center marginLeft">
         <div class="col-md-8">
             <main>
+  
                 <section class="col-md-6 flex-row flex-nowrap align-items-center">
                   <form action="/contact" method="post">
                     @csrf
@@ -23,15 +24,31 @@
                         <input type="submit" class="btn btn-outline-success mt-4" value="Enviar">
                         </div>
                     </section>
-
                   </form>
-                    <section class="map_pushDown">
-                        <div class="img-responsive" id="map" style="width:800px; height:400px; margin-left:20px"></div>
+                <div style="margin-top: 60px">
+
+                    <h3>@lang('layout.direccion'):</h3>
+                    <p>ALTHAIA (xarxa assistencial de Manresa)</p>
+                    <p>CENTRE HOSPITALARI DE MANRESA</p>
+                    <p>C/ Flor de Lis, 33, 08242 MANRESA</p>
+
+                    <h3>@lang('layout.tele'):</h3>
+                    <p>93 875 93 00 + ext.1065 @lang('layout.horarioAtencion')</p>
+                    <p>661 713 162 (Marta)</p>
+
+                    <h3>@lang('layout.mail'):</h3>
+                    <p>grupdesuport.em@gmail.com</p>
+
+
+                  </div>
+                  <div class="img-responsive" id="map" style="width:800px; height:400px; margin-left:20px"></div>
                     </section>
+                  </div>  
                 </section> 
             </main>
         </div>
     </div>
+    
 </div>
 
 @endsection
