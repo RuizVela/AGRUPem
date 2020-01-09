@@ -39,6 +39,6 @@ Route::post('/event/deleteImage/{event}', 'EventController@deleteImage')->name('
 Route::get('/event/{event}/edit', 'EventController@edit')->name('event.edit')->middleware('auth');
 Route::DELETE('/event/{event}', 'EventController@destroy')->name('event.destroy')->middleware('auth');
 
-Route::get('contact', 'ContactFormController@create');
+Route::get('contact', 'ContactFormCo/ntroller@create');
 Route::post('contact', 'ContactFormController@store');
-Route::get('quiSom', 'HomeController@quiSom')->name('quiSom');
+Route::get('quiSom', 'HomeController@quiSom')->name('quiSom'); 
