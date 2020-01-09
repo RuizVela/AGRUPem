@@ -6,7 +6,7 @@
         
     @foreach ($posts as $post)
         <div class="card">
-            <a class="btn btn-primary" href="/post/{{$post->id}}">
+            <a id="blog_entries_button" class="btn btn-primary" href="/post/{{$post->id}}">
                 <h2 id="title">{{$post->getLocalTitle()}}</h2>
                 <p id="content">{!! Str::words($post->getLocalContent(), 5,"...")!!}</p>
             </a>

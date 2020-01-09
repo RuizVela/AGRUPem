@@ -98,7 +98,7 @@
                 </div>
             </div>
         </nav>
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav id="secondNavbar" class="navbar navbar-expand-md navbar-light shadow-sm">
             <div class="navbar-nav ml-auto">
                 <a href="/queFem" class="button btn">@lang('layout.what-we-do')</a>
                 <a href="/quiSom" class="button btn">@lang('layout.who-we-are')</a>

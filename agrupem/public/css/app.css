@@ -5,16 +5,28 @@
   font-size: 150%;
 }
 
+#secondNavbar {
+  background-color: #E7FBFA;
+}
+
 #blog_home_container {
   width: 90%;
+  margin-top: 7%;
+}
+
+#blog_entries_button {
+  background-color: #4F9A94;
+  border-color: #4F9A94;
 }
 
 #home_left_central_container {
   width: 60%;
+  margin-top: 5%;
 }
 
 #home_right_central_container {
   width: 40%;
+  margin-top: 10%;
 }
 
 .left-container-card {
@@ -11533,5 +11545,9 @@ body {
 .next_events_container {
   position: relative;
   left: 5%;
+}
+
+#secondNavbar {
+  background-color: #E7FBFA;
 }
 
