@@ -100,7 +100,7 @@
                 </div>
             </div>
         </nav>
-        <nav id="secondNavbar" class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav id="secondNavbar" class="navbar navbar-expand-md navbar-light shadow-sm">
             <div class="navbar-nav ml-auto">
                 <a href="/queFem" class="button btn"><?php echo app('translator')->get('layout.what-we-do'); ?></a>
                 <a href="/quiSom" class="button btn"><?php echo app('translator')->get('layout.who-we-are'); ?></a>
