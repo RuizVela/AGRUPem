@@ -11534,6 +11534,14 @@ body {
   right: 10%;
 }
 
+.window_center {
+  max-width: 709px;
+  height: 476px;
+  background-color: #4F9A94;
+  border: 30px solid #FFE97D;
+  border-radius: 8px;
+}
+
 ul {
   margin: 10px;
   margin-top: 10px;

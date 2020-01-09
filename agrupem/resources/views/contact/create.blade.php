@@ -46,7 +46,7 @@
                     </section>
                 </section> 
                 <section>
-                    <div class="img-responsive window_information" id="map" style="width:800px; height:400px; margin-left:20px"></div>
+                    <div class="img-responsive window_center" id="map" style="width:800px; height:400px; margin-left:20px"></div>
                 </section>
                   
             </main>
