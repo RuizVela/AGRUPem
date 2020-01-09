@@ -5,19 +5,13 @@
 <div id="resources_container" class="container">  
     <div id="resocurce_content" class="window_information">
         <div class="col-md-8">
-            <header class="">
-                <div class="text_container">
                     <h1>Recursos</h1>
-                </div>
-            </header>
             <div class="text_container">
             @foreach ($resources as $resource)
             <section class="links_card">
-                <div class="">
                     <a id="resource_link" href="{{$resource->url}}">
                         {{$resource->getLocalTitle()}}
                     </a>
-                </div>
                 @auth
                 <div class="row admin_button">
                 <form action="/resource/{{$resource->id}}/edit" method="GET">
