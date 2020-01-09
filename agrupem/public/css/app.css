@@ -11535,7 +11535,11 @@ body {
   left: 5%;
 }
 
-.links_card {
-  margin-bottom: 10%;
+.col-md-8 {
+  padding: 10px;
+}
+
+.admin_button {
+  margin-left: 10px;
 }
 

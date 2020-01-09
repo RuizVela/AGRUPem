@@ -12,14 +12,14 @@
             </header>
             <div class="text_container">
             @foreach ($resources as $resource)
-            <section class="">
-                <div class="links_card">
+            <section class="links_card">
+                <div class="">
                     <a id="resource_link" href="{{$resource->url}}">
                         {{$resource->getLocalTitle()}}
                     </a>
                 </div>
                 @auth
-                <div class="row">
+                <div class="row admin_button">
                 <form action="/resource/{{$resource->id}}/edit" method="GET">
                     <input type="submit" id="button_edit" class = "btn btn-primary mt-4" value="Editar">
                 </form>
@@ -34,7 +34,7 @@
             </section>
             @endforeach
             @auth
-            <a id="button_create" href="/resource/create" class="btn btn-success mt-4">Crear</a>
+            <a id="button_create" href="/resource/create" class="btn btn-success mt-4 admin_button">Crear</a>
         @endif    
         </div>
         
