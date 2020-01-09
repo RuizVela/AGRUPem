@@ -2,11 +2,13 @@
 
 @section('content')
 
-<div id="resources_container" class="container"> 
-    <div class="row justify-content-center">
+<div id="resources_container" class="container">  
+    <div id="resocurce_content" class="window_information">
         <div class="col-md-8">
             <header class="card">
-                <div class="card-header">Recursos</div>
+                <div class="text_container">
+                    <h1>Recursos</h1>
+                </div>
             </header>
             <main>
             @foreach ($resources as $resource)

@@ -4,10 +4,10 @@
 
 <div class="container">
    <div class="window_information">
-      <h1>@lang('slider.who-we-are-title')</h1>
+         <h1>@lang('slider.who-we-are-title')</h1>
          <div class="text_container">
-   <p>@lang('slider.who-we-are-content')</p>
-   </div>
+            <p>@lang('slider.who-we-are-content')</p>
+         </div>
    </div>
    <div class="right_content">
       <div class="right_buttons">
