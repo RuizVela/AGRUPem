@@ -11460,6 +11460,7 @@ a.text-dark:focus {
   top: 10%;
   left: 5%;
   width: 400px;
+  border-radius: 5px;
 }
 
 .text_container {
@@ -11468,6 +11469,7 @@ a.text-dark:focus {
   top: 15%;
   left: 5%;
   background-color: #FFE97D;
+  border-radius: 5px;
 }
 
 .right_content {
@@ -11497,7 +11499,21 @@ body {
 }
 
 #home_events_container {
+  position: relative;
+  top: 5%;
   padding: 10px;
+  height: 550px;
+  background-color: #4F9A94;
+  box-shadow: 50px 50px #80CBC4;
+}
+
+#home_events_container h1 {
+  background-color: #FFE97D;
+  position: relative;
+  top: 1%;
+  left: 5%;
+  width: 400px;
+  font-size: 35px;
 }
 
 #home_events_container h3 {
@@ -11511,5 +11527,11 @@ body {
 .resource_card {
   height: auto;
   background-color: #80CBC4;
+  font-weight: bold;
+}
+
+.next_events_container {
+  position: relative;
+  left: 5%;
 }
 
