@@ -112,7 +112,14 @@
             @yield('content')
         </main>
     </div>
+    <footer class="d-flex flex-column">
+        <div>
+        <p>Copyright © 2012-2018 AGRUPem</br></p> </div>
+        <div>
+        <p>grupdesuport.em@gmail.com</p> </div> 
+    </footer>
     <script>
+    
 	var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 		osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 		osm = L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib});
