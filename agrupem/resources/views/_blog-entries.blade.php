@@ -6,9 +6,11 @@
         
     @foreach ($posts as $post)
         <div class="card">
-            <h2 id="title">{{$post->getLocalTitle()}}</h2>
-            <p id="content">{!! Str::words($post->getLocalContent(), 5,"...")!!}</p>
+            <a class="btn btn-primary" href="/post/{{$post->id}}">
+                <h2 id="title">{{$post->getLocalTitle()}}</h2>
+                <p id="content">{!! Str::words($post->getLocalContent(), 5,"...")!!}</p>
+            </a>
         </div>
-    @endforeach 
+    @endforeach
     </div>
 </section>
