@@ -11460,6 +11460,7 @@ a.text-dark:focus {
   top: 10%;
   left: 5%;
   width: 400px;
+  border-radius: 5px;
 }
 
 .text_container {
@@ -11468,6 +11469,7 @@ a.text-dark:focus {
   top: 15%;
   left: 5%;
   background-color: #FFE97D;
+  border-radius: 5px;
 }
 
 .right_content {
