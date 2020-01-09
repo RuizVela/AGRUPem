@@ -1,5 +1,5 @@
 <section id="slider" class="card">
-    <div class="card-body">
+    <div class="card-body window_information">
         @if (session('status'))
             <div class="alert alert-success" role="alert">
                 {{ session('status') }}
@@ -10,15 +10,21 @@
 
         <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <h2>@lang('slider.who-we-are-title')</h2>
+                    <h1>@lang('slider.who-we-are-title')</h1>
+                    <div class="text_container">
                 <p class="content">@lang('slider.who-we-are-content')</p>
+                    </div>
                 </div>
                 <div class="carousel-item">
+                    <div class="text_container">
                     <p>@lang('slider.become-a-partner-content')</p>
+                </div>
                 <button class="slider-button btn btn-primary">@lang('slider.become-a-partner-button')</button>
                 </div>
                 <div class="carousel-item">
-                    <p>@lang('slider.collaborate-content')</p>
+                    <div class="text_container">
+                        <p>@lang('slider.collaborate-content')</p>
+                    </div>
                 <button class="slider-button btn btn-primary">@lang('slider.collaborate-button')</button>
                 </div>
         </div>
