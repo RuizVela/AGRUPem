@@ -11452,7 +11452,7 @@ a.text-dark:focus {
   height: 476px;
   background-color: #4F9A94;
   box-shadow: 50px 50px #80CBC4;
-  border-radius: 8px;
+  border-radius: 5px;
 }
 
 .window_information h1 {
@@ -11591,7 +11591,7 @@ footer {
   height: 476px;
   background-color: #4F9A94;
   border: 30px solid #FFE97D;
-  border-radius: 8px;
+  border-radius: 5px;
 }
 
 ul {

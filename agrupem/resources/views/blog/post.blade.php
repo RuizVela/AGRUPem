@@ -9,9 +9,9 @@
                 <div class="card-header">AGRUPem Blog</div>
             </header>
             <main>
-            <section class="card">
+            <section>
 
-                <h2 id="title">{{$post->getLocalTitle()}}</h2>
+                <h2 class="class-header" id="title">{{$post->getLocalTitle()}}</h2>
                 {!! html_entity_decode($post->getLocalContent()) !!}
 
                 @auth
@@ -25,7 +25,7 @@
                 <input id="button_delete" type="submit" value="Eliminar post" class="btn btn-outline-danger mt-4">
                 </form>
                 @endauth
-                <a id="button_return" href="/post" class="btn btn-outline-success mt-4">Volver index</a>
+                <a class="btn btn-primary" id="button_return" href="/post" class="btn btn-outline-success mt-4">Volver index</a>
             </section>
             </main>
         </div>
