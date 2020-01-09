@@ -5,13 +5,12 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <header class="card">
-                <div class="card-header">AGRUPem Blog</div>
-            </header>
+      
             <main>
             <section>
-
-                <h2 class="class-header" id="title">{{$post->getLocalTitle()}}</h2>
+            <header class="card">
+                <h2 class="card-header class-header" id="title">{{$post->getLocalTitle()}}</h2>
+            </header>
                 {!! html_entity_decode($post->getLocalContent()) !!}
 
                 @auth
