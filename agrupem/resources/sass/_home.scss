@@ -3,10 +3,13 @@
     font-size: 150%;
 }
 
-// .fab{
-//     color: #FFE97D;
-//     color: #FFB74D;
-// }
+.fab{
+    color: #FFE97D;
+}
+
+.fab:hover{
+    color: #FFB74D;
+}
 
 #blog_home_container{
     width: 90%;
