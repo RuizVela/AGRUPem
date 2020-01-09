@@ -1,9 +1,8 @@
-<section id="blog_home_container" class="">
-    <div class="title">
+<section id="blog_home_container">
+    <div id="home_blog_entries_title" class="title">
         <h3>Ultimas entradas del blog</h3>
     </div>
-    <div class="d-flex justify-content-around">
-        
+    <div id="home_blog_entries" class="d-flex justify-content-around">
     @foreach ($posts as $post)
         <div class="card">
             <a id="blog_entries_button" class="btn btn-primary" href="/post/{{$post->id}}">
