@@ -5,7 +5,7 @@
 </section>
 <section>
     <div id="home_event_title">
-        <h1>Proximos Eventos</h1>
+        <h1>@lang('home.events')</h1>
     </div>
     <div id="home_events_container" >
             <div class="next_events_container">

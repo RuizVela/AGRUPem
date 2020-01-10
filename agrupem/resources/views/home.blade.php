@@ -8,6 +8,7 @@
             <div id="home_central_container" class="d-flex">
                 <div id="home_left_central_container">
                     @include('_banner')
+                    <img id="inline_home" src="{{ asset('/images/inline.jpg')}}" alt="">
                     @include('novelty._novelties')
                     @include('_personal-assitance')
                 </div>

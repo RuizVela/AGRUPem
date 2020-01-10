@@ -6,6 +6,7 @@
             <div id="home_central_container" class="d-flex">
                 <div id="home_left_central_container">
                     <?php echo $__env->make('_banner', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+                    <img id="inline_home" src="<?php echo e(asset('/images/inline.jpg')); ?>" alt="">
                     <?php echo $__env->make('novelty._novelties', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                     <?php echo $__env->make('_personal-assitance', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                 </div>
