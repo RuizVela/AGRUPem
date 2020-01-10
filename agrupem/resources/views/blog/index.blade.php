@@ -12,6 +12,7 @@
             @foreach ($posts as $post)
             <section class="card">
                 <h2 id="title">{{$post->getLocalTitle()}}</h2>
+                {!! html_entity_decode($post->getEncodedImage($post)) !!}
                 <p id="content">{!! Str::words($post->getLocalContent(), 10,"...")!!}</p>
                 <!-- TODO posicionamiento de la imagen -->
 
