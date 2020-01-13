@@ -114,13 +114,8 @@
     </div>
     <footer class="d-flex flex-column">
         <div>
-<<<<<<< HEAD
-        <p>Copyright © 2012-2018 AGRUPem</br></p> </div>
-       
-=======
-        <p>Copyright © 2012-2020 AGRUPem</br></p> </div>
+        <p>Copyright © 2012-2020 AGRUPem</br></p>
          </div> 
->>>>>>> bd8711cee206a4a89cf70aa4b6c19117eed9b37c
     </footer>
     <script>
     
