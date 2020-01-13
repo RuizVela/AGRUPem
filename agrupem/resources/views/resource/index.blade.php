@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@section('content')
+@section('content') 
 
-<div id="resources_container" class="container">  
+<div id="" class="container general_container">  
     <div id="resocurce_content" class="window_information">
         <div class="col-md-8">
                     <h1>Recursos</h1>

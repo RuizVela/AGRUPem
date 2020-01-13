@@ -115,8 +115,7 @@
     <footer class="d-flex flex-column">
         <div>
         <p>Copyright © 2012-2018 AGRUPem</br></p> </div>
-        <div>
-        <p>grupdesuport.em@gmail.com</p> </div> 
+       
     </footer>
     <script>
     

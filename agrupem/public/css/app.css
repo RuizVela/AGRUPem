@@ -11538,6 +11538,10 @@ footer {
   height: auto;
 }
 
+.general_container {
+  padding-bottom: 140px;
+}
+
 .resource_card {
   height: auto;
   background-color: #80CBC4;

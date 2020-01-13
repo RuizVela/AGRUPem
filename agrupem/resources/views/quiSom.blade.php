@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container">
+<div class="container general_container"> 
    <div class="window_information">
          <h1>@lang('slider.who-we-are-title')</h1>
          <div class="text_container">

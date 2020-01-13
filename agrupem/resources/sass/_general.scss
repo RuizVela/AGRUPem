@@ -5,7 +5,7 @@
     box-shadow: 50px 50px #80CBC4;
     border-radius: 8px;
 }
-.window_information h1{
+.window_information h1{ 
     background-color: #FFE97D;
     position: relative;
     top: 10%;
@@ -76,6 +76,10 @@ footer{
 
 #resocurce_content{
     height: auto;
+}
+
+.general_container{
+    padding-bottom: 140px;
 }
 
 .resource_card{

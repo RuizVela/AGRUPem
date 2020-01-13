@@ -1,9 +1,9 @@
 @extends('layouts.app')
 @section('content')
 <body>
-<div class="container">
+<div class="container general_container" >
     <div class="window_information">
-    <h1>@lang('layout.what-we-do')</h1>
+    <h1>@lang('layout.what-we-do')</h1> 
         <div class="text_container">
         <p>@lang('slider.what-we-do-content')</p>
         </div>
