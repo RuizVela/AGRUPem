@@ -36,10 +36,6 @@
     <div id="app">
         <nav id="firstNavbar" class="navbar navbar-expand-md navbar-light shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="<?php echo e(url('/home')); ?>">
-                    <?php echo e(config('AGRUPem', 'AGRUPem')); ?>
-
-                </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="<?php echo e(__('Toggle navigation')); ?>">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -100,7 +96,10 @@
                 </div>
             </div>
         </nav>
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <a href="<?php echo e(url('/')); ?>">
+        <img id="logotipo" src="<?php echo e(asset('/images/logo.png')); ?>" alt="logotipo de agrupem">
+        </a>
+        <nav id="secondNavbar" class="navbar navbar-expand-md navbar-light shadow-sm">
             <div class="navbar-nav ml-auto">
                 <a href="/queFem" class="button btn"><?php echo app('translator')->get('layout.what-we-do'); ?></a>
                 <a href="/quiSom" class="button btn"><?php echo app('translator')->get('layout.who-we-are'); ?></a>

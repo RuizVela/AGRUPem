@@ -46,4 +46,11 @@ trait Multilanguage
         }
         return $this->getCatalanContent();
     }
+    static function getLocalCalendar()
+    {
+        if (App::isLocale('es')){
+            return "https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/locale/es.js";
+        }
+        return "https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/locale/ca.js";
+    }
 }

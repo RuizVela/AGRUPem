@@ -16,8 +16,9 @@ class HomeController extends Controller
         $all_posts = Post::all();
         $events = $all_events->take(4);
         $posts = $all_posts->take(-3);
+        $calendar = Event::getLocalCalendar();
 
-        return view('home',['novelties'=>$novelties, 'events'=>$events, 'posts'=>$posts]);
+        return view('home',['novelties'=>$novelties, 'events'=>$events, 'posts'=>$posts, 'calendar'=>$calendar]);
     
     
     }

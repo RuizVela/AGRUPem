@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App;
 use App\traits\Multilanguage;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\File;
