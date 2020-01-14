@@ -9388,7 +9388,7 @@ button.bg-dark:focus {
 
 .pb-4,
 .py-4 {
-  padding-bottom: 0rem !important;
+  padding-bottom: 1.5rem !important;
 }
 
 .pl-4,
@@ -11805,8 +11805,12 @@ hr {
   border: 1px black;
 }
 
-main {
+#post_main {
   border-left: 1px solid black;
+}
+
+#title_post {
+  background-color: #FFE97D;
 }
 
 .margin {
