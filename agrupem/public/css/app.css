@@ -279,6 +279,25 @@
   }
 }
 
+@media only screen and (min-width: 1360px) {
+  #que_fem_images_buttons_container {
+    margin-left: 10%;
+  }
+
+  #quefem_full_container {
+    height: 68.7vh;
+  }
+}
+
+#qui_som_text_container {
+  width: 95%;
+  position: relative;
+  top: 1%;
+  left: 5%;
+  background-color: #FFE97D;
+  border-radius: 5px;
+}
+
 /*!
  * Bootstrap v4.4.0 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -11696,7 +11715,7 @@ footer {
           align-items: center;
   line-height: 1px;
   position: relative;
-  bottom: 0px;
+  bottom: 0;
 }
 
 #resocurce_content {

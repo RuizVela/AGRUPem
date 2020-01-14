@@ -1,8 +1,8 @@
 @extends('layouts.app')
 @section('content')
 
-<div class="container" >
-    <div id="que_fem_general_container" class="d-flex justify-content-center">
+<div id="quefem_full_container" class="container" >
+    <div id="que_fem_general_container" class="col-md-12 d-flex justify-content-around">
         <div id="que_fem_container">
             <div>
                 <h1>@lang('layout.what-we-do')</h1>
