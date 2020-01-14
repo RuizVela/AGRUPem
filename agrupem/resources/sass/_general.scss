@@ -32,9 +32,13 @@ border-radius: 5px;
     height: 70px;
     width: 150px;
     border-radius: 40px;
+    z-index: 10;
+    position: relative;
+    color: black;
 }
 .right_buttons button:hover{
     background-color: #FFB74D;
+    color: white;
 }
 .right_content img{
     margin-top: 50px;
