@@ -4,7 +4,8 @@ return [
     'colabora' => 'COLABORA',
     'aportaciones' => 'APORTACIONES',
     'aportaciones_text' => '<p>Si quieres colaborar económicamente con AGRUPem, desde 1 euro, entra en
-    <p>http://www.migranodearena.org/reto/18054/ajudans-a-fer-un-cim
+    <p><a href src="http://www.migranodearena.org/reto/18054/ajudans-a-fer-un-cim">http://www.migranodearena.org/reto/18054/ajudans-a-fer-un-cim</a>
+
     <p>o bien haz un ingreso en el número de cuenta de "la Caixa":
     <p>2100 0295 18 0101642713',
     'voluntariados' => 'VOLUNTARIADOS',
