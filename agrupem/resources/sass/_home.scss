@@ -208,3 +208,18 @@
     float: right;
     border-radius: 50%;
 }
+
+@media only screen and (max-width: 768px){
+    #home_central_container{
+        margin-top: 10%;
+    }
+    #blog_entries_button{
+        height: 100%;
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    #home_central_container{
+        margin-top: 8%;
+    }
+}

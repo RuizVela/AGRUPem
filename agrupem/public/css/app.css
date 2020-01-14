@@ -218,6 +218,22 @@
   border-radius: 50%;
 }
 
+@media only screen and (max-width: 768px) {
+  #home_central_container {
+    margin-top: 10%;
+  }
+
+  #blog_entries_button {
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  #home_central_container {
+    margin-top: 8%;
+  }
+}
+
 #selected_lenguage {
   color: black;
 }
@@ -272,12 +288,9 @@
   background-color: #FFE97D;
 }
 
-.button_show {
-  color: #FFE97D;
-}
-
-.button_show:hover {
-  color: #FFB74D;
+#button_show {
+  margin-left: 5%;
+  margin-top: 5%;
 }
 
 /*!
@@ -11671,10 +11684,14 @@ a.text-dark:focus {
   height: 70px;
   width: 150px;
   border-radius: 40px;
+  z-index: 10;
+  position: relative;
+  color: black;
 }
 
 .right_buttons button:hover {
   background-color: #FFB74D;
+  color: white;
 }
 
 .right_content img {

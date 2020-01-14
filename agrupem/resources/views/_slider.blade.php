@@ -17,15 +17,19 @@
                 </div>
                 <div class="carousel-item">
                     <div class="text_container">
-                    <p>@lang('slider.become-a-partner-content')</p>
-                </div>
-                <button class="slider-button btn btn-primary">@lang('slider.become-a-partner-button')</button>
+                        <p>@lang('slider.become-a-partner-content')</p>
+                    </div>
+                    <div class="right_buttons">
+                        <button class="slider-button btn btn-primary">@lang('slider.become-a-partner-button')</button>
+                    </div>
                 </div>
                 <div class="carousel-item">
                     <div class="text_container">
                         <p>@lang('slider.collaborate-content')</p>
                     </div>
-                <button class="slider-button btn btn-primary">@lang('slider.collaborate-button')</button>
+                    <div class="right_buttons">
+                        <button class="slider-button btn btn-primary">@lang('slider.collaborate-button')</button>
+                    </div>
                 </div>
         </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
