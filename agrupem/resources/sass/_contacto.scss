@@ -14,9 +14,44 @@
 
 #contactForm{
     width: 450px;
-    right: 30%;
+    padding: 5%;
+    box-shadow: 50px 50px #80CBC4;
+    background-color: #4F9A94;
+    border-radius: 5px;
 }
 
+#contact_form_information{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+#contact_send_button{
+    height: 50px;
+    width: 120px;
+    border: #4F9A94 solid 2px;
+}
+
+#contact_information{
+    margin: 10px;
+}
+
+#contact_information_container{
+    margin: 5% 0% 5% 10%;
+    background-color: #FFE97D;
+    border-radius: 8px;
+    position: relative;
+}
+
+#contact_map{
+    margin: 10% 0% 0% 10%;
+}
+
+#map{
+    width: 80%;
+    height: 400px; 
+    margin-left: 20px; 
+    position: relative;
+}
 
 .window_block{
     background-color: #FFE97D;
@@ -49,6 +84,46 @@ p{
 #map{
     margin-top: 30px;
     border-radius: 8px;
-    margin-left: -10;
     background-color: #FFE97D;
+}
+
+@media only screen and (max-width: 1024){
+    #contact_map{
+        margin: 10% 0% 0% 8%;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    #contact_information_container{
+        margin: 5% 0%;
+    }
+    #contact_information{
+    display: flex;
+    flex-wrap: nowrap;
+    }
+    #contact_map{
+        margin: 0% 0% 0% 5%;
+    }
+    #map{
+        width: 80%;
+        height: 20vh;
+        margin-left: 20px; 
+        position: relative;
+    }
+    #contact_form_information{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #contactForm{
+        width: 635px;
+        height: 360px;
+        margin-bottom: 10%;
+    }
+    #contact_textarea_container{
+        margin-bottom: 1%;
+    }
+    #contact_textarea{
+        width: 550px;
+        height: 150px;
+    }
 }
