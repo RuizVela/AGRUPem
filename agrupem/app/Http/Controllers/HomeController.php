@@ -36,4 +36,8 @@ class HomeController extends Controller
     {
         return view('quiSom');     
     }
+    public function colabora()
+    {
+        return view('colabora');     
+    }
 }
