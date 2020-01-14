@@ -1,22 +1,21 @@
 <?php $__env->startSection('content'); ?>
+
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
-
-                <div class="card-body">
-                    <?php if(session('status')): ?>
-                        <div class="alert alert-success" role="alert">
-                            <?php echo e(session('status')); ?>
-
-                        </div>
-                    <?php endif; ?>
-
-                    You are logged in!
+            <?php echo $__env->make('_slider', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+            <div id="home_central_container" class="d-flex">
+                <div id="home_left_central_container">
+                    <?php echo $__env->make('_banner', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+                    <img id="inline_home" src="<?php echo e(asset('/images/inline.jpg')); ?>" alt="">
+                    <?php echo $__env->make('novelty._novelties', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+                    <?php echo $__env->make('_personal-assitance', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+                </div>
+                <div id="home_right_central_container">
+                    <?php echo $__env->make('event._events-calendar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                 </div>
             </div>
-        </div>
+            <?php echo $__env->make('_blog-entries', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+            <?php echo $__env->make('_collaborators', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     </div>
 </div>
 <?php $__env->stopSection(); ?>

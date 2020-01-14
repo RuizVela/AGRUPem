@@ -25,6 +25,7 @@
     "dependencies": {
         "bs4-summernote": "^0.8.10",
         "codemirror": "^5.49.2",
+        "cross-env": "^6.0.3",
         "summernote": "^0.8.12"
     }
 }

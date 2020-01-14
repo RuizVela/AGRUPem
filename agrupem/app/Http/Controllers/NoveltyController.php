@@ -1,17 +1,21 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers;  
 
 use App\Novelty;
 use App\Image;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class NoveltyController extends Controller
 {
     public function index()
     {
         $novelties = Novelty::all();
+        
+        
         return view('novelty.index',['novelties'=>$novelties]);
+       
     }
     public function create()
     {
@@ -20,11 +24,11 @@ class NoveltyController extends Controller
     public function store(Request $request)
     {
         $novelty=Novelty::create($request->all());
-        $novelty_id=$novelty->id;
-        $path=Image::updateImageNovelty($request, $novelty->id);
-        Image::create(['novelty_id'=>$novelty_id , 'url'=>"storage/".$path]);
+       
+        $novelty->uploadImage($request,$novelty);
+        
 
-        return redirect('/novelty/'.$novelty->id);
+        return redirect('/novelty');
     }
     public function edit(Novelty $novelty)
     {
@@ -33,9 +37,9 @@ class NoveltyController extends Controller
     public function update(Request $request, Novelty $novelty)
     {
         $novelty->update($request->all());
-        $novelty_id = $novelty->id;
-        $path=Image::updateImageNovelty($request,$novelty->id);
-        Image::create(['novelty_id'=>$novelty_id , 'url'=>"storage/".$path]);
+        
+        $novelty->uploadImage($request,$novelty);
+        
         return redirect('novelty');
     }
     public function destroy(Novelty $novelty)
@@ -43,4 +47,10 @@ class NoveltyController extends Controller
         $novelty->delete();
         return redirect('novelty');
     }
+    public function deleteImage(Novelty $novelty)
+    {
+        Storage::delete("public/novelties/$novelty->id.jpg");
+        return redirect("novelty");
+    }
+   
 }
