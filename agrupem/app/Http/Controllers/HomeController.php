@@ -12,7 +12,7 @@ class HomeController extends Controller
     public function index()
     {
         $novelties = Novelty::all();
-        $all_events = Event::all();
+        $all_events = Event::getNonExpiredEvents();
         $all_posts = Post::all();
         $events = $all_events->take(4);
         $posts = $all_posts->take(-3);

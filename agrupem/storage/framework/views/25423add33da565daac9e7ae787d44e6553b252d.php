@@ -11,6 +11,8 @@
                     <?php echo $__env->make('_personal-assitance', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                 </div>
                 <div id="home_right_central_container">
+                        <form method="GET" action="/event/create">
+                            <input type="submit" value="Nuevo Evento"></form>
                     <?php echo $__env->make('event._events-calendar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                 </div>
             </div>
