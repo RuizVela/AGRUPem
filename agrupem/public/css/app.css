@@ -243,6 +243,42 @@
   color: #636b6f;
 }
 
+#que_fem_container {
+  background-color: #4F9A94;
+  box-shadow: 50px 50px #80CBC4;
+  border-radius: 5px;
+  padding: 10px;
+  position: relative;
+  width: 50%;
+}
+
+#que_fem_images_buttons_container {
+  position: relative;
+}
+
+#que_fem_general_container {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: 5%;
+}
+
+#que_fem_container h1 {
+  background-color: #FFE97D;
+  position: relative;
+  left: 5%;
+  width: 95%;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+  #que_fem_general_container {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
 /*!
  * Bootstrap v4.4.0 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -11659,6 +11695,8 @@ footer {
   -webkit-box-align: center;
           align-items: center;
   line-height: 1px;
+  position: relative;
+  bottom: 0px;
 }
 
 #resocurce_content {
