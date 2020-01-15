@@ -15,27 +15,29 @@
                     </div>
                 </header>
                 @if ($post->getEncodedImage($post))
-                <div id="post_entry" class="d-flex flex-nowrap align-items-center">
-                    <div id="image_post_entry">
+                <div id="post_entry" class="d-flex flex-wrap align-items-center">
+                    <div id="image_post_entry" class="d-flex justify-content-center col-md-6 col-sm-12">
                         <img src="{{$post->getEncodedImage($post)}}">
                     </div>
-                    <div id="content_blog_index">
+                    <div id="content_blog_index" class="col-md-6 col-sm-12">
                         <p>{!! Str::words($post->deleteEncodedImage($post), 40,"...")!!}</p>
                     </div>
                 </div>
                 @else
-                <div id="post_entry" class="d-flex flex-nowrap align-items-center">
+                <div id="post_entry" class="d-flex justify-content-center align-items-center">
                     <div id="content_blog_index_no_image">
                         <p>{!! Str::words($post->getLocalContent(), 40,"...")!!}</p>
                     </div>
                 </div>
                 @endif
 
+                <div id="show_blog_button" class="d-flex">
                 <form action="/post/{{$post->id}}" method="GET">
                     <div class="right_buttons d-flex align-items-center">
                         <button type="submit" id="button_show" class="button">@lang('blog.show-me-more')</button>
                     </div>
                 </form>
+                </div>
 
                 <div class="d-flex flex-row justify-content-between">
                     @auth

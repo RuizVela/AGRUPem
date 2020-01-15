@@ -10,7 +10,7 @@
             <header class="card">
                 <h2 class="card-header class-header" id="title_post">{{$post->getLocalTitle()}}</h2>
             </header>
-            <main id="post_main" class="margin">
+            <main id="post_main" class="margin col-sm-12">
                 <hr>{!! html_entity_decode($post->getLocalContent()) !!}<br><br>
 
                 @auth
