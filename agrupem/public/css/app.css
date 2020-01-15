@@ -11646,34 +11646,32 @@ a.text-dark:focus {
 }
 
 .window_information {
-  max-width: 709px;
-  height: 476px;
   background-color: #4F9A94;
-  box-shadow: 50px 50px #80CBC4;
+  box-shadow: 15px 15px #80CBC4;
   border-radius: 5px;
+  padding: 2%;
+  margin-bottom: 10%;
 }
 
 .window_information h1 {
   background-color: #FFE97D;
-  position: relative;
-  top: 10%;
-  left: 5%;
-  width: 400px;
   border-radius: 5px;
+  text-align: center;
 }
 
 .text_container {
   width: 90%;
-  position: relative;
   top: 15%;
   left: 5%;
   background-color: #FFE97D;
   border-radius: 5px;
+  padding: 1%;
+  margin: auto;
 }
 
 .right_content {
   text-align: center;
-  position: absolute;
+  position: initial;
   right: 50px;
   width: 400px;
   top: 20%;
@@ -11696,9 +11694,6 @@ a.text-dark:focus {
 
 .right_content img {
   margin-top: 50px;
-  width: 100%;
-  height: 150px;
-  box-shadow: 15px 15px #80CBC4;
 }
 
 body {
@@ -11743,6 +11738,10 @@ footer {
 
 .admin_button {
   margin-left: 10px;
+}
+
+#sectionQuiSom {
+  margin-left: 1%;
 }
 
 .button_pushUp {
