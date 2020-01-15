@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Event; 
 use App\Image; 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class EventController extends Controller
 {
@@ -12,7 +13,7 @@ class EventController extends Controller
     public function index()
     {
         $events=Event::getNonExpiredEvents();
-        return view('event.calendar',['events'=>$events]);
+        return view('event.index',['events'=>$events]);
     }
 
     public function create()
@@ -22,32 +23,27 @@ class EventController extends Controller
 
     public function store(Request $request)
     {
-       
         $event=Event::create($request->all());
-        $event_id=$event->id;
-        $path=Image::updateImageEvent($request,$event->id);
-        Image::create(['event_id'=>$event_id , 'url'=>"storage/".$path]);
+        $event->uploadImage($request,$event);
         return redirect('event');
     }
-
+    
     public function show(Event $event)
     {
-        return view('event.event',['event'=>$event]);
+        $route = $event->imageUrl($event);
+        return view('event.event',['event'=>$event, 'route'=>$route]);
+        
     }
-
+    
     public function edit(Event $event)
     {
         return view('event.edit',['event'=>$event]);
     }
-
+    
     public function update(Request $request, Event $event)
     {
         $event->update($request->all());
-        $path=Image::updateImageEvent($request,$event->id);
-        $event_id=$event->id;
-        $image=Image::create(['event_id'=>$event_id , 'url'=>"storage/".$path]);
-
-        
+        $event->uploadImage($request,$event);
         return redirect("event/$event->id");
     }
 
@@ -55,5 +51,11 @@ class EventController extends Controller
     {
         $event->delete();
         return redirect('event');
+    }
+
+    public function deleteImage(Event $event)
+    {
+        Storage::delete("public/events/$event->id.jpg");
+        return redirect("event/$event->id");
     }
 }

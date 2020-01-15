@@ -5,14 +5,13 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+           
+            <section>
             <header class="card">
-                <div class="card-header">AGRUPem Blog</div>
+                <h2 class="card-header class-header" id="title_post">{{$post->getLocalTitle()}}</h2>
             </header>
-            <main>
-            <section class="card">
-
-                <h2 id="title">{{$post->getLocalTitle()}}</h2>
-                {!! html_entity_decode($post->getLocalContent()) !!}
+            <main id="post_main" class="margin">
+                <hr>{!! html_entity_decode($post->getLocalContent()) !!}<br><br>
 
                 @auth
                 <form action="/post/{{$post->id}}/edit" method="GET">
@@ -20,12 +19,14 @@
                 </form>
 
                 <form action="/post/{{$post->id}}" method="post">
-                @csrf
-                @method('DELETE') 
-                <input id="button_delete" type="submit" value="Eliminar post" class="btn btn-outline-danger mt-4">
+                    @csrf
+                    @method('DELETE') 
+                    <input id="button_delete" type="submit" value="Eliminar post" class="btn btn-outline-danger mt-4">
                 </form>
                 @endauth
-                <a id="button_return" href="/post" class="btn btn-outline-success mt-4">Volver index</a>
+                <div class="right_buttons">
+                    <button id="button_return" onclick="window.location.href = '/post';">@lang('blog.return')</button>
+                </div>
             </section>
             </main>
         </div>

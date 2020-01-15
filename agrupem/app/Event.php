@@ -2,20 +2,22 @@
 
 namespace App;
 
+use App;
 use App\traits\Multilanguage;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\File;
 
 
 class Event extends Model
 {
     use Multilanguage;
     protected $fillable=[
-        'title_catalan','title_spanish','content_catalan','content_spanish','date', 'expired'
+        'title_catalan','title_spanish','content_catalan','content_spanish','startDate', 'endDate', 'expired'
     ];
     static function sortByDate()
     {
         $events = Event::all();
-        $eventsSortered = $events->sortBy('date');
+        $eventsSortered = $events->sortBy('startDate');
         return $eventsSortered;
     }
     static function getNonExpiredEvents()
@@ -31,7 +33,7 @@ class Event extends Model
     static function getPastEvents()
     {
         $today = date('Y-m-d');
-        $events = Event::all()->where('date','<',$today)->where('expired', false);
+        $events = Event::all()->where('endDate','<',$today)->where('expired', false);
         return $events;
     }
     static function expirePastEvents()
@@ -41,8 +43,35 @@ class Event extends Model
         $event->expireEvent();
     }
 
-    public function images()
+    private function validateImg($request)
     {
-        return $this->hasMany(Image::class);
+        $request->validate([
+                               
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048' //TODO: preguntar david, tamaño requerido
+
+        ]); 
+    } 
+
+    public function uploadImage($request, $event) 
+    {
+           
+        $event->validateImg($request);   
+        
+        if ($request->hasFile('image')) 
+        {
+            $image = $request->file('image');
+            $filePath = $event->id. '.jpg'; //TODO preguntar david
+            $image->storeAs("public/events/",$filePath);            
+        }
+        
+    }
+    public function imageUrl()
+    {
+        $route = "storage/public/events/$this->id.jpg";
+        if (File::exists($route))
+        {
+            return $route;
+        }
+        return false;
     }
 }

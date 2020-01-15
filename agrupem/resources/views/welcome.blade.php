@@ -78,18 +78,20 @@
                     @endif
                     
                 </div>
+                
 
             <div class="content">
                 <div class="title m-b-md">
-                    AGRUPem
+                    <a id="home-link" href="/home" style="text-decoration:none;
+    color: #636b6f">AGRUPem</a>
                 </div>
 
                 <div class="links">
                     <a onclick="window.location='{{ url("post") }}'">Blog</a>
                     <a onclick="window.location='{{ url("resource") }}'">Recursos</a>
-                    <a onclick="window.location='{{ url("event") }}'">Esdeveniments</a>
-                    <a onclick="window.location='{{ url("novelty") }}'">Novetats</a>
-                    <a onclick="window.location='{{ url("image") }}'"}>Imatges</a>
+                    <a onclick="window.location='{{ url("event") }}'">@lang('welcome.events')</a>
+                    <a onclick="window.location='{{ url("novelty") }}'">@lang('welcome.novelties')</a>
+                    <a onclick="window.location='{{ url("contact") }}'"}>@lang('welcome.contact')</a>
                 </div>
             </div>
         </div>

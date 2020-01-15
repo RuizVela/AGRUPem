@@ -12,6 +12,7 @@
                 <section class="d-flex flex-row">
                     <form action="/novelty" method="post" accept-charset="UTF-8" enctype="multipart/form-data">
                     @csrf
+                    
                     <section class="flex-column p-2">
                         <div>
                             <label for="novelties_title">Títol</label>
@@ -31,10 +32,11 @@
                             <textarea id="novelties_content_spanish" name="content_spanish" cols="60" rows="1"></textarea>
                         </div>
                         <div>
-                         <input type="file" class="btn btn-outline-primary mt-4" name="novelty_image">
+                         <input type="file" class="btn btn-outline-primary mt-4" name="image">
                         </div>
                     </section>
                     <input type="submit" class="btn btn-outline-success mt-4" value="Guardar">
+                    
                     </form>
                 </section>
             </main>
