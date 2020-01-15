@@ -77,15 +77,14 @@
 #blog_entries_button {
   background-color: #4F9A94;
   border-color: #4F9A94;
+  height: 100%;
 }
 
 #home_left_central_container {
-  width: 60%;
   margin-top: 5%;
 }
 
 #home_right_central_container {
-  width: 40%;
   margin-top: 10%;
   margin-bottom: 5%;
 }
@@ -221,10 +220,6 @@
 @media only screen and (max-width: 768px) {
   #home_central_container {
     margin-top: 10%;
-  }
-
-  #blog_entries_button {
-    height: 100%;
   }
 }
 

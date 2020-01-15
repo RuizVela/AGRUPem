@@ -109,7 +109,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-4 pb-0">
             <?php echo $__env->yieldContent('content'); ?>
         </main>
     </div>
