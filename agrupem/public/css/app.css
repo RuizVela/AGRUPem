@@ -11882,7 +11882,7 @@ p {
   }
 }
 
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 414px) {
   #contact_information {
     display: -webkit-box;
     display: flex;
