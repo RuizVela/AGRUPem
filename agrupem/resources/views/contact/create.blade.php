@@ -7,7 +7,8 @@
         <div class="col-md-12">
             <main>
   
-                <section id="contact_form_information" class="flex-row d-flex align-items-center">
+                <section id="contact_form_information" class="d-flex justify-content-around align-items-center">
+                    <div class="flex-column col-md-10 col-lg-7">
                     <form action="/contact" method="post">
                         @csrf
                         <section id="contactForm">
@@ -25,7 +26,9 @@
                             </div>
                         </section>
                     </form>
-                
+                    </div>
+
+                    <div class="flex-column col-lg-5 col-md-10 mt-4">
                     <section id="contact_information_container">
                         <ul id="contact_information">
                         <div>
@@ -47,8 +50,10 @@
                         </div>
                         </ul>   
                     </section>
+                    </div>
+
                 </section> 
-                <section id="contact_map">
+                <section id="contact_map" class="d-flex justify-content-around">
                     <div id="map"></div>
                 </section>
                   

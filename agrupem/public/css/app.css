@@ -11843,10 +11843,6 @@ p {
 }
 
 @media only screen and (max-width: 768px) {
-  #contact_information_container {
-    margin: 5% 0%;
-  }
-
   #contact_information {
     display: -webkit-box;
     display: flex;
@@ -11867,11 +11863,11 @@ p {
   #contact_form_information {
     display: -webkit-box;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap !important;
   }
 
   #contactForm {
-    width: 635px;
+    width: 100%;
     height: 360px;
     margin-bottom: 10%;
   }
@@ -11881,8 +11877,24 @@ p {
   }
 
   #contact_textarea {
-    width: 550px;
+    width: 100%;
     height: 150px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  #contact_information {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #map {
+    height: 250px;
+  }
+
+  #contact_map {
+    margin: 0px;
   }
 }
 
