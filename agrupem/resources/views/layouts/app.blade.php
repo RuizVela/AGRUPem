@@ -61,9 +61,11 @@
                             <!-- Authentication Links -->
                     @guest
                     <div class="">
-                        <a class="nav-link nav-item" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        <a class="nav-link nav-item " href="{{ route('login') }}">{{ __('Login') }}</a>
+                    </div>
                     @endguest
                     @auth
+                    <div>
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
@@ -85,15 +87,15 @@
                     </div>
                         
                     @endauth
-
-            <div class="navbar-nav ml-auto col-md-12 justify-content-end">
-                <a href="/queFem" class="nav-item nav-link">@lang('layout.what-we-do')</a>
-                <a href="/quiSom" class="nav-item nav-link">@lang('layout.who-we-are')</a>
-                <a href="/resource" class="nav-item nav-link">RECURSOS</a>
-                <a href="/post" class="nav-item nav-link">BLOG</a>
-                <a href="/contact" class="nav-item nav-link">@lang('layout.contact')</a>
             </div>
-            
+
+                    <div class="navbar-nav ml-auto col-md-12 justify-content-end">
+                        <a href="/queFem" class="nav-item nav-link">@lang('layout.what-we-do')</a>
+                        <a href="/quiSom" class="nav-item nav-link">@lang('layout.who-we-are')</a>
+                        <a href="/resource" class="nav-item nav-link">RECURSOS</a>
+                        <a href="/post" class="nav-item nav-link">BLOG</a>
+                        <a href="/contact" class="nav-item nav-link">@lang('layout.contact')</a>
+                    </div>
         </div>
     </nav>
 <main class="row m-4">
