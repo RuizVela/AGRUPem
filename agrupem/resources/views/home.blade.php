@@ -4,7 +4,7 @@
 
 <div class="container">
     <div class="row justify-content-center">
-            @include('_slider')
+            <!-- @include('_slider') -->
             <div id="home_central_container" class="d-flex flex-wrap">
                 <div id="home_left_central_container" class="col-sm-12 col-md-6 mt-5">
                     @include('_banner')
@@ -13,8 +13,11 @@
                     @include('_personal-assitance')
                 </div>
                 <div id="home_right_central_container" class="col-sm-12 col-md-6 mb-5">
-                        <form method="GET" action="/event/create">
-                            <input type="submit" value="Nuevo Evento"></form>
+                    @auth
+                    <form method="GET" action="/event/create">
+                        <input type="submit" value="Nuevo Evento">
+                    </form>
+                    @endauth
                     @include('event._events-calendar')
                 </div>
             </div>

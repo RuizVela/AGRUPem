@@ -217,6 +217,17 @@
   border-radius: 50%;
 }
 
+.carousel-item img {
+  width: 90%;
+}
+
+.slider_background {
+  height: 50%;
+  background-color: #4F9A94;
+  box-shadow: 50px 50px #80CBC4;
+  border-radius: 5px;
+}
+
 @media only screen and (max-width: 768px) {
   #home_central_container {
     margin-top: 10%;
