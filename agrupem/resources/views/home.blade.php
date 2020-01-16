@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container">
+<div class="container ">
     <div class="row justify-content-center">
             @include('_slider')
             <div id="home_central_container" class="d-flex">

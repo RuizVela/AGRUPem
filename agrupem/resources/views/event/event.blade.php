@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="container">
-   <div class="window_information">
+   <div class="">
          <h1>{{$event->getLocalTitle()}}</h1>
          <div class="text_container">
             <p>{{$event->getLocalContent()}}</p>

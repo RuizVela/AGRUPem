@@ -1,51 +1,23 @@
-.window_information{
-    background-color: #4F9A94;
-    box-shadow: 15px 15px #80CBC4;
-    border-radius: 5px;
-    padding: 2%;
-    margin-bottom: 10%;
 
-}
-.window_information h1{ 
-    background-color: #FFE97D;
-    border-radius: 5px;
-    text-align: center;
+h1{
+    font-size:5vw; 
 }
 .text_container{    
     width: 90%;
     top: 15%;
     left: 5%;
-    background-color: #FFE97D;
     border-radius: 5px;
     padding: 1%;
     margin: auto;
-}
-.right_content{
-    text-align: center;
-    position: initial;
-    right: 50px;
-    width: 400px;
-    top: 20%;
-}
-.right_buttons button{
-    background-color: #FFE97D;
-    height: 70px;
-    width: 150px;
-    border-radius: 40px;
-    z-index: 10;
-    position: relative;
-    color: black;
-}
-.right_buttons button:hover{
-    background-color: #FFB74D;
-    color: white;
-}
-.right_content img{
-    margin-top: 50px;
-   
+    margin-bottom: inherit;
     
-   
 }
+
+.container img{
+    margin-top: 50px;
+  
+}
+
 body{
     background-repeat: no-repeat;
 }
@@ -53,8 +25,6 @@ body{
 nav{
     border-bottom: solid 1px #73a2bf;
 }
-
-
 
 footer{
     width: 100%;
@@ -94,4 +64,9 @@ footer{
 
 #sectionQuiSom{
     margin-left: 1%;
+}
+
+#button{
+    max-width: 40%;
+    margin: 0 4% 0 4%;
 }

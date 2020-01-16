@@ -1,12 +1,12 @@
 <section id="slider" class="card">
-    <div class="card-body window_information">
+    <div class="card-body">
         @if (session('status'))
             <div class="alert alert-success" role="alert">
                 {{ session('status') }}
             </div>
         @endif
 
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div id="carouselExampleControls" class="carousel slide " data-ride="carousel">
 
         <div class="carousel-inner">
                 <div class="carousel-item active">

@@ -11644,54 +11644,21 @@ a.text-dark:focus {
   }
 }
 
-.window_information {
-  background-color: #4F9A94;
-  box-shadow: 15px 15px #80CBC4;
-  border-radius: 5px;
-  padding: 2%;
-  margin-bottom: 10%;
-}
-
-.window_information h1 {
-  background-color: #FFE97D;
-  border-radius: 5px;
-  text-align: center;
+h1 {
+  font-size: 5vw;
 }
 
 .text_container {
   width: 90%;
   top: 15%;
   left: 5%;
-  background-color: #FFE97D;
   border-radius: 5px;
   padding: 1%;
   margin: auto;
+  margin-bottom: inherit;
 }
 
-.right_content {
-  text-align: center;
-  position: initial;
-  right: 50px;
-  width: 400px;
-  top: 20%;
-}
-
-.right_buttons button {
-  background-color: #FFE97D;
-  height: 70px;
-  width: 150px;
-  border-radius: 40px;
-  z-index: 10;
-  position: relative;
-  color: black;
-}
-
-.right_buttons button:hover {
-  background-color: #FFB74D;
-  color: white;
-}
-
-.right_content img {
+.container img {
   margin-top: 50px;
 }
 
@@ -11744,6 +11711,11 @@ footer {
 
 #sectionQuiSom {
   margin-left: 1%;
+}
+
+#button {
+  max-width: 40%;
+  margin: 0 4% 0 4%;
 }
 
 .button_pushUp {
