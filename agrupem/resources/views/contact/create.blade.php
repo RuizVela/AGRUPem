@@ -4,36 +4,41 @@
 
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <main>
   
-                <section class="col-md-6 flex-row flex-nowrap d-flex align-items-center">
+                <section id="contact_form_information" class="d-flex justify-content-around align-items-center">
+                    <div class="flex-column col-md-10 col-lg-7">
                     <form action="/contact" method="post">
                         @csrf
-                        <section id="contactForm" class="col-md-12 flex-column p-5">
+                        <section id="contactForm">
                             <div class="form-group">
                                 <input class="inputColor" id="contact_name" type="text" placeholder="@lang('contact.name')" name="contact_name" value="{{old('contact_name')}}" class="form-control" required></input>
                             </div>
                             <div class="form-group">
                                 <input class="inputColor" id="contact_email" type="email" placeholder="Email"name="contact_email" value="{{old('contact_email')}}" class="form-control" required></input>
                             </div>
-                            <div class="form-group">
-                                <textarea class="inputColor" id="contact_message" placeholder="@lang('contact.message')" name="contact_message" cols="30" rows="10" class="form-control" required>{{old('contact_message')}}</textarea>
+                            <div id="contact_textarea_container" class="form-group">
+                                <textarea id="contact_textarea" class="inputColor" id="contact_message" placeholder="@lang('contact.message')" name="contact_message" cols="30" rows="10" class="form-control" required>{{old('contact_message')}}</textarea>
                             </div>
-                            <div class="form-group button_pushUp"> 
-                            <input type="submit" class="btn btn-outline-success mt-4" value="Enviar">
+                            <div class="right_buttons"> 
+                            <button id="contact_send_button" type="submit" class="">Enviar</button>
                             </div>
                         </section>
                     </form>
-                
-                    <section class="window_block" style="margin-top: 60px">
-                        <ul>
+                    </div>
+
+                    <div class="flex-column col-lg-5 col-md-10 mt-4">
+                    <section id="contact_information_container">
+                        <ul id="contact_information">
+                        <div>
                             <li>
                             <h3>@lang('layout.direccion'):</h3>
                             <p>ALTHAIA (xarxa assistencial de Manresa)</p>
                             <p>CENTRE HOSPITALARI DE MANRESA</p>
                             <p>C/ Flor de Lis, 33, 08242 MANRESA</p></li>
-
+                        </div>
+                        <div>
                             <li>
                             <h3>@lang('layout.tele'):</h3>
                             <p>93 875 93 00 + ext.1065 @lang('layout.horarioAtencion')</p>
@@ -42,11 +47,14 @@
                             <li>
                             <h3>@lang('layout.mail'):</h3>
                             <p>grupdesuport.em@gmail.com</p></li>
+                        </div>
                         </ul>   
                     </section>
+                    </div>
+
                 </section> 
-                <section>
-                    <div class="img-responsive window_center" id="map" style="width:800px; height:400px; margin-left:20px"></div>
+                <section id="contact_map" class="d-flex justify-content-around">
+                    <div id="map"></div>
                 </section>
                   
             </main>

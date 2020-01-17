@@ -32,7 +32,7 @@
     <script src="https://kit.fontawesome.com/ba7e41d0d3.js" crossorigin="anonymous"></script>
 
 </head>
-<body style="background:url('/images/wallpaper.png')">
+<body>
     
     <nav class="navbar navbar-light navbar-expand-md shadow p-3 mb-5">
             <a href="<?php echo e(url('/')); ?>" class="ancorNavbar">
