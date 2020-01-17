@@ -1,4 +1,4 @@
-<section id="collaborators_container">
+<section id="collaborators_container" class="mt-4">
     <div id="collaborators_title" class="title">
         <h3>@lang('home.collaborators')</h3>
     </div>

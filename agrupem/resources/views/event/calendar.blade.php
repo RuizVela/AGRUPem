@@ -1,6 +1,8 @@
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/fullcalendar.min.css' />
 
-<h3>@lang('home.calendar')</h3>
+<div id="calendar_title">
+    <h1>@lang('home.calendar')</h1>
+</div>
 
 <div id='calendar'></div>
 

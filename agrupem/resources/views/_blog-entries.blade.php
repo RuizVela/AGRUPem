@@ -1,4 +1,4 @@
-<section id="blog_home_container">
+<section id="blog_home_container" class="mt-5 mb-4">
     <div id="home_blog_entries_title" class="title">
         <h3>@lang('home.blog')</h3>
     </div>

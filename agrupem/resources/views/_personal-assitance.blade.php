@@ -1,4 +1,4 @@
-<section id="personal_assistance_container">
+<section id="personal_assistance_container" class="col-md-12 mb-4 mt-4">
     <div id="home_personal_assistance_title" class="title">
         <h3>@lang('home.personal-assistance-title')</h3>
     </div>
