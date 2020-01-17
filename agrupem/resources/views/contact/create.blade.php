@@ -11,7 +11,7 @@
                     <div class="flex-column col-md-10 col-lg-7">
                     <form action="/contact" method="post">
                         @csrf
-                        <section id="contactForm">
+                        <section id="contactForm" class="p-2">
                             <div class="form-group">
                                 <input class="inputColor" id="contact_name" type="text" placeholder="@lang('contact.name')" name="contact_name" value="{{old('contact_name')}}" class="form-control" required></input>
                             </div>
@@ -28,8 +28,8 @@
                     </form>
                     </div>
 
-                    <div class="flex-column col-lg-5 col-md-10 mt-4">
-                    <section id="contact_information_container">
+                    <div id="contact_information_container" class="flex-column col-lg-5 col-md-10 mt-4">
+                    <section>
                         <ul id="contact_information">
                         <div>
                             <li>

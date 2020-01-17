@@ -169,13 +169,6 @@
   width: 100%;
 }
 
-#inline_home {
-  margin-left: 10%;
-  width: 80%;
-  height: 1%;
-  box-shadow: 0 0px 0px 50px #80cbc4;
-}
-
 #logo_1 {
   height: 100%;
   width: 10%;
@@ -213,22 +206,6 @@
 #logo_8 {
   height: 100%;
   width: 15%;
-}
-
-.slider-button {
-  float: right;
-  border-radius: 50%;
-}
-
-.carousel-item img {
-  width: 90%;
-}
-
-.slider_background {
-  height: 50%;
-  background-color: #4F9A94;
-  box-shadow: 50px 50px #80CBC4;
-  border-radius: 5px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -300,7 +277,7 @@
 }
 
 /*!
- * Bootstrap v4.4.1 (https://getbootstrap.com/)
+ * Bootstrap v4.4.0 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -2625,7 +2602,7 @@ pre code {
 .form-control {
   display: block;
   width: 100%;
-  height: calc(1.6em + 0.75rem + 2px);
+  height: calc(1.6em + 0.75rem2px);
   padding: 0.375rem 0.75rem;
   font-size: 1.1rem;
   font-weight: 400;
@@ -2748,7 +2725,7 @@ select.form-control:focus::-ms-value {
 }
 
 .form-control-sm {
-  height: calc(1.5em + 0.5rem + 2px);
+  height: calc(1.5em + 0.5rem2px);
   padding: 0.25rem 0.5rem;
   font-size: 0.9625rem;
   line-height: 1.5;
@@ -2756,7 +2733,7 @@ select.form-control:focus::-ms-value {
 }
 
 .form-control-lg {
-  height: calc(1.5em + 1rem + 2px);
+  height: calc(1.5em + 1rem2px);
   padding: 0.5rem 1rem;
   font-size: 1.375rem;
   line-height: 1.5;
@@ -2807,8 +2784,7 @@ textarea.form-control {
   margin-left: -1.25rem;
 }
 
-.form-check-input[disabled] ~ .form-check-label,
-.form-check-input:disabled ~ .form-check-label {
+.form-check-input[disabled] ~ .form-check-label {
   color: #6c757d;
 }
 
@@ -4424,7 +4400,7 @@ input[type=button].btn-block {
 
 .input-group-lg > .form-control:not(textarea),
 .input-group-lg > .custom-select {
-  height: calc(1.5em + 1rem + 2px);
+  height: calc(1.5em + 1rem2px);
 }
 
 .input-group-lg > .form-control,
@@ -4441,7 +4417,7 @@ input[type=button].btn-block {
 
 .input-group-sm > .form-control:not(textarea),
 .input-group-sm > .custom-select {
-  height: calc(1.5em + 0.5rem + 2px);
+  height: calc(1.5em + 0.5rem2px);
 }
 
 .input-group-sm > .form-control,
@@ -4523,13 +4499,11 @@ input[type=button].btn-block {
   border-color: #cce3f6;
 }
 
-.custom-control-input[disabled] ~ .custom-control-label,
-.custom-control-input:disabled ~ .custom-control-label {
+.custom-control-input[disabled] ~ .custom-control-label {
   color: #6c757d;
 }
 
-.custom-control-input[disabled] ~ .custom-control-label::before,
-.custom-control-input:disabled ~ .custom-control-label::before {
+.custom-control-input[disabled] ~ .custom-control-label::before {
   background-color: #e9ecef;
 }
 
@@ -4644,7 +4618,7 @@ input[type=button].btn-block {
 .custom-select {
   display: inline-block;
   width: 100%;
-  height: calc(1.6em + 0.75rem + 2px);
+  height: calc(1.6em + 0.75rem2px);
   padding: 0.375rem 1.75rem 0.375rem 0.75rem;
   font-size: 1.1rem;
   font-weight: 400;
@@ -4692,7 +4666,7 @@ input[type=button].btn-block {
 }
 
 .custom-select-sm {
-  height: calc(1.5em + 0.5rem + 2px);
+  height: calc(1.5em + 0.5rem2px);
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   padding-left: 0.5rem;
@@ -4700,7 +4674,7 @@ input[type=button].btn-block {
 }
 
 .custom-select-lg {
-  height: calc(1.5em + 1rem + 2px);
+  height: calc(1.5em + 1rem2px);
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   padding-left: 1rem;
@@ -4711,7 +4685,7 @@ input[type=button].btn-block {
   position: relative;
   display: inline-block;
   width: 100%;
-  height: calc(1.6em + 0.75rem + 2px);
+  height: calc(1.6em + 0.75rem2px);
   margin-bottom: 0;
 }
 
@@ -4719,7 +4693,7 @@ input[type=button].btn-block {
   position: relative;
   z-index: 2;
   width: 100%;
-  height: calc(1.6em + 0.75rem + 2px);
+  height: calc(1.6em + 0.75rem2px);
   margin: 0;
   opacity: 0;
 }
@@ -4729,8 +4703,7 @@ input[type=button].btn-block {
   box-shadow: 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
 }
 
-.custom-file-input[disabled] ~ .custom-file-label,
-.custom-file-input:disabled ~ .custom-file-label {
+.custom-file-input[disabled] ~ .custom-file-label {
   background-color: #e9ecef;
 }
 
@@ -4748,7 +4721,7 @@ input[type=button].btn-block {
   right: 0;
   left: 0;
   z-index: 1;
-  height: calc(1.6em + 0.75rem + 2px);
+  height: calc(1.6em + 0.75rem2px);
   padding: 0.375rem 0.75rem;
   font-weight: 400;
   line-height: 1.6;
@@ -11746,7 +11719,9 @@ footer {
 
 #contactForm {
   width: 450px;
-  right: 30%;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 10px 10px 5px 0px rgba(115, 162, 192, 0.5);
 }
 
 .window_block {
@@ -11777,11 +11752,77 @@ p {
   font-size: 16px;
 }
 
+#contact_information_container {
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 10px 10px 5px 0px rgba(115, 162, 192, 0.5);
+}
+
 #map {
   margin-top: 30px;
   border-radius: 8px;
-  margin-left: -10;
-  background-color: #FFE97D;
+}
+
+@media only screen and (max-width: 1024) {
+  #contact_map {
+    margin: 10% 0% 0% 8%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #contact_information {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  #contact_map {
+    margin: 0% 0% 0% 5%;
+  }
+
+  #map {
+    width: 80%;
+    height: 20vh;
+    margin-left: 20px;
+    position: relative;
+  }
+
+  #contact_form_information {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap !important;
+  }
+
+  #contactForm {
+    width: 100%;
+    height: 360px;
+    margin-bottom: 10%;
+  }
+
+  #contact_textarea_container {
+    margin-bottom: 1%;
+  }
+
+  #contact_textarea {
+    width: 100%;
+    height: 150px;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  #contact_information {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #map {
+    height: 250px;
+  }
+
+  #contact_map {
+    margin: 0px;
+  }
 }
 
 hr {
