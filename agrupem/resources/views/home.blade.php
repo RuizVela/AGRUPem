@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container">
+<div class="container ">
     <div class="row justify-content-center">
         <div class="col-md-8 justify-content-center mb-5">
             @include('novelty._novelties')

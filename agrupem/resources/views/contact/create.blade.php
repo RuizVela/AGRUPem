@@ -10,7 +10,7 @@
                 <section class="col-md-6 flex-row flex-nowrap d-flex align-items-center">
                     <form action="/contact" method="post">
                         @csrf
-                        <section id="contactForm" class="col-md-12 flex-column p-5 window_information">
+                        <section id="contactForm" class="col-md-12 flex-column p-5">
                             <div class="form-group">
                                 <input class="inputColor" id="contact_name" type="text" placeholder="@lang('contact.name')" name="contact_name" value="{{old('contact_name')}}" class="form-control" required></input>
                             </div>
