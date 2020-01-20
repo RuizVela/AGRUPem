@@ -57249,6 +57249,13 @@ $(document).ready(function () {
 $(document).ready(function () {
   $('#content_edit_spanish').summernote();
 });
+$(document).ready(function () {
+  var footer = document.getElementById('footer');
+
+  if ($("body").height() < $(window).height()) {
+    footer.classList.add("fixed-bottom");
+  }
+});
 
 /***/ }),
 

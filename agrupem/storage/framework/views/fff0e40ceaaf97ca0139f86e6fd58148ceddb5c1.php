@@ -103,7 +103,7 @@
         <?php echo $__env->yieldContent('content'); ?>
 </main>
 
-<footer class="d-flex flex-column">
+<footer id="footer" class="d-flex flex-column">
     <div>
         <p>Copyright © 2012-2020 AGRUPem</br></p>
     </div> 
@@ -119,9 +119,6 @@
 		.bindPopup('AGRUPem.')
 		.openPopup();
 </script>
-
-       
-
  </body>
 </html>
 <?php /**PATH C:\xampp\htdocs\AGRUPem\agrupem\resources\views/layouts/app.blade.php ENDPATH**/ ?>

@@ -102,7 +102,7 @@
         @yield('content')
 </main>
 
-<footer class="d-flex flex-column">
+<footer id="footer" class="d-flex flex-column">
     <div>
         <p>Copyright © 2012-2020 AGRUPem</br></p>
     </div> 
@@ -118,8 +118,5 @@
 		.bindPopup('AGRUPem.')
 		.openPopup();
 </script>
-
-       
-
  </body>
 </html>
