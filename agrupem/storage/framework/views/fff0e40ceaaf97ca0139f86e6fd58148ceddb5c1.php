@@ -34,7 +34,7 @@
 </head>
 <body>
     
-    <nav class="navbar navbar-light navbar-expand-md shadow p-3 mb-5">
+    <nav class="navbar navbar-light navbar-expand-md shadow p-3 mb-5"> 
             <a href="<?php echo e(url('/')); ?>" class="ancorNavbar">
             <img id="logotipo" src="<?php echo e(asset('/images/logo.png')); ?>" alt="logotipo de agrupem">
             </a>
@@ -84,7 +84,7 @@
                                                                 
                             <a class="nav-link nav-item " href="<?php echo e(route('register')); ?>"><?php echo e(__('Registrar')); ?></a>
                             
-                        </div>
+                        </div> 
                     </div>
                         
                     <?php endif; ?>

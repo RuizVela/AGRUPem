@@ -11,7 +11,7 @@ Route::get('/colabora','HomeController@Colabora')->name('Colabora');
 
 Route::get('lang/{locale}', 'HomeController@lang')->name('language');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home'); 
 
 Route::resource('post', 'PostController');
 Route::get('/post/create', 'PostController@create')->name('post.create')->middleware('auth');
@@ -41,3 +41,5 @@ Route::DELETE('/event/{event}', 'EventController@destroy')->name('event.destroy'
 Route::get('contact', 'ContactFormController@create');
 Route::post('contact', 'ContactFormController@store');
 Route::get('quiSom', 'HomeController@quiSom')->name('quiSom'); 
+Route::get('colabora', 'HomeController@colabora')->name('colabora'); 
+Route::get('hazteSocio', 'HomeController@hazteSocio')->name('hazteSocio'); 

@@ -38,6 +38,12 @@ class HomeController extends Controller
     }
     public function colabora()
     {
-        return view('colabora');     
+        return view('colabora');      
     }
+    public function hazteSocio()
+    {
+        return view('hazteSocio');      
+    }
+
+   
 }

@@ -34,7 +34,7 @@
 </head>
 <body>
     
-    <nav class="navbar navbar-light navbar-expand-md shadow p-3 mb-5">
+    <nav class="navbar navbar-light navbar-expand-md shadow p-3 mb-5"> 
             <a href="{{ url('/') }}" class="ancorNavbar">
             <img id="logotipo" src="{{asset('/images/logo.png')}}" alt="logotipo de agrupem">
             </a>
@@ -83,7 +83,7 @@
                                                                 
                             <a class="nav-link nav-item " href="{{ route('register') }}">{{ __('Registrar') }}</a>
                             
-                        </div>
+                        </div> 
                     </div>
                         
                     @endauth

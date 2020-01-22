@@ -7,7 +7,7 @@
          <h1>{{$event->getLocalTitle()}}</h1>
          <div class="text_container">
             <p>{{$event->getLocalContent()}}</p>
-            
+             
         
          @auth
 <div class="row admin_button">
