@@ -5,7 +5,8 @@
 <section id="" class="container-fluid row section ">  
     <div id="resocurce_content" class="shadow-lg p-3 mb-5 rounded ">
         <div class="col-md-8 shadow-lg p-3 mb-5 rounded col-sm-12 col-md-12 col-lg-6">
-                        <h1>Recursos</h1>
+                        
+            <h1>Recursos</h1>
                         
                 @auth
                 <a id="button_create" href="/resource/create" class="btn btn-success mt-4 admin_button">Crear</a>
@@ -16,7 +17,7 @@
                 @foreach ($resources as $resource)
                         <div class=" shadow-lg p-3 mb-5 rounded">
                             <a id="resource_link" class="text-dark" href="{{$resource->url}}">
-                               <h3> {{$resource->getLocalTitle()}} </h3>
+                               <h3 class="recursos"> {{$resource->getLocalTitle()}} </h3>
                             </a>
                         </div>
                         @auth
