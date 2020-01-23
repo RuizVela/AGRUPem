@@ -25,7 +25,7 @@
                 </form>
                 @endauth
                 <div class="right_buttons">
-                    <button id="button_return" onclick="window.location.href = '/post';">@lang('blog.return')</button>
+                    <button class="btn btn-primary" id="button_return" onclick="window.location.href = '/post';">@lang('blog.return')</button>
                 </div>
             </section>
             </main>

@@ -22,7 +22,7 @@
                                 <textarea id="contact_textarea" class="inputColor" id="contact_message" placeholder="@lang('contact.message')" name="contact_message" cols="30" rows="10" class="form-control" required>{{old('contact_message')}}</textarea>
                             </div>
                             <div class="right_buttons"> 
-                            <button id="contact_send_button" type="submit" class="">Enviar</button>
+                            <button id="contact_send_button" type="submit" class="btn btn-primary">Enviar</button>
                             </div>
                         </section>
                     </form>

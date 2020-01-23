@@ -13,7 +13,7 @@
                 {{$event->startDate}}
                 <h3> {{$event->getLocalTitle()}}</h3>
                 <form action="/event/{{$event->id}}" method="GET">
-                    <input type="submit" value="Mostrar Evento">
+                    <input class="btn btn-primary" type="submit" value="Mostrar Evento">
                 </form>
                 <br>
             @endforeach

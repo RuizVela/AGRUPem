@@ -33,7 +33,7 @@
 
                 <form action="/post/{{$post->id}}" method="GET">
                     <div class="right_buttons d-flex align-items-center">
-                        <button type="submit" id="button_show" class="button">@lang('blog.show-me-more')</button>
+                        <button type="submit" id="button_show" class="btn btn-primary">@lang('blog.show-me-more')</button>
                     </div>
                 </form>
 
