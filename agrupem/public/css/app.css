@@ -270,6 +270,11 @@
   margin-top: 5%;
 }
 
+#button_create {
+  width: 115px;
+  left: auto;
+}
+
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
