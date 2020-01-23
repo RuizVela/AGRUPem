@@ -11633,7 +11633,13 @@ a.text-dark:focus {
 }
 
 h1 {
-  font-size: 5vw;
+  font-size: 3vw;
+  font-size: min(20px);
+}
+
+h3 {
+  font-size: 2vw;
+  font-size: min(15px);
 }
 
 .text_container {
@@ -11652,7 +11658,7 @@ h1 {
 
 body {
   background-color: #E7FBFA;
-  background-image: url(/images/wallpaper.png?d41d8cd98f00b204e9800998ecf8427e);
+  background: url("/images/wallpaper.png");
 }
 
 nav {

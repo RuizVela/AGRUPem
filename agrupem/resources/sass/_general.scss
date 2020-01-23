@@ -1,6 +1,11 @@
 
 h1{
-    font-size:5vw; 
+    font-size:3vw; 
+    font-size: min(20px);
+}
+h3{
+    font-size: 2vw;
+    font-size: min(15px);
 }
 .text_container{    
     width: 90%;
@@ -20,7 +25,7 @@ h1{
 
 body{
     background-color: #E7FBFA;
-    background-image: url('../images/wallpaper.png');
+    background: url('/images/wallpaper.png');
 }
 
 nav{
