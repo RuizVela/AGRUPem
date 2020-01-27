@@ -1,5 +1,4 @@
-<section id="novelties_container">
-    <div id="formEdit">
+<section id="formEdit" class="novelties_container">
     <div id="home_novelties_title" class="title">
     <h3>{{$novelty->getLocalTitle()}}</h3>
     </div>
@@ -8,22 +7,42 @@
             {{$novelty->getLocalContent()}}
         </p>
     </div>
-    </div>
     @auth
-    <a href="#" onClick="toggleForm(['formEdit', 'formEdit1'])">Editar</a>
+    <a class="btn btn-primary" href="#" onClick="toggleForm(['formEdit', 'formEdit1'])">Editar</a>
     @endauth
-    <div id="formEdit1" class="hidden">
+</section>
+@auth
+<section id="formEdit1" class="hidden">
     <form action="/text/{{$novelty->id}}" method="POST">
         @csrf
         @method('PATCH')
-        catitle<input type="text" name="title_catalan" value="{{$novelty->title_catalan}}">
-        tituñol<input type="text" name="title_spanish" value="{{$novelty->title_spanish}}">
-        catanido<input type="text" name="content_catalan" value="{{$novelty->content_catalan}}">
-        contespañol<input type="text" name="content_spanish" value="{{$novelty->content_spanish}}">
-        <input type="submit" >
+        <div class="d-flex flex-wrap">
+            <div class="novelties_container">
+                <div>
+                    <label for="title_cat">Títol</label><br>
+                    <input id="title_cat" type="text" name="title_catalan" value="{{$novelty->title_catalan}}">
+                </div>
+                <div>
+                    <label for="content_edit_catalan">Contingut</label><br>
+                    <textarea id="content_edit_catalan" name="content_catalan" cols="30" rows="10">{{$novelty->content_catalan}}</textarea>
+                </div>
+            </div>
+            <div class="novelties_container">
+                <div>
+                    <label for="title_spa">Título</label><br>
+                    <input id="title_spa" type="text" name="title_spanish" value="{{$novelty->title_spanish}}">
+                </div>
+                <div>
+                    <label for="content_edit_spanish">Contenido</label><br>
+                    <textarea name="content_spanish" id="content_edit_spanish" cols="30" rows="10">{{$novelty->content_spanish}}</textarea>
+                </div>
+            </div>
+        </div>
+        <input class="btn btn-success" type="submit">
     </form>
-    </div>
+    <a class="btn btn-primary" href="#" onClick="toggleForm(['formEdit', 'formEdit1'])">Cancelar</a>
 </section>
+@endauth
 
 <script>
     function toggleForm(tags) {
