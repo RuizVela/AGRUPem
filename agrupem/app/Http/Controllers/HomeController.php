@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 use App;
 use Illuminate\Http\Request;
-use App\Novelty;
 use App\Event;
 use App\Post;
 use App\Text;
