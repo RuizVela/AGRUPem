@@ -1,12 +1,12 @@
 <?php
 
-use App\Http\Controllers\ContactFormController; 
+use App\Http\Controllers\ContactFormController;
+use App\Http\Controllers\TextController;
 
 Route::get('/', 'HomeController@index')->name('home');
 
 Auth::routes();
 
-Route::get('/queFem', 'HomeController@queFem')->name('queFem');
 Route::get('/colabora','HomeController@Colabora')->name('Colabora');
 
 Route::get('lang/{locale}', 'HomeController@lang')->name('language');
@@ -40,4 +40,8 @@ Route::DELETE('/event/{event}', 'EventController@destroy')->name('event.destroy'
 
 Route::get('contact', 'ContactFormController@create');
 Route::post('contact', 'ContactFormController@store');
-Route::get('quiSom', 'HomeController@quiSom')->name('quiSom'); 
+
+Route::get('quiSom', 'TextController@quiSom')->name('quiSom'); 
+Route::get('queFem', 'TextController@queFem')->name('queFem');
+
+Route::PATCH('text/{text}', 'TextController@update')->name('name.text')->middleware('auth');
