@@ -15,17 +15,17 @@
 
                 @auth
                 <form action="/post/{{$post->id}}/edit" method="GET">
-                    <input type="submit" id="button_edit" class = "btn btn-outline-primary mt-4" value="Editar">
+                    <input type="submit" id="button_edit" class = "btn btn-primary mt-4" value="Editar">
                 </form>
 
                 <form action="/post/{{$post->id}}" method="post">
                     @csrf
                     @method('DELETE') 
-                    <input id="button_delete" type="submit" value="Eliminar post" class="btn btn-outline-danger mt-4">
+                    <input id="button_delete" type="submit" value="Eliminar post" class="btn btn-danger mt-4">
                 </form>
                 @endauth
                 <div class="right_buttons">
-                    <button id="button_return" onclick="window.location.href = '/post';">@lang('blog.return')</button>
+                    <button class="btn btn-primary" id="button_return" onclick="window.location.href = '/post';">@lang('blog.return')</button>
                 </div>
             </section>
             </main>

@@ -5,6 +5,7 @@
  */
 
 require('./bootstrap');
+require('./scripts');
 
 window.Vue = require('vue');
 
@@ -39,10 +40,10 @@ $(document).ready(function() {
     $('#content_edit_spanish').summernote();
   });
 
-  $(document).ready(function() {
-    let footer = document.getElementById('footer');
+$(document).ready(function() {
+  let footer = document.getElementById('footer');
 
-    if ($("body").height() < $(window).height()) {
-          footer.classList.add("fixed-bottom");
-    }
+  if ($("body").height() < $(window).height()) {
+        footer.classList.add("fixed-bottom");
+  }
 });

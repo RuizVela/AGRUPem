@@ -5,7 +5,7 @@
 </section>
 <section class="col-md-6 justify-content-center col-sm-12 mb-5">
     <div id="home_event_title">
-        <h1>@lang('home.events')</h1>
+        <h3>@lang('home.events')</h3>
     </div>
     <div id="home_events_container" >
             <div class="next_events_container">
@@ -13,7 +13,7 @@
                 {{$event->startDate}}
                 <h3> {{$event->getLocalTitle()}}</h3>
                 <form action="/event/{{$event->id}}" method="GET">
-                    <input type="submit" value="Mostrar Evento">
+                    <input class="btn btn-primary" type="submit" value="Mostrar Evento">
                 </form>
                 <br>
             @endforeach

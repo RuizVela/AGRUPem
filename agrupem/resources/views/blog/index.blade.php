@@ -33,27 +33,27 @@
 
                 <form action="/post/{{$post->id}}" method="GET">
                     <div class="right_buttons d-flex align-items-center">
-                        <button type="submit" id="button_show" class="button">@lang('blog.show-me-more')</button>
+                        <button type="submit" id="button_show" class="btn btn-primary">@lang('blog.show-me-more')</button>
                     </div>
                 </form>
 
                 <div class="d-flex flex-row justify-content-between">
                     @auth
                     <form action="/post/{{$post->id}}/edit" method="GET">
-                        <input type="submit" id="button_edit" class = "btn btn-outline-primary mt-4" value="Editar">
+                        <input type="submit" id="button_edit" class = "btn btn-primary mt-4" value="Editar">
                     </form>
 
                     <form action="/post/{{$post->id}}" method="post">
                     @csrf
                     @method('DELETE') 
-                    <input id="button_delete" type="submit" value="Eliminar post" class="btn btn-outline-danger mt-4">
+                    <input id="button_delete" type="submit" value="Eliminar Post" class="btn btn-danger mt-4">
                     </form>
                     @endauth
                 </div>
             </section>
             @endforeach 
             @auth
-                <a id="button_create" href="/post/create" class="btn btn-outline-success mt-4">Crear post</a>
+                <a id="button_create" href="/post/create" class="btn btn-success m-4 fixed-bottom float-right">Crear Post</a>
             @endif    
         </main>
         </div>

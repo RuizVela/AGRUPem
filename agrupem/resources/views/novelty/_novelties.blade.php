@@ -2,7 +2,7 @@
     <div id="home_novelties_title" class="title">
     <h3>{{$novelty->getLocalTitle()}}</h3>
     </div>
-    <div class="home_novelties_content">
+    <div id="home_novelties_content">
         <p class="content">
             {{$novelty->getLocalContent()}}
         </p>
