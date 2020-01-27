@@ -10,10 +10,10 @@
             <div class="text_container shadow-lg">
             <p>{{$queFem->getLocalContent()}}</p>
             </div>
+            @auth
+            <a href="#" onClick="toggleForm(['formEdit', 'formEdit1'])">Editar</a>
+            @endauth
         </div>
-        @auth
-        <a href="#" onClick="toggleForm(['formEdit', 'formEdit1'])">Editar</a>
-        @endauth
         <div id="formEdit1" class="hidden">
         <form action="/text/{{$queFem->id}}" method="POST">
             @csrf
