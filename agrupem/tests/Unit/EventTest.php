@@ -41,7 +41,8 @@ class EventTest extends TestCase
     }
     public function test_expire_if_date_is_past()
     {
-        factory(Event::class,5)->create();
+        $yesterday = date('Y-m-d',strtotime("-1 days"));
+        factory(Event::class,2)->create(['endDate'=>$yesterday]);
         Event::expirePastEvents();
         $events=Event::all();
         foreach ($events as $event){

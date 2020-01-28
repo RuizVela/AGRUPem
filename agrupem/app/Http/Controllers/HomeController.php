@@ -3,24 +3,21 @@
 namespace App\Http\Controllers;
 use App;
 use Illuminate\Http\Request;
-use App\Novelty;
 use App\Event;
 use App\Post;
+use App\Text;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        $novelties = Novelty::all();
+        $novelty = Text::getNovelty();
         $all_events = Event::getNonExpiredEvents();
         $all_posts = Post::all();
         $events = $all_events->take(4);
         $posts = $all_posts->take(-3);
         $calendar = Event::getLocalCalendar();
-
-        return view('home',['novelties'=>$novelties, 'events'=>$events, 'posts'=>$posts, 'calendar'=>$calendar]);
-    
-    
+        return view('home',['novelty'=>$novelty, 'events'=>$events, 'posts'=>$posts, 'calendar'=>$calendar]);
     }
     public function lang($locale)
     {
@@ -28,16 +25,12 @@ class HomeController extends Controller
         session()->put('locale', $locale);
         return redirect()->back();
     }
-    public function queFem()
-    {
-        return view('queFem');
-    }
-    public function quiSom()
-    {
-        return view('quiSom');     
-    }
     public function colabora()
     {
         return view('colabora');     
+    }
+    public function festesoci()
+    {
+        return view('festesoci');     
     }
 }
