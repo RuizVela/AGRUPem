@@ -3,18 +3,18 @@
 
 <section  class="container-fluid row section">
     
-        <div id="formEdit" class="box-shadow p-3 mb-5 rounded col-sm-12 col-md-12 col-lg-6">
-            <div class="text_container text-center shadow-lg">
-            <h1 class="">{{$queFem->getLocalTitle()}}</h1>
-            </div>            
+        <article id="formEdit" class="box-shadow p-3 mb-5 rounded col-sm-12 col-md-12 col-lg-6">
+            <header class="text_container text-center shadow-lg">
+                <h1 class="">{{$queFem->getLocalTitle()}}</h1>
+            </header>            
             <div class="text_container shadow-lg">
-            <p>{{$queFem->getLocalContent()}}</p>
+                <p>{{$queFem->getLocalContent()}}</p>
             </div>
             @auth
             <a href="#" onClick="toggleForm(['formEdit', 'formEdit1'])">Editar</a>
             @endauth
-        </div>
-        <div id="formEdit1" class="hidden">
+        </article>
+        <section id="formEdit1" class="hidden">
             <form action="/text/{{$queFem->id}}" method="POST">
                 @csrf
                 @method('PATCH')
@@ -24,13 +24,11 @@
                 <input type="text" name="content_spanish" value="{{$queFem->content_spanish}}">
                 <input type="submit" >
             </form>
-        </div>  
-        <div class="container right_content col-sm-12 col-md-12 col-lg-6">
+        </section>  
+        <section class="container right_content col-sm-12 col-md-12 col-lg-6">
             @include('_rightContent') 
-        </div>
-    
-    
-
+        </section>
+        
 </section>
 <script>
     function toggleForm(tags) {

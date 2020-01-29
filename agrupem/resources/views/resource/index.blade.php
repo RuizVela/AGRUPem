@@ -4,16 +4,14 @@
 
 <section id="" class="container-fluid row section ">  
     <div id="resocurce_content" class="shadow-lg p-3 mb-5 rounded ">
-        <div class="col-md-8 shadow-lg p-3 mb-5 rounded col-sm-12 col-md-12 col-lg-6">
-                        
-            <h1>Recursos</h1>
-                        
-                @auth
+        <div class="col-md-8 box-shadow p-3 mb-5 rounded col-sm-12 col-md-12 col-lg-6">
+            <header>
+                <h1>Recursos</h1>
+            </header>
+            @auth
                 <a id="button_create" href="/resource/create" class="btn btn-success mt-4 admin_button">Crear</a>
-            
-                @endauth
+            @endauth
             <div class="">
-                
                 @foreach ($resources as $resource)
                         <div class=" shadow-lg p-3 mb-5 rounded">
                             <a id="resource_link" class="text-dark" href="{{$resource->url}}">
@@ -34,7 +32,6 @@
                         </div>
                         @endauth 
                 @endforeach
-                
             </div>
         </div>
     </div>

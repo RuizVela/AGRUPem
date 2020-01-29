@@ -7,9 +7,9 @@
         <div class="col-md-10">
             <main>
             @foreach ($posts as $post)
-            <section id="blog_index_container">
+            <section class="box-shadow mt-2 mb-5">
                 <header class="card">
-                    <div id="header_index_blog" class="card-header d-flex flex-nowrap justify-content-between">
+                    <div class="card-header shadow-lg d-flex flex-nowrap justify-content-between">
                         <h4 id="title">{{$post->getLocalTitle()}}</h4>
                         <h4 id="post_date">{{$post->created_at->format('Y-m-d')}}</h4>
                     </div>
@@ -33,7 +33,7 @@
 
                 <form action="/post/{{$post->id}}" method="GET">
                     <div class="right_buttons d-flex align-items-center">
-                        <button type="submit" id="button_show" class="button">@lang('blog.show-me-more')</button>
+                        <button type="submit" id="button_show" class="btn btn-primary mb-1 ml-4">@lang('blog.show-me-more')</button>
                     </div>
                 </form>
 
