@@ -11,7 +11,7 @@ Route::get('/colabora','HomeController@Colabora')->name('Colabora');
 
 Route::get('lang/{locale}', 'HomeController@lang')->name('language');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home'); 
 
 Route::resource('post', 'PostController');
 Route::get('/post/create', 'PostController@create')->name('post.create')->middleware('auth');
@@ -41,5 +41,4 @@ Route::PATCH('text/{text}', 'TextController@update')->name('name.text')->middlew
 
 Route::get('festeSoci', 'HomeController@festesoci')->name('festeSoci'); 
 
-
-
+Route::get('colabora', 'HomeController@colabora')->name('colabora'); 

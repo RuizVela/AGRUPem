@@ -1,6 +1,7 @@
 
-h1{
-    font-size:5vw; 
+.recursos{
+    font-size: 2vw;
+    font-size: min(15px);
 }
 .text_container{    
     width: 90%;
@@ -20,7 +21,7 @@ h1{
 
 body{
     background-color: #E7FBFA;
-    background-image: url('../images/wallpaper.png');
+    background: url('/images/wallpaper.png');
 }
 
 nav{
@@ -36,10 +37,11 @@ footer{
     align-items: center;
     line-height: 1px;
 
-}
+} 
 
 #resocurce_content{
     height: auto;
+    display: contents;
 }
 
 .general_container{
@@ -74,3 +76,18 @@ footer{
 .hidden{
     display: none;
 }
+
+.buttons{
+    border: none;
+    text-align: center;
+    color:white ;
+    outline: none;
+    width: 100%;
+    height: 100%;
+}
+
+.box-shadow{
+    background-color: white;
+    box-shadow: 10px 10px 5px 0px rgba(115, 162, 191, 0.5);
+}
+ 

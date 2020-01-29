@@ -4,7 +4,7 @@
 
 <section  class="container-fluid row section">
     
-        <div id="formEdit" class="shadow-lg p-3 mb-5 rounded col-sm-12 col-md-12 col-lg-6">
+        <div id="formEdit" class="box-shadow p-3 mb-5 rounded col-sm-12 col-md-12 col-lg-6">
             <div class="text_container text-center shadow-lg">
             <h1 class="">{{$quiSom->getLocalTitle()}}</h1>
             </div>
@@ -27,17 +27,11 @@
         </form>
         </div>
         <div class="container right_content col-sm-12 col-md-12 col-lg-6">
-            <div class="d-flex flex-wrap flex-md-nowrap">
-                <button class="btn btn-primary btn-lg col-sm-12 col-md-6 col-lg-6 m-1" type="button">Colabora</button>
-                <a class="btn btn-primary btn-lg col-sm-12 col-md-6 col-lg-6 m-1" type="button" href= "{{ url('/festeSoci') }}"> Hazte Socio</a>
-            </div>
-            <div class="">
-                <img class="col-sm-12 col-md-12 col-lg-12 " src="images/image1.jpg">
-                <img class="col-sm-12 col-md-12 col-lg-12 " src="images/image1.jpg">
-            </div>
+            @include('_rightContent') 
         </div>
     
 </section>
+
 <script>
     function toggleForm(tags) {
     
