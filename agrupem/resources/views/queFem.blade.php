@@ -15,15 +15,16 @@
             @endauth
         </div>
         <div id="formEdit1" class="hidden">
-        <form action="/text/{{$queFem->id}}" method="POST">
-            @csrf
-            @method('PATCH')
-            <input type="text" name="title_catalan" value="{{$queFem->title_catalan}}">
-            <input type="text" name="title_spanish" value="{{$queFem->title_spanish}}">
-            <input type="text" name="content_catalan" value="{{$queFem->content_catalan}}">
-            <input type="text" name="content_spanish" value="{{$queFem->content_spanish}}">
-            <input type="submit" >
-        </form>
+            <form action="/text/{{$queFem->id}}" method="POST">
+                @csrf
+                @method('PATCH')
+                <input type="text" name="title_catalan" value="{{$queFem->title_catalan}}">
+                <input type="text" name="title_spanish" value="{{$queFem->title_spanish}}">
+                <input type="text" name="content_catalan" value="{{$queFem->content_catalan}}">
+                <input type="text" name="content_spanish" value="{{$queFem->content_spanish}}">
+                <input type="submit" >
+            </form>
+        </div>  
         <div class="container right_content col-sm-12 col-md-12 col-lg-6">
             @include('_rightContent') 
         </div>
