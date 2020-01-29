@@ -16,7 +16,7 @@
 
         <h1>@lang('colabora.voluntariados')</h1>
         <div class="colabora_text">
-            @lang('colabora.voluntariados_text')
+            @lang('socio.precios_text')
         </div>
         <h1 id="ec">@lang('colabora.entidades_colaboradoras')</h1>
         <div class="colabora_text">
