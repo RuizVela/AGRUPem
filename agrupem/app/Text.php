@@ -25,4 +25,16 @@ class Text extends Model
     {
         return Text::all()->where('name','novelty')->first();
     }
+    static function getColabora1()
+    {
+        return Text::all()->where('name','colabora1')->first();
+    }
+    static function getColabora2()
+    {
+        return Text::all()->where('name','colabora2')->first();
+    }
+    static function getColabora3()
+    {
+        return Text::all()->where('name','colabora3')->first();
+    }
 }

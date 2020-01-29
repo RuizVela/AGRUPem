@@ -7,6 +7,7 @@ use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 use App\Text;
 use App;
+use App\Http\Controllers\TextController;
 
 class TextTest extends TestCase
 {
@@ -30,5 +31,23 @@ class TextTest extends TestCase
         $novelty=factory(Text::class)->create(['name'=>'novelty']);
         $response = Text::getNovelty();
         $this->assertEquals($novelty->name,$response->name);
+    }
+    public function test_get_colabora_text1()
+    {
+        $colabora1=factory(Text::class)->create(['name'=>'colabora1']);
+        $response = Text::getColabora1();
+        $this->assertEquals($colabora1->name,$response->name);
+    }
+    public function test_get_colabora_text2()
+    {
+        $colabora2=factory(Text::class)->create(['name'=>'colabora2']);
+        $response = Text::getColabora2();
+        $this->assertEquals($colabora2->name,$response->name);
+    }
+    public function test_get_colabora_text3()
+    {
+        $colabora3=factory(Text::class)->create(['name'=>'colabora3']);
+        $response = Text::getColabora3();
+        $this->assertEquals($colabora3->name,$response->name);
     }
 }

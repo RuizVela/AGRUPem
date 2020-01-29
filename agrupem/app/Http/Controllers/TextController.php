@@ -17,6 +17,10 @@ class TextController extends Controller
         $quiSom = Text::getQuiSom();
         return view('quiSom', ['quiSom'=>$quiSom]);     
     }
+    public function colabora()
+    {
+        return view('colabora');     
+    }
     public function update(Request $request, Text $text)
     {
         $text->update($request->all());
