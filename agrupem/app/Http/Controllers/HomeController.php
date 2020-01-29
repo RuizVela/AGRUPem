@@ -29,4 +29,8 @@ class HomeController extends Controller
     {
         return view('colabora');     
     }
+    public function festesoci()
+    {
+        return view('festesoci');     
+    }
 }

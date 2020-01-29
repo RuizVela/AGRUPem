@@ -38,3 +38,8 @@ Route::get('quiSom', 'TextController@quiSom')->name('quiSom');
 Route::get('queFem', 'TextController@queFem')->name('queFem');
 
 Route::PATCH('text/{text}', 'TextController@update')->name('name.text')->middleware('auth');
+
+Route::get('festeSoci', 'HomeController@festesoci')->name('festeSoci'); 
+
+
+
