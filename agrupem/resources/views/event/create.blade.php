@@ -10,31 +10,31 @@
                 <div class="d-flex flex-nowrap">
                 <section class="flex-column p-2">
                 <div class="form-group">
-                    <label for="title_cat">Título catalan:</label> <br>
+                    <label for="title_cat">@lang('form.titlecat')</label> <br>
                     <input id="title_cat" required type="text" name="title_catalan"><br>
                 </div>
                 <div class="form-group">
-                    <label for="content_cat">Contenido en catalan:</label>
+                    <label for="content_cat">@lang('form.contentcat')</label>
                     <textarea id="content_cat" required type="textarea" name="content_catalan" cols="30" rows="10"></textarea><br>
                 </div>
                 </section>
                 <section class="flex-column p-2">
                 <div class="form-group">
-                    <label for="title_spa">Título castellano:</label><br>
+                    <label for="title_spa">@lang('form.titlecas')</label><br>
                     <input id="title_spa" type="text" name="title_spanish"><br>
                 </div>
                 <div>
-                    <label for="content_spa">Contenido en castellano:</label>
+                    <label for="content_spa">@lang('form.contentcat')</label>
                     <textarea id="content_spa" type="textarea" name="content_spanish" cols="30" rows="10"></textarea><br>
                 </div>
                 </section>
                 </div>
                 <div class="form-group">
-                    <label for="strtDate">Fecha de inicio:</label>
+                    <label for="strtDate">@lang('form.datestart')</label>
                     <input id="strtDate" required type="date" name="startDate" value="<?php echo date("Y-m-d");?>"><br>
                 </div>
                 <div class="form-group">
-                    <label for="strtDate">Fecha de finalización:</label>
+                    <label for="strtDate">@lang('form.dateend')</label>
                     <input id="edDate" required type="date" name="endDate" value="<?php echo date("Y-m-d");?>"><br>
                 </div>
                 <input type="file" class="btn btn-outline-primary mt-4" name="event_image"><br>

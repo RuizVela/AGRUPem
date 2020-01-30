@@ -1,5 +1,5 @@
 <section id="collaborators_container" class="mt-4">
-    <header id="collaborators_title" class="title">
+    <header id="collaborators_title" class="shadow-home p-2 pl-3">
         <h3>@lang('home.collaborators')</h3>
     </header>
     <div class="card">

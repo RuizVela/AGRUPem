@@ -13,7 +13,7 @@
             </div>
         </div>
         @include('_blog-entries')
-        <div class="col-sm-12 col-md-12">
+        <div class="col-sm-8 col-md-8">
             @include('_personal-assitance')
         </div>
         @include('_collaborators')

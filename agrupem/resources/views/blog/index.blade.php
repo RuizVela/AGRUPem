@@ -8,7 +8,7 @@
             <main>
             @foreach ($posts as $post)
             <section class="box-shadow mt-2 mb-5">
-                <header class="card">
+                <header>
                     <div class="card-header shadow-lg d-flex flex-nowrap justify-content-between">
                         <h4 id="title">{{$post->getLocalTitle()}}</h4>
                         <h4 id="post_date">{{$post->created_at->format('Y-m-d')}}</h4>

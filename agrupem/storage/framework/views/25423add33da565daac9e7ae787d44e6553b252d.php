@@ -12,7 +12,7 @@
             </div>
         </div>
         <?php echo $__env->make('_blog-entries', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
-        <div class="col-sm-12 col-md-12">
+        <div class="col-sm-8 col-md-8">
             <?php echo $__env->make('_personal-assitance', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
         </div>
         <?php echo $__env->make('_collaborators', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>

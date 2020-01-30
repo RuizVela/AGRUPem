@@ -5,7 +5,6 @@
 
 .novelties_container {
   position: relative;
-  margin: 0% 4% 5% 4%;
   padding: 10%;
   background-color: white;
   box-shadow: 10px 10px 5px 0px rgba(115, 162, 191, 0.5);
@@ -23,14 +22,11 @@
 
 #home_personal_assistance_title {
   position: relative;
-  right: 5%;
-  background-color: #ffe97c;
   margin-bottom: 5%;
 }
 
 .home_personal_assistance_content {
   padding: 3%;
-  background-color: #FFE97D;
 }
 
 #blog_home_container {
@@ -106,8 +102,8 @@
 
 #collaborators_title {
   position: relative;
-  background-color: #ffe97c;
-  margin-bottom: 10%;
+  background-color: white;
+  margin-bottom: 5%;
 }
 
 .left-container-card {
@@ -10485,6 +10481,10 @@ footer {
 
 .hidden {
   display: none;
+}
+
+.white-background {
+  background-color: white;
 }
 
 .buttons {
