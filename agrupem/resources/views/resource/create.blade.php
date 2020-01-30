@@ -14,11 +14,11 @@
                     @csrf
                     <section class="flex-column p-2">
                         <div>
-                            <label for="resource_title">Título catalan</label><br>
+                            <label for="resource_title">@lang('form.titlecat')</label><br>
                             <input id="resource_title" type="text" name="title_catalan"></input>
                         </div>
                         <div>
-                            <label for="resource_title">Título</label><br>
+                            <label for="resource_title">@lang('form.titlecas')</label><br>
                             <input id="resource_title" type="text" name="title_spanish"></input>
                         </div>
                         <div>

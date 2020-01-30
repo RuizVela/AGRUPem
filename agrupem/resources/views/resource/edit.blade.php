@@ -15,11 +15,11 @@
                     @method('PUT')
                     <section class="flex-column p-2">
                         <div>
-                            <label for="resource_title">Título catalan</label><br>
+                            <label for="resource_title">@lang('form.titlecat')</label><br>
                             <input id="resource_title" type="text" name="title_catalan" value="{{$resource->title_catalan}}"></input>
                         </div>
                         <div>
-                            <label for="resource_title">Título</label><br>
+                            <label for="resource_title">@lang('form.titlecas')</label><br>
                             <input id="resource_title" type="text" name="title_spanish" value="{{$resource->title_spanish}}"></input>
                         </div>
                         <div>

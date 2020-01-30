@@ -19,21 +19,21 @@
         <div class="d-flex flex-wrap">
             <div class="novelties_container">
                 <div>
-                    <label for="title_cat">Título catalan</label><br>
+                    <label for="title_cat">@lang('form.titlecat')</label><br>
                     <input id="title_cat" type="text" name="title_catalan" value="{{$novelty->title_catalan}}">
                 </div>
                 <div>
-                    <label for="content_edit_catalan">Contingut</label><br>
+                    <label for="content_edit_catalan">@lang('form.contentcat')</label><br>
                     <textarea id="content_edit_catalan" name="content_catalan" cols="30" rows="10">{{$novelty->content_catalan}}</textarea>
                 </div>
             </div>
             <div class="novelties_container">
                 <div>
-                    <label for="title_spa">Título</label><br>
+                    <label for="title_spa">@lang('form.titlecas')</label><br>
                     <input id="title_spa" type="text" name="title_spanish" value="{{$novelty->title_spanish}}">
                 </div>
                 <div>
-                    <label for="content_edit_spanish">Contenido</label><br>
+                    <label for="content_edit_spanish">@lang('form.contentcas')</label><br>
                     <textarea name="content_spanish" id="content_edit_spanish" cols="30" rows="10">{{$novelty->content_spanish}}</textarea>
                 </div>
             </div>
