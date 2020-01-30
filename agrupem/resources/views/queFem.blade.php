@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-<section  class="container-fluid row section">
+<section  class="container-fluid d-flex">
     
         <article id="formEdit" class="box-shadow p-3 mb-5 rounded col-sm-12 col-md-12 col-lg-6">
             <header class="text_container text-center shadow-lg">
@@ -15,12 +15,12 @@
             @endauth
         </article>
         @auth
-        <section id="formEdit1" class="hidden">
+        <section id="formEdit1" class="hidden col-md-12">
             <form action="/text/{{$queFem->id}}" method="POST">
                 @csrf
                 @method('PATCH')
                 <div class="d-flex flex-wrap">
-                    <div class="novelties_container">
+                    <div class="novelties_container mt-3 mb-3 col-sm-12 col-md-12">
                         <div>
                             <label for="title_cat">Títol</label><br>
                             <input id="title_cat" type="text" name="title_catalan" value="{{$queFem->title_catalan}}">
@@ -30,7 +30,7 @@
                             <textarea id="content_edit_catalan" name="content_catalan" cols="30" rows="10">{{$queFem->content_catalan}}</textarea>
                         </div>
                     </div>
-                    <div class="novelties_container">
+                    <div class="novelties_container mt-3 mb-3 col-sm-12 col-md-12">
                         <div>
                             <label for="title_spa">Título</label><br>
                             <input id="title_spa" type="text" name="title_spanish" value="{{$queFem->title_spanish}}">
@@ -42,8 +42,8 @@
                     </div>
                 </div>
                 <input class="btn btn-success" type="submit">
+                <a class="btn btn-primary" href="#" onClick="toggleForm(['formEdit', 'formEdit1'])">Cancelar</a>
             </form>
-            <a class="btn btn-primary" href="#" onClick="toggleForm(['formEdit', 'formEdit1'])">Cancelar</a>
         </section>
         @endauth
         <section class="container right_content col-sm-12 col-md-12 col-lg-6">

@@ -4,7 +4,7 @@
     </div>
 </section>
 <section class="col-md-6 justify-content-center col-sm-12 mb-5">
-    <header id="home_event_title" class="shadow-home pl-2">
+    <header id="home_event_title" class="shadow-home p-2 pl-3">
         <h1>@lang('home.events')</h1>
     </header>
     <section id="home_events_container" >

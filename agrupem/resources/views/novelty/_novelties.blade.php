@@ -4,7 +4,7 @@
     </header>
     <div id="home_novelties_content">
         <p class="content">
-            {{$novelty->getLocalContent()}}
+        {!! html_entity_decode($novelty->getLocalContent()) !!}
         </p>
     </div>
     @auth

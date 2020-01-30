@@ -1,6 +1,6 @@
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/fullcalendar.min.css' />
 
-<header id="calendar_title" class="shadow-home pl-2">
+<header id="calendar_title" class="shadow-home p2 pl-3">
     <h3>@lang('home.calendar')</h3>
 </header>
 
