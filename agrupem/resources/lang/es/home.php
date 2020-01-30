@@ -2,6 +2,7 @@
 
 return [
     'calendar' => 'Calendario',
+    'eventsbtn' => 'Ver todos',
     'collaborators' => 'Colaboran con nosotros',
     'personal-assistance-title' => 'Atención Personal',
     'personal-assistance' => "La esclerosis múltiple es una enfermedad del sistema nervioso que olla provocar importantes discapacidades

@@ -17,7 +17,7 @@
                         </div>
                         <div>
                             <label for="content_catalan">@lang('form.contentcat')</label><br>
-                            <textarea id="content_edit_catalan" name="content_catalan" cols="70" rows="30">{{$post->content_catalan}}</textarea>
+                            <textarea id="content_edit_catalan" class="summernote" name="content_catalan" cols="70" rows="30">{{$post->content_catalan}}</textarea>
                         </div>
                     </section>
                     <section class="flex-column p-2 m-2 box-shadow">
@@ -27,7 +27,7 @@
                         </div>
                         <div>
                             <label for="content_spanish">@lang('form.contentcas')</label><br>
-                            <textarea name="content_spanish" id="content_edit_spanish" cols="30" rows="10" value="{{$post->content_spanish}}">{{$post->content_spanish}}</textarea>
+                            <textarea class="summernote" name="content_spanish" id="content_edit_spanish" cols="30" rows="10" value="{{$post->content_spanish}}">{{$post->content_spanish}}</textarea>
                         </div>
                     </section>
                     <input type="submit" class="btn btn-success mt-4" value="Guardar">

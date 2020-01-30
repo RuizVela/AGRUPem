@@ -19,9 +19,12 @@
             @endforeach
             </div>
             @auth
-                <form method="GET" action="/event/create">
-                    <input type="submit" class="btn btn-success" value="Nuevo Evento">
+                <form method="GET" action="/event/create" class="m-2">
+                    <input type="submit" class="btn btn-success" value="Crear">
                 </form>
             @endauth
+            <div class="m-2">
+                <button class="btn btn-secondary" onclick="window.location.href = '/event';">@lang('home.eventsbtn')</button>
+            </div>
     </section>
 </section>

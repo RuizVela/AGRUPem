@@ -2,6 +2,7 @@
 
 return [
     'calendar' => 'Calendari',
+    'eventsbtn' => 'Veure tots',
     'collaborators' => 'Col·laboren amb nosaltres',
     'personal-assistance-title' => 'Atenció Personal',
     'personal-assistance' => "L'esclerosi múltiple és una Malaltia de el sistema nerviós que olla provocar importants discapacitats
