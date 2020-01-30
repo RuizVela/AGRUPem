@@ -19,7 +19,7 @@
         <div class="d-flex flex-wrap">
             <div class="novelties_container">
                 <div>
-                    <label for="title_cat">Títol</label><br>
+                    <label for="title_cat">Título catalan</label><br>
                     <input id="title_cat" type="text" name="title_catalan" value="{{$novelty->title_catalan}}">
                 </div>
                 <div>

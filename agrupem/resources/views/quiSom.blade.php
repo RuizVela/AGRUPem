@@ -8,7 +8,7 @@
                 <h1 class="">{{$quiSom->getLocalTitle()}}</h1>
             </header>
             <div class="text_container shadow-lg">
-                <p>{{$quiSom->getLocalContent()}}</p>
+                <p>{!! html_entity_decode($quiSom->getLocalContent()) !!}</p>
             </div>
             @auth
              <a class="btn btn-primary" href="#" onClick="toggleForm(['formEdit', 'formEdit1'])">Editar</a>
@@ -22,7 +22,7 @@
                 <div class="d-flex flex-wrap">
                     <div class="novelties_container mt-3 mb-3 col-sm-12 col-md-12">
                         <div>
-                            <label for="title_cat">Títol</label><br>
+                            <label for="title_cat">Título catalan</label><br>
                             <input id="title_cat" type="text" name="title_catalan" value="{{$quiSom->title_catalan}}">
                         </div>
                         <div>

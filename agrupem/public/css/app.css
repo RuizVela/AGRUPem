@@ -10483,6 +10483,10 @@ footer {
   display: none;
 }
 
+.white-background {
+  background-color: white;
+}
+
 .buttons {
   border: none;
   text-align: center;

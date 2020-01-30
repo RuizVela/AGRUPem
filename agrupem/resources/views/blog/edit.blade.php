@@ -15,7 +15,7 @@
                     @method('PUT')
                     <section class="flex-column p-2">
                         <div>
-                            <label for="title_catalan">Títol</label>
+                            <label for="title_catalan">Título catalan</label>
                             <input id="title_catalan" type="text" name="title_catalan" value="{{$post->title_catalan}}"></input>
                         </div>
                         <div>

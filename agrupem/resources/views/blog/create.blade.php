@@ -14,7 +14,7 @@
                     @csrf
                     <section class="flex-column p-2">
                         <div>
-                            <label for="title_cat">Títol</label>
+                            <label for="title_cat">Título catalan</label>
                             <input id="title_cat" type="text" name="title_catalan"></input>
                         </div>
                         <div>

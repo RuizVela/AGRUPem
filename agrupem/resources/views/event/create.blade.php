@@ -20,7 +20,7 @@
                 </section>
                 <section class="flex-column p-2">
                 <div class="form-group">
-                    <label for="title_spa">Título castellano:</label><br>
+                    <label for="title_spa">Título catalan:</label><br>
                     <input id="title_spa" type="text" name="title_spanish"><br>
                 </div>
                 <div>
