@@ -25,8 +25,5 @@ class HomeController extends Controller
         session()->put('locale', $locale);
         return redirect()->back();
     }
-    public function festesoci()
-    {
-        return view('festesoci');     
-    }
+
 }

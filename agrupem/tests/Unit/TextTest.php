@@ -50,4 +50,10 @@ class TextTest extends TestCase
         $response = Text::getColabora3();
         $this->assertEquals($colabora3->name,$response->name);
     }
+    public function test_get_festeSoci()
+    {
+        $festeSoci = factory(Text::class)->create(['name'=>'festeSoci']);
+        $response = Text::getFesteSoci();
+        $this->assertEquals($festeSoci->id,$response->id);
+    }
 }

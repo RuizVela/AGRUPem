@@ -7,8 +7,6 @@ Route::get('/', 'HomeController@index')->name('home');
 
 Auth::routes();
 
-Route::get('/colabora','TextController@Colabora')->name('Colabora');
-
 Route::get('lang/{locale}', 'HomeController@lang')->name('language');
 
 Route::get('/home', 'HomeController@index')->name('home'); 
@@ -36,7 +34,7 @@ Route::post('contact', 'ContactFormController@store');
 
 Route::get('quiSom', 'TextController@quiSom')->name('quiSom'); 
 Route::get('queFem', 'TextController@queFem')->name('queFem');
+Route::get('festeSoci', 'TextController@festeSoci')->name('festeSoci'); 
+Route::get('/colabora','TextController@Colabora')->name('Colabora');
 
 Route::PATCH('text/{text}', 'TextController@update')->name('name.text')->middleware('auth');
-
-Route::get('festeSoci', 'HomeController@festesoci')->name('festeSoci'); 

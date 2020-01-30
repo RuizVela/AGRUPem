@@ -26,4 +26,8 @@ class TextController extends Controller
         $text->update($request->all());
         return redirect()->back();
     }
+    public function festeSoci()
+    {
+        return view('festesoci');     
+    }
 }

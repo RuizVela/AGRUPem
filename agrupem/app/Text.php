@@ -37,4 +37,8 @@ class Text extends Model
     {
         return Text::all()->where('name','colabora3')->first();
     }
+    static function getFesteSoci()
+    {
+        return Text::all()->where('name','festeSoci')->first();
+    }
 }
