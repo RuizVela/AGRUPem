@@ -27,7 +27,7 @@
                         </div>
                         <div>
                             <label for="content_edit_catalan">Contingut</label><br>
-                            <textarea id="content_edit_catalan" name="content_catalan" cols="30" rows="10">{{$queFem->content_catalan}}</textarea>
+                            <textarea id="content_edit_catalan" class="summernote" name="content_catalan" cols="30" rows="10">{{$queFem->content_catalan}}</textarea>
                         </div>
                     </div>
                     <div class="novelties_container">
@@ -37,7 +37,7 @@
                         </div>
                         <div>
                             <label for="content_edit_spanish">Contenido</label><br>
-                            <textarea name="content_spanish" id="content_edit_spanish" cols="30" rows="10">{{$queFem->content_spanish}}</textarea>
+                            <textarea class="summernote" name="content_spanish" id="content_edit_spanish" cols="30" rows="10">{{$queFem->content_spanish}}</textarea>
                         </div>
                     </div>
                 </div>

@@ -41,6 +41,10 @@ $(document).ready(function() {
   });
 
 $(document).ready(function() {
+    $('.summernote').summernote();
+  });
+
+$(document).ready(function() {
   let footer = document.getElementById('footer');
 
   if ($("body").height() < $(window).height()) {
