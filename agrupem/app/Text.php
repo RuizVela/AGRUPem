@@ -41,4 +41,9 @@ class Text extends Model
     {
         return Text::all()->where('name','festeSoci')->first();
     }
+    static function getServeisSoci()
+    {
+        return Text::all()->where('name','serveisSoci')->first();
+    }
+    
 }

@@ -56,4 +56,10 @@ class TextTest extends TestCase
         $response = Text::getFesteSoci();
         $this->assertEquals($festeSoci->id,$response->id);
     }
+    public function test_get_serveisSoci()
+    {
+        $serveisSoci = factory(Text::class)->create(['name'=>'serveisSoci']);
+        $response = Text::getServeisSoci();
+        $this->assertEquals($serveisSoci->id,$response->id);
+    }
 }

@@ -12,5 +12,7 @@ class TextTableSeeder extends Seeder
         factory(App\Text::class)->create(['name'=>'colabora1']);
         factory(App\Text::class)->create(['name'=>'colabora2']);
         factory(App\Text::class)->create(['name'=>'colabora3']);
+        factory(App\Text::class)->create(['name'=>'festeSoci']);
+        factory(App\Text::class)->create(['name'=>'serveisSoci  ']);
     }
 }

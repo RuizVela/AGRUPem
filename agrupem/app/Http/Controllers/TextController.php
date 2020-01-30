@@ -19,7 +19,10 @@ class TextController extends Controller
     }
     public function colabora()
     {
-        return view('colabora');     
+        $colabora1 = Text::getColabora1();
+        $colabora2 = Text::getColabora2();
+        $colabora3 = Text::getColabora3();
+        return view('colabora',['colabora1'=>$colabora1, 'colabora2'=>$colabora2, 'colabora3'=>$colabora3]);     
     }
     public function update(Request $request, Text $text)
     {
@@ -28,6 +31,8 @@ class TextController extends Controller
     }
     public function festeSoci()
     {
-        return view('festesoci');     
+        $festeSoci = Text::getFesteSoci();
+        $serveisSoci=Text::getServeisSoci();
+        return view('festesoci',['festeSoci'=>$festeSoci, 'serveisSoci'=>$serveisSoci]);     
     }
 }
