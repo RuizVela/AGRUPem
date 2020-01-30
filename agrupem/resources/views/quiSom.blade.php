@@ -12,20 +12,41 @@
                 <p>{{$quiSom->getLocalContent()}}</p>
             </div>
             @auth
-             <a href="#" onClick="toggleForm(['formEdit', 'formEdit1'])">Editar</a>
+             <a class="btn btn-primary" href="#" onClick="toggleForm(['formEdit', 'formEdit1'])">Editar</a>
              @endauth
         </article>
+        @auth
         <section id="formEdit1" class="hidden">
             <form action="/text/{{$quiSom->id}}" method="POST">
                 @csrf
                 @method('PATCH')
-                <input type="text" name="title_catalan" value="{{$quiSom->title_catalan}}">
-                <input type="text" name="title_spanish" value="{{$quiSom->title_spanish}}">
-                <input type="text" name="content_catalan" value="{{$quiSom->content_catalan}}">
-                <input type="text" name="content_spanish" value="{{$quiSom->content_spanish}}">
-                <input type="submit" >
+                <div class="d-flex flex-wrap">
+                    <div class="novelties_container">
+                        <div>
+                            <label for="title_cat">Títol</label><br>
+                            <input id="title_cat" type="text" name="title_catalan" value="{{$quiSom->title_catalan}}">
+                        </div>
+                        <div>
+                            <label for="content_edit_catalan">Contingut</label><br>
+                            <textarea id="content_edit_catalan" name="content_catalan" cols="30" rows="10">{{$quiSom->content_catalan}}</textarea>
+                        </div>
+                    </div>
+                    <div class="novelties_container">
+                        <div>
+                            <label for="title_spa">Título</label><br>
+                            <input id="title_spa" type="text" name="title_spanish" value="{{$quiSom->title_spanish}}">
+                        </div>
+                        <div>
+                            <label for="content_edit_spanish">Contenido</label><br>
+                            <textarea name="content_spanish" id="content_edit_spanish" cols="30" rows="10">{{$quiSom->content_spanish}}</textarea>
+                        </div>
+                    </div>
+                </div>
+                <input class="btn btn-success" type="submit">
             </form>
+            <a class="btn btn-primary" href="#" onClick="toggleForm(['formEdit', 'formEdit1'])">Cancelar</a>
         </section>
+        @endauth
         <section class="container right_content col-sm-12 col-md-12 col-lg-6">
             @include('_rightContent') 
         </section>
