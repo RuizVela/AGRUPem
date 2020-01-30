@@ -36,7 +36,7 @@
     
     <nav class="navbar navbar-light navbar-expand-md shadow p-3 mb-5"> 
             <a href="{{ url('/') }}" class="ancorNavbar">
-            <img id="logotipo" src="{{asset('/images/logo.png')}}" alt="logotipo de agrupem">
+            <img id="logotipo" src="{{asset('/images/logoletrasnegras.png')}}" alt="logotipo de agrupem">
             </a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -61,7 +61,7 @@
                             <!-- Authentication Links -->
                     @guest
                     <div class="">
-                        <a class="nav-link nav-item " href="{{ route('login') }}">{{ __('Login') }}</a>
+                        <a id="nav-button" class="nav-link nav-item " href="{{ route('login') }}">{{ __('Login') }}</a>
                     </div>
                     @endguest
                     @auth
@@ -81,7 +81,7 @@
                                 @csrf
                             </form>
                                                                 
-                            <a class="nav-link nav-item " href="{{ route('register') }}">{{ __('Registrar') }}</a>
+                            <a id="nav-button" class="nav-link nav-item " href="{{ route('register') }}">{{ __('Registrar') }}</a>
                             
                         </div> 
                     </div>
@@ -90,11 +90,11 @@
             </div>
 
                     <div class="navbar-nav ml-auto col-md-12 justify-content-end">
-                        <a href="/queFem" class="nav-item nav-link">@lang('layout.what-we-do')</a>
-                        <a href="/quiSom" class="nav-item nav-link">@lang('layout.who-we-are')</a>
-                        <a href="/resource" class="nav-item nav-link">RECURSOS</a>
-                        <a href="/post" class="nav-item nav-link">BLOG</a>
-                        <a href="/contact" class="nav-item nav-link">@lang('layout.contact')</a>
+                        <a href="/queFem" id="nav-button" class="nav-item nav-link">@lang('layout.what-we-do')</a>
+                        <a href="/quiSom" id="nav-button" class="nav-item nav-link">@lang('layout.who-we-are')</a>
+                        <a href="/resource" id="nav-button" class="nav-item nav-link">RECURSOS</a>
+                        <a href="/post" id="nav-button" class="nav-item nav-link">BLOG</a>
+                        <a href="/contact" id="nav-button" class="nav-item nav-link">@lang('layout.contact')</a>
                     </div>
         </div>
     </nav>

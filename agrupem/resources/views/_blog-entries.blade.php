@@ -1,5 +1,6 @@
 <section id="blog_home_container" class="mt-5 mb-4">
-    <header id="home_blog_entries_title" class="title">
+    <div id="home_blog_entries_title" class="title mb-5">
+    <header>
         <h3>@lang('home.blog')</h3>
     </header>
     <div id="home_blog_entries" class="d-flex flex-wrap justify-content-around">

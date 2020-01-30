@@ -33,7 +33,7 @@
                             <textarea name="content_spanish" id="content_edit_spanish" cols="30" rows="10" value="{{$post->content_spanish}}">{{$post->content_spanish}}</textarea>
                         </div>
                     </section>
-                    <input type="submit" class="btn btn-outline-success mt-4" value="Guardar">
+                    <input type="submit" class="btn btn-success mt-4" value="Guardar">
                     </form>
                 </section>
             </main>

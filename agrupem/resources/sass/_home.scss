@@ -4,15 +4,7 @@
     font-size: 150%;
 }
 
-.fab{
-    color: #FFE97D;
-}
-
-.fab:hover{
-    color: #FFB74D;
-}
-
-#novelties_container{
+.novelties_container{
     position: relative;
     margin: 0% 4% 5% 4%;
     padding: 10%;
@@ -33,12 +25,7 @@
 #home_personal_assistance_title{
     position: relative;
     right: 5%;
-    background-image: url(../images/underline.jpg);
-    background-size: 100%;
-    background-position-y: 20px;
-    background-repeat: no-repeat;
-    background-position-x: 40px;
-    padding: 0 0 5px 0;
+    background-color: #ffe97c;
     margin-bottom: 5%;
 }
 
@@ -75,25 +62,17 @@
 
 #home_event_title{
     position: relative;
-    left: 5%;
-    background-image: url(../images/underline.jpg);
-    background-size: 100%;
-    background-position-y: 30px;
-    background-repeat: no-repeat;
-    background-position-x: 40px;
-    padding: 0 0 5px 0;
+    background-color: white;
     margin: 15% 0;
+}
+
+.shadow-home{
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.4) !important;
 }
 
 #calendar_title{
     position: relative;
-    left: 5%;
-    background-image: url(../images/underline.jpg);
-    background-size: 100%;
-    background-position-y: 30px;
-    background-repeat: no-repeat;
-    background-position-x: 40px;
-    padding: 0 0 5px 0;
+    background-color: white;
     margin: 15% 0;
 }
 
@@ -115,14 +94,7 @@
 
 #home_blog_entries_title{
     position: relative;
-    right: 5%;
-    background-image: url(../images/underline.jpg);
-    background-size: 100%;
-    background-position-y: 20px;
-    background-repeat: no-repeat;
-    background-position-x: 40px;
-    padding: 0 0 10px 0;
-    margin-bottom: 5%;
+    background-color: white;
 }
 
 #home_blog_entries{
@@ -134,12 +106,7 @@
 
 #collaborators_title{
     position: relative;
-    background-image: url(../images/underline.jpg);
-    background-size: 100%;
-    background-position-y: 20px;
-    background-repeat: no-repeat;
-    background-position-x: 40px;
-    padding: 0 0 10px 0;
+    background-color: #ffe97c;
     margin-bottom: 10%;
 }
 

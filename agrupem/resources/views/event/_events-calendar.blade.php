@@ -1,10 +1,10 @@
 <section id="home_calendar_container" class="col-md-6 d-flex justify-content-center align-items-center col-sm-12">
-    <header>
+    <div>
         @include('event.calendar')
-    </header>
+    </div>
 </section>
 <section class="col-md-6 justify-content-center col-sm-12 mb-5">
-    <header id="home_event_title">
+    <header id="home_event_title" class="shadow-home pl-2">
         <h1>@lang('home.events')</h1>
     </header>
     <section id="home_events_container" >
@@ -13,7 +13,7 @@
                 {{$event->startDate}}
                 <h3> {{$event->getLocalTitle()}}</h3>
                 <form action="/event/{{$event->id}}" method="GET">
-                    <input type="submit" value="Mostrar Evento">
+                    <input class="btn btn-primary" type="submit" value="Mostrar Evento">
                 </form>
                 <br>
             @endforeach
