@@ -58648,12 +58648,6 @@ var app = new Vue({
   el: '#app'
 });
 $(document).ready(function () {
-  $('#content_edit_catalan').summernote();
-});
-$(document).ready(function () {
-  $('#content_edit_spanish').summernote();
-});
-$(document).ready(function () {
   $('.summernote').summernote();
 });
 $(document).ready(function () {

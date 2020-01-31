@@ -13,6 +13,7 @@ return [
                 en las personas afectadas y que, casi siempre, provoca Grandes Cambios en la vida del afectado
                 y las personas que le rodean.",
     'events' => 'Próximos Eventos',
+    'eventsmore' => 'Mostrar'
 ];
 
 ?>
