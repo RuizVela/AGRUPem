@@ -1,3 +1,27 @@
+
+#AGRUPEM
+
+This application is created for Agrupem. The aim of the app is to help the asociation of "Associació Grup d'Esclerosi Múltiple del Bages" in Catalonia to be present in the web in a way we can help all those who are fighting now against multiple sclerosis.
+
+If you want to see the aplication you should:
+
+composer update
+
+then you should do a duplicate of the .env.example and call it .env. Once you have that file check the database has the name equal to the one in your php my admin and then generate the key with:
+
+php artisan key:generate
+
+If you want the mail function to work you should:
+
+change the .env and fill it up with your mailing system and credentials and then:
+
+php artisan config:cache
+
+Now you are ready to go.
+
+Regards, Noelia, Raúl, Andrés, Camilo y Nuria.
+
+
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
