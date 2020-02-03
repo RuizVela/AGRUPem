@@ -8,4 +8,3 @@
         </p>
     </article>
 </section>
-<!-- TODO cambiar, solo con motivo de testeo!! -->

@@ -34,7 +34,7 @@ Route::post('contact', 'ContactFormController@store');
 
 Route::get('quiSom', 'TextController@quiSom')->name('quiSom'); 
 Route::get('queFem', 'TextController@queFem')->name('queFem');
-Route::get('festeSoci', 'TextController@festeSoci')->name('festeSoci'); 
+Route::get('festeSoci','TextController@festeSoci')->name('festeSoci'); 
 Route::get('/colabora','TextController@Colabora')->name('Colabora');
 
 Route::PATCH('text/{text}', 'TextController@update')->name('name.text')->middleware('auth');

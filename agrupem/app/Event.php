@@ -47,7 +47,7 @@ class Event extends Model
     {
         $request->validate([
                                
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048' //TODO: preguntar david, tamaño requerido
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
 
         ]); 
     } 
@@ -60,7 +60,7 @@ class Event extends Model
         if ($request->hasFile('image')) 
         {
             $image = $request->file('image');
-            $filePath = $event->id. '.jpg'; //TODO preguntar david
+            $filePath = $event->id. '.jpg';
             $image->storeAs("public/events/",$filePath);            
         }
         

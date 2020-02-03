@@ -1,20 +1,20 @@
 [
     {
+        "level": "WARNING",
+        "message": "other - The connection used to load resources from https:\/\/www.manresa.cat used TLS 1.0 or TLS 1.1, which are deprecated and will be disabled in the future. Once disabled, users will be prevented from loading these resources. The server should enable TLS 1.2 or later. See https:\/\/www.chromestatus.com\/feature\/5654791610957824 for more information.",
+        "source": "other",
+        "timestamp": 1580467419170
+    },
+    {
         "level": "SEVERE",
         "message": "https:\/\/unpkg.com\/leaflet@1.0.3\/dist\/leaflet.js 4:31690 Uncaught Error: Map container not found.",
         "source": "javascript",
-        "timestamp": 1580457079314
+        "timestamp": 1580467419500
     },
     {
         "level": "SEVERE",
         "message": "http:\/\/localhost\/js\/app.js 47199:14 \"[Vue warn]: Cannot find element: #app\"",
         "source": "console-api",
-        "timestamp": 1580457079402
-    },
-    {
-        "level": "WARNING",
-        "message": "other - The connection used to load resources from https:\/\/www.manresa.cat used TLS 1.0 or TLS 1.1, which are deprecated and will be disabled in the future. Once disabled, users will be prevented from loading these resources. The server should enable TLS 1.2 or later. See https:\/\/www.chromestatus.com\/feature\/5654791610957824 for more information.",
-        "source": "other",
-        "timestamp": 1580457079477
+        "timestamp": 1580467419594
     }
 ]
