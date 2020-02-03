@@ -12,7 +12,8 @@ class EventController extends Controller
     public function index()
     {
         $events=Event::getNonExpiredEvents();
-        return view('event.index',['events'=>$events]);
+        $calendar = Event::getLocalCalendar();
+        return view('event.index',['events'=>$events, 'calendar'=>$calendar]);
     }
 
     public function create()
